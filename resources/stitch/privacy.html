@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>سياسة الخصوصية | الأفق للبرمجيات</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary": "#514c4b",
+                    "on-secondary-fixed": "#410001",
+                    "primary-fixed-dim": "#c7c6c6",
+                    "on-tertiary-container": "#e9e2e0",
+                    "secondary-fixed": "#ffdad5",
+                    "on-secondary-container": "#fffbff",
+                    "surface-container-low": "#f7f3f2",
+                    "on-tertiary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "on-tertiary-fixed": "#1e1b1a",
+                    "surface-tint": "#5e5e5e",
+                    "tertiary-fixed-dim": "#ccc5c3",
+                    "surface-dim": "#ddd9d8",
+                    "on-primary-fixed": "#1b1c1c",
+                    "surface-container": "#f1edec",
+                    "on-background": "#1c1b1b",
+                    "background": "#fcf8f8",
+                    "surface": "#fcf8f8",
+                    "on-error-container": "#93000a",
+                    "surface-container-lowest": "#ffffff",
+                    "on-surface": "#1c1b1b",
+                    "secondary-container": "#e3231c",
+                    "on-tertiary-fixed-variant": "#4a4645",
+                    "secondary": "#bc0007",
+                    "on-secondary-fixed-variant": "#930004",
+                    "inverse-on-surface": "#f4f0ef",
+                    "secondary-fixed-dim": "#ffb4a9",
+                    "surface-bright": "#fcf8f8",
+                    "tertiary-fixed": "#e9e1df",
+                    "tertiary-container": "#696463",
+                    "on-primary-container": "#e4e3e3",
+                    "outline-variant": "#c4c7c7",
+                    "on-surface-variant": "#444748",
+                    "on-secondary": "#ffffff",
+                    "surface-variant": "#e5e2e1",
+                    "inverse-surface": "#313030",
+                    "on-primary-fixed-variant": "#464747",
+                    "inverse-primary": "#c7c6c6",
+                    "on-error": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "outline": "#747878",
+                    "on-primary": "#ffffff",
+                    "primary-fixed": "#e4e2e2",
+                    "primary-container": "#656565",
+                    "surface-container-high": "#ebe7e7",
+                    "surface-container-highest": "#e5e2e1",
+                    "primary": "#4d4d4d"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-mobile": "20px",
+                    "margin-desktop": "64px",
+                    "stack-section": "80px",
+                    "container-max": "1440px",
+                    "unit": "8px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "headline-lg": ["IBM Plex Sans Arabic"],
+                    "body-md": ["IBM Plex Sans Arabic"],
+                    "body-lg": ["IBM Plex Sans Arabic"],
+                    "headline-lg-mobile": ["IBM Plex Sans Arabic"],
+                    "label-sm": ["IBM Plex Sans Arabic"],
+                    "display-lg": ["IBM Plex Sans Arabic"],
+                    "title-md": ["IBM Plex Sans Arabic"]
+            },
+            "fontSize": {
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "label-sm": ["13px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                    "display-lg": ["48px", {"lineHeight": "60px", "letterSpacing": "0", "fontWeight": "700"}],
+                    "title-md": ["20px", {"lineHeight": "28px", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .brand-gradient {
+            background: linear-gradient(135deg, #E0201A 0%, #3C9E91 100%);
+        }
+        .brand-gradient-text {
+            background: linear-gradient(135deg, #E0201A 0%, #3C9E91 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(101, 101, 101, 0.1);
+        }
+        .reveal-on-scroll {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .reveal-on-scroll.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .diagonal-cut {
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+        }
+        .scrollspy-active {
+            color: #bc0007;
+            font-weight: 700;
+            border-right: 3px solid #bc0007;
+            background: rgba(188, 0, 7, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md selection:bg-secondary-fixed-dim selection:text-on-secondary-fixed overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="bg-surface/70 backdrop-blur-xl docked full-width top-0 sticky shadow-sm z-[100] flex flex-row-reverse justify-between items-center w-full px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="flex items-center gap-4">
+<span class="font-display-lg text-display-lg font-bold text-primary">Al-Ofuq</span>
+</div>
+<div class="hidden md:flex flex-row-reverse gap-8 items-center">
+<a class="text-on-surface-variant font-medium hover:text-secondary transition-colors duration-300" href="#">الرئيسية</a>
+<a class="text-on-surface-variant font-medium hover:text-secondary transition-colors duration-300" href="#">من نحن</a>
+<a class="text-on-surface-variant font-medium hover:text-secondary transition-colors duration-300" href="#">خدماتنا</a>
+<a class="text-on-surface-variant font-medium hover:text-secondary transition-colors duration-300" href="#">أعمالنا</a>
+<a class="text-on-surface-variant font-medium hover:text-secondary transition-colors duration-300" href="#">شركاؤنا</a>
+<a class="text-on-surface-variant font-medium hover:text-secondary transition-colors duration-300" href="#">عملاؤنا</a>
+<a class="text-secondary font-bold border-b-2 border-secondary pb-1" href="#">اتصل بنا</a>
+</div>
+<button class="brand-gradient text-on-tertiary px-6 py-2 rounded-xl font-bold active:scale-95 transition-transform duration-200">
+            ابدأ مشروعك
+        </button>
+</nav>
+<!-- Hero Section -->
+<header class="relative h-[614px] flex items-center justify-center overflow-hidden diagonal-cut">
+<!-- STITCH_SHADER_START:ANIMATION_27 class="absolute inset-0 w-full h-full" -->
+<div class="absolute inset-0 w-full h-full" style="display:block;">
+<canvas id="shader-canvas-ANIMATION_27" style="display:block;width:100%;height:100%"></canvas>
+<script>
+(function() {
+  const canvas = document.getElementById('shader-canvas-ANIMATION_27');
+
+  // Sync the WebGL drawing-buffer size with the CSS-driven layout size.
+  // This fires on initial layout and whenever the element is resized.
+  function syncSize() {
+    const w = canvas.clientWidth  || 1280;
+    const h = canvas.clientHeight || 720;
+    if (canvas.width !== w || canvas.height !== h) {
+      canvas.width  = w;
+      canvas.height = h;
+    }
+  }
+  if (typeof ResizeObserver !== 'undefined') {
+    new ResizeObserver(syncSize).observe(canvas);
+  }
+  syncSize();
+
+  const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+  if (!gl) return;
+  const vs = `attribute vec2 a_position;
+varying vec2 v_texCoord;
+void main() {
+  v_texCoord = a_position * 0.5 + 0.5;
+  gl_Position = vec4(a_position, 0.0, 1.0);
+}`;
+  const fs = `precision highp float;
+varying vec2 v_texCoord;
+uniform float u_time;
+uniform vec2 u_resolution;
+
+void main() {
+    vec2 uv = v_texCoord;
+    float t = u_time * 0.12;
+    
+    // Base surface color (Clean White/Gray)
+    vec3 color = vec3(0.97, 0.97, 0.97); 
+    
+    // Brand Gradient Colors
+    vec3 red = vec3(0.88, 0.13, 0.10);    // #E0201A
+    vec3 orange = vec3(0.94, 0.42, 0.09); // #F06A17
+    vec3 gold = vec3(0.96, 0.69, 0.0);    // #F6B000
+    vec3 teal = vec3(0.24, 0.62, 0.57);   // #3C9E91
+    
+    // Soft flowing blobs for a calm, professional privacy page
+    float d1 = distance(uv, vec2(0.8 + 0.1 * sin(t), 0.2 + 0.1 * cos(t * 0.9)));
+    float b1 = smoothstep(0.8, 0.0, d1);
+    color = mix(color, orange, b1 * 0.03);
+    
+    float d2 = distance(uv, vec2(0.2 + 0.2 * cos(t * 0.7), 0.8 + 0.1 * sin(t * 1.2)));
+    float b2 = smoothstep(0.7, 0.0, d2);
+    color = mix(color, teal, b2 * 0.04);
+    
+    float d3 = distance(uv, vec2(0.5 + 0.3 * cos(t * 0.5), 0.5 + 0.3 * sin(t * 0.6)));
+    float b3 = smoothstep(0.65, 0.0, d3);
+    color = mix(color, gold, b3 * 0.02);
+
+    // Subtle diagonal movement
+    float lines = sin((uv.x + uv.y) * 20.0 - t * 1.0);
+    lines = smoothstep(0.98, 1.0, lines);
+    color = mix(color, vec3(0.93, 0.93, 0.93), lines * 0.1);
+
+    gl_FragColor = vec4(color, 1.0);
+}`;
+  function cs(type, src) {
+    const s = gl.createShader(type);
+    gl.shaderSource(s, src);
+    gl.compileShader(s);
+    return s;
+  }
+  const prog = gl.createProgram();
+  gl.attachShader(prog, cs(gl.VERTEX_SHADER, vs));
+  gl.attachShader(prog, cs(gl.FRAGMENT_SHADER, fs));
+  gl.linkProgram(prog);
+  gl.useProgram(prog);
+  const buf = gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1, 1,-1, -1,1, 1,1]), gl.STATIC_DRAW);
+  const pos = gl.getAttribLocation(prog, 'a_position');
+  gl.enableVertexAttribArray(pos);
+  gl.vertexAttribPointer(pos, 2, gl.FLOAT, false, 0, 0);
+  const uTime = gl.getUniformLocation(prog, 'u_time');
+  const uRes = gl.getUniformLocation(prog, 'u_resolution');
+  const uMouse = gl.getUniformLocation(prog, 'u_mouse');
+
+  // u_mouse is in pixel coordinates matching u_resolution (ShaderToy convention).
+  // Shaders that need normalized coords should use: u_mouse / u_resolution.
+  let mouse = { x: canvas.width / 2, y: canvas.height / 2 };
+  window.addEventListener('mousemove', (event) => {
+    const rect = canvas.getBoundingClientRect();
+    if (rect.width && rect.height) {
+      const nx = (event.clientX - rect.left) / rect.width;
+      const ny = 1.0 - (event.clientY - rect.top) / rect.height;
+      mouse.x = nx * canvas.width;
+      mouse.y = ny * canvas.height;
+    }
+  });
+
+  function render(t) {
+    if (typeof ResizeObserver === 'undefined') syncSize();
+    gl.viewport(0, 0, canvas.width, canvas.height);
+    if (uTime) gl.uniform1f(uTime, t * 0.001);
+    if (uRes) gl.uniform2f(uRes, canvas.width, canvas.height);
+    if (uMouse) gl.uniform2f(uMouse, mouse.x, mouse.y);
+    gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+    requestAnimationFrame(render);
+  }
+  render(0);
+})();
+</script>
+</div>
+<!-- STITCH_SHADER_END:ANIMATION_27 -->
+<div class="absolute inset-0 bg-black/30 backdrop-blur-[2px]"></div>
+<div class="relative z-10 text-center px-margin-mobile max-w-4xl animate-in fade-in slide-in-from-bottom-8 duration-1000">
+<h1 class="font-display-lg text-white mb-6 drop-shadow-lg">سياسة الخصوصية</h1>
+<p class="font-body-lg text-white/90 leading-relaxed max-w-2xl mx-auto">
+                نحن في الأفق نلتزم بحماية خصوصيتك وبياناتك الشخصية وتوفير بيئة رقمية آمنة لمشاريعك. خصوصيتك هي أولويتنا القصوى.
+            </p>
+</div>
+</header>
+<!-- Main Layout -->
+<main class="max-w-container-max mx-auto px-margin-desktop py-stack-section flex flex-col md:flex-row-reverse gap-12 relative">
+<!-- Sidebar Navigation (Scrollspy) -->
+<aside class="hidden md:block w-72 sticky top-32 h-fit">
+<div class="bg-surface-container-low p-6 rounded-2xl shadow-sm border border-outline-variant/30">
+<h3 class="font-title-md mb-6 border-b border-outline-variant pb-2">فهرس السياسة</h3>
+<nav class="flex flex-col gap-2">
+<a class="p-3 rounded-lg text-on-surface-variant hover:bg-surface-variant transition-all nav-link" data-section="intro" href="#intro">مقدمة</a>
+<a class="p-3 rounded-lg text-on-surface-variant hover:bg-surface-variant transition-all nav-link" data-section="data-collection" href="#data-collection">البيانات التي نجمعها</a>
+<a class="p-3 rounded-lg text-on-surface-variant hover:bg-surface-variant transition-all nav-link" data-section="data-usage" href="#data-usage">استخدام البيانات</a>
+<a class="p-3 rounded-lg text-on-surface-variant hover:bg-surface-variant transition-all nav-link" data-section="data-protection" href="#data-protection">حماية البيانات</a>
+<a class="p-3 rounded-lg text-on-surface-variant hover:bg-surface-variant transition-all nav-link" data-section="cookies" href="#cookies">ملفات تعريف الارتباط</a>
+<a class="p-3 rounded-lg text-on-surface-variant hover:bg-surface-variant transition-all nav-link" data-section="rights" href="#rights">حقوقك القانونية</a>
+</nav>
+</div>
+</aside>
+<!-- Content Area -->
+<article class="flex-1 space-y-16">
+<!-- Section: Introduction -->
+<section class="reveal-on-scroll" id="intro">
+<div class="flex items-center gap-4 mb-6">
+<span class="material-symbols-outlined text-secondary text-4xl" style="font-variation-settings: 'FILL' 1;">policy</span>
+<h2 class="font-headline-lg text-on-surface">مقدمة</h2>
+</div>
+<div class="glass-card p-8 rounded-2xl leading-relaxed text-on-surface-variant space-y-4 shadow-sm border-r-4 border-secondary">
+<p>
+                        تعتبر خصوصية زوارنا ومستخدمينا من أهم أولويات شركة "الأفق للبرمجيات". تهدف هذه السياسة إلى توضيح كيفية جمعنا ومعالجتنا لبياناتك الشخصية عند استخدامك لموقعنا الإلكتروني أو خدماتنا السحابية.
+                    </p>
+<p>
+                        باستخدامك لمنصتنا، فإنك توافق على ممارسات البيانات الموضحة في هذه الوثيقة، والتي تتماشى مع المعايير الدولية لحماية البيانات (GDPR) والأنظمة المحلية المعمول بها في المملكة.
+                    </p>
+</div>
+</section>
+<!-- Section: Data Collection -->
+<section class="reveal-on-scroll" id="data-collection">
+<div class="flex items-center gap-4 mb-6">
+<span class="material-symbols-outlined text-secondary text-4xl" style="font-variation-settings: 'FILL' 1;">database</span>
+<h2 class="font-headline-lg text-on-surface">البيانات التي نجمعها</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="bg-surface-container-highest p-6 rounded-xl border border-outline-variant/20 hover:shadow-md transition-shadow">
+<h4 class="font-title-md mb-3 flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">person</span>
+                            بيانات الهوية
+                        </h4>
+<ul class="list-disc list-inside space-y-2 text-on-surface-variant">
+<li>الاسم الكامل والمسمى الوظيفي</li>
+<li>معلومات الاتصال (البريد، الهاتف)</li>
+<li>بيانات الشركة والموقع الجغرافي</li>
+</ul>
+</div>
+<div class="bg-surface-container-highest p-6 rounded-xl border border-outline-variant/20 hover:shadow-md transition-shadow">
+<h4 class="font-title-md mb-3 flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">terminal</span>
+                            البيانات التقنية
+                        </h4>
+<ul class="list-disc list-inside space-y-2 text-on-surface-variant">
+<li>عنوان الـ IP ونوع المتصفح</li>
+<li>بيانات سجل الاستخدام والنشاط</li>
+<li>معلومات نظام التشغيل والجهاز</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Section: Data Usage -->
+<section class="reveal-on-scroll" id="data-usage">
+<div class="flex items-center gap-4 mb-6">
+<span class="material-symbols-outlined text-secondary text-4xl" style="font-variation-settings: 'FILL' 1;">insights</span>
+<h2 class="font-headline-lg text-on-surface">استخدام البيانات</h2>
+</div>
+<div class="glass-card p-8 rounded-2xl shadow-sm border-r-4 border-secondary">
+<p class="mb-6">نستخدم بياناتك بطرق محددة تهدف لرفع كفاءة التجربة الرقمية:</p>
+<div class="space-y-4">
+<div class="flex items-start gap-4">
+<div class="brand-gradient w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 text-white">
+<span class="material-symbols-outlined">settings_suggest</span>
+</div>
+<div>
+<h5 class="font-title-md">تخصيص التجربة</h5>
+<p class="text-on-surface-variant">تعديل محتوى الموقع والخدمات لتناسب احتياجات مشروعك التقنية.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="brand-gradient w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 text-white">
+<span class="material-symbols-outlined">security</span>
+</div>
+<div>
+<h5 class="font-title-md">الأمن والحماية</h5>
+<p class="text-on-surface-variant">مراقبة التهديدات السيبرانية وضمان سلامة حسابك من الدخول غير المصرح به.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: Data Protection -->
+<section class="reveal-on-scroll" id="data-protection">
+<div class="flex items-center gap-4 mb-6">
+<span class="material-symbols-outlined text-secondary text-4xl" style="font-variation-settings: 'FILL' 1;">encrypted</span>
+<h2 class="font-headline-lg text-on-surface">حماية البيانات</h2>
+</div>
+<div class="relative overflow-hidden rounded-2xl aspect-video md:aspect-[21/9] mb-8 group">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A professional data center interior with servers glowing with red and teal neon lights. The environment is dark, futuristic, and highly technical, symbolizing high-end digital security and data protection. Soft volumetric lighting highlights the sleek metallic surfaces of the server racks in a modern light-mode office building context." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD_oTCuIIX918tLGJKh3junbPPzPWoYbw8fhNn3UX2FFING3ZpXRk07ITET6BAkXSXqYmHmqmqx-rAAa3GOAQcemggOvNrDeorWTAlybukn9fyZ4ngjlfXzHQbw8h0RbFjq8siFEF6lY3cmmbr5LLuOYnkkNeV9eHCz3bXRJrvTqPlsxT00Heia0xkSKaf74u5rRWx0NtZ9miEir8ZLNerh1sP1sbZEa2LUZ1whRSzQ5OqzcAH9CAgMCasVOxpEsuUPRPZBAyaIIz8')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-8">
+<p class="text-white font-medium max-w-xl">نستخدم بروتوكولات تشفير متطورة (AES-256) لحماية تدفق البيانات بين أجهزتك وخوادمنا.</p>
+</div>
+</div>
+</section>
+<!-- Section: Cookies -->
+<section class="reveal-on-scroll" id="cookies">
+<div class="flex items-center gap-4 mb-6">
+<span class="material-symbols-outlined text-secondary text-4xl" style="font-variation-settings: 'FILL' 1;">cookie</span>
+<h2 class="font-headline-lg text-on-surface">ملفات تعريف الارتباط (Cookies)</h2>
+</div>
+<div class="bg-surface-container p-8 rounded-2xl border-l-4 border-outline">
+<p class="text-on-surface-variant mb-4">
+                        نستخدم ملفات تعريف الارتباط لتحسين تصفحك للموقع. يمكنك التحكم في تفضيلات الكوكيز من خلال إعدادات متصفحك في أي وقت.
+                    </p>
+<div class="flex flex-wrap gap-3">
+<span class="bg-white px-4 py-2 rounded-full text-label-sm border border-outline-variant shadow-sm">كوكيز أساسية</span>
+<span class="bg-white px-4 py-2 rounded-full text-label-sm border border-outline-variant shadow-sm">كوكيز تحليلية</span>
+<span class="bg-white px-4 py-2 rounded-full text-label-sm border border-outline-variant shadow-sm">كوكيز وظيفية</span>
+</div>
+</div>
+</section>
+<!-- Section: Rights -->
+<section class="reveal-on-scroll" id="rights">
+<div class="flex items-center gap-4 mb-6">
+<span class="material-symbols-outlined text-secondary text-4xl" style="font-variation-settings: 'FILL' 1;">gavel</span>
+<h2 class="font-headline-lg text-on-surface">حقوقك القانونية</h2>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+<div class="p-6 bg-white rounded-xl shadow-sm border border-outline-variant/30 text-center flex flex-col items-center">
+<span class="material-symbols-outlined text-3xl mb-3 brand-gradient-text">visibility</span>
+<h6 class="font-bold mb-1">حق الوصول</h6>
+<p class="text-label-sm text-on-surface-variant">طلب نسخة من بياناتك المخزنة لدينا.</p>
+</div>
+<div class="p-6 bg-white rounded-xl shadow-sm border border-outline-variant/30 text-center flex flex-col items-center">
+<span class="material-symbols-outlined text-3xl mb-3 brand-gradient-text">edit_square</span>
+<h6 class="font-bold mb-1">حق التعديل</h6>
+<p class="text-label-sm text-on-surface-variant">تصحيح أي بيانات غير دقيقة متعلقة بك.</p>
+</div>
+<div class="p-6 bg-white rounded-xl shadow-sm border border-outline-variant/30 text-center flex flex-col items-center">
+<span class="material-symbols-outlined text-3xl mb-3 brand-gradient-text">delete_forever</span>
+<h6 class="font-bold mb-1">حق الحذف</h6>
+<p class="text-label-sm text-on-surface-variant">طلب مسح بياناتك نهائياً من سجلاتنا.</p>
+</div>
+</div>
+</section>
+</article>
+</main>
+<!-- Final CTA Section -->
+<section class="bg-surface-container-highest py-stack-section relative overflow-hidden">
+<div class="absolute -right-20 -top-20 w-64 h-64 brand-gradient opacity-5 rounded-full blur-3xl"></div>
+<div class="max-w-4xl mx-auto text-center px-margin-mobile relative z-10">
+<h2 class="font-headline-lg text-on-surface mb-4">هل لديك أي استفسارات حول خصوصيتك؟</h2>
+<p class="text-body-lg text-on-surface-variant mb-10">يسعدنا دائماً الإجابة على تساؤلاتك المتعلقة بحماية بياناتك وسياستنا الأمنية.</p>
+<button class="brand-gradient text-white px-10 py-4 rounded-full font-bold text-body-lg shadow-xl hover:shadow-2xl transition-all hover:scale-105 active:scale-95 group">
+<span class="flex items-center gap-3">
+                    تواصل معنا
+                    <span class="material-symbols-outlined transition-transform group-hover:-translate-x-1">arrow_back</span>
+</span>
+</button>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest full-width bottom-0 bg-surface-container-low shadow-inner w-full py-stack-section px-margin-desktop flex flex-col items-center justify-center gap-4 text-center">
+<div class="font-title-md text-title-md font-bold text-primary mb-2">الأفق للبرمجيات</div>
+<div class="flex flex-wrap justify-center gap-6 mb-4">
+<a class="text-secondary underline font-medium" href="#">سياسة الخصوصية</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">الشروط والأحكام</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">خريطة الموقع</a>
+</div>
+<p class="text-label-sm text-on-surface-variant opacity-80">© 2024 الأفق للبرمجيات. جميع الحقوق محفوظة.</p>
+</footer>
+<!-- Scripts -->
+<script>
+        // Intersection Observer for Scroll Animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal-on-scroll').forEach(el => observer.observe(el));
+
+        // Scrollspy Logic
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        window.addEventListener('scroll', () => {
+            let current = "";
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('scrollspy-active');
+                if (link.getAttribute('data-section') === current) {
+                    link.classList.add('scrollspy-active');
+                }
+            });
+        });
+
+        // Reduced Motion Support
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            document.querySelectorAll('.reveal-on-scroll').forEach(el => {
+                el.style.transition = 'none';
+                el.style.opacity = '1';
+                el.style.transform = 'none';
+            });
+        }
+    </script>
+</body></html>

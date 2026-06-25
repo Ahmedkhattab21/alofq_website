@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>عملاؤنا | الأفق للبرمجيات Al-Ofuq</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "on-primary": "#ffffff",
+                "on-surface-variant": "#444748",
+                "background": "#fcf8f8",
+                "on-secondary": "#ffffff",
+                "tertiary": "#514c4b",
+                "on-primary-container": "#e4e3e3",
+                "on-secondary-fixed": "#410001",
+                "surface-container": "#f1edec",
+                "on-tertiary-fixed": "#1e1b1a",
+                "on-secondary-fixed-variant": "#930004",
+                "surface-container-highest": "#e5e2e1",
+                "surface-bright": "#fcf8f8",
+                "on-secondary-container": "#fffbff",
+                "tertiary-fixed": "#e9e1df",
+                "surface-container-lowest": "#ffffff",
+                "surface-container-low": "#f7f3f2",
+                "outline": "#747878",
+                "on-tertiary": "#ffffff",
+                "secondary-fixed-dim": "#ffb4a9",
+                "primary-fixed": "#e4e2e2",
+                "surface": "#fcf8f8",
+                "primary-fixed-dim": "#c7c6c6",
+                "on-primary-fixed-variant": "#464747",
+                "surface-dim": "#ddd9d8",
+                "tertiary-fixed-dim": "#ccc5c3",
+                "on-error-container": "#93000a",
+                "inverse-primary": "#c7c6c6",
+                "error": "#ba1a1a",
+                "on-primary-fixed": "#1b1c1c",
+                "surface-variant": "#e5e2e1",
+                "tertiary-container": "#696463",
+                "surface-container-high": "#ebe7e7",
+                "error-container": "#ffdad6",
+                "surface-tint": "#5e5e5e",
+                "on-error": "#ffffff",
+                "on-tertiary-container": "#e9e2e0",
+                "outline-variant": "#c4c7c7",
+                "secondary-fixed": "#ffdad5",
+                "inverse-surface": "#313030",
+                "secondary": "#bc0007",
+                "primary-container": "#656565",
+                "inverse-on-surface": "#f4f0ef",
+                "on-background": "#1c1b1b",
+                "on-tertiary-fixed-variant": "#4a4645",
+                "on-surface": "#1c1b1b",
+                "secondary-container": "#e3231c",
+                "primary": "#4d4d4d"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+            },
+            "spacing": {
+                "stack-section": "80px",
+                "margin-mobile": "20px",
+                "container-max": "1440px",
+                "unit": "8px",
+                "gutter": "24px",
+                "margin-desktop": "64px"
+            },
+            "fontFamily": {
+                "body-lg": ["IBM Plex Sans Arabic"],
+                "body-md": ["IBM Plex Sans Arabic"],
+                "label-sm": ["IBM Plex Sans Arabic"],
+                "headline-lg-mobile": ["IBM Plex Sans Arabic"],
+                "display-lg": ["IBM Plex Sans Arabic"],
+                "title-md": ["IBM Plex Sans Arabic"],
+                "headline-lg": ["IBM Plex Sans Arabic"]
+            },
+            "fontSize": {
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "label-sm": ["13px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                "display-lg": ["48px", {"lineHeight": "60px", "letterSpacing": "0", "fontWeight": "700"}],
+                "title-md": ["20px", {"lineHeight": "28px", "fontWeight": "500"}],
+                "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .brand-gradient {
+            background: linear-gradient(135deg, #bc0007 0%, #e3231c 50%, #00b8d4 100%);
+        }
+        .brand-gradient-text {
+            background: linear-gradient(135deg, #bc0007 0%, #e3231c 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(101, 101, 101, 0.1);
+        }
+        .diagonal-cut {
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+        }
+        .diagonal-cut-reverse {
+            clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
+        }
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+            100% { transform: translateY(0px) rotate(0deg); }
+        }
+        .animate-float { animation: float 6s ease-in-out infinite; }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md">
+<!-- 1. TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/70 backdrop-blur-md border-b border-outline/10 shadow-sm">
+<div class="flex flex-row-reverse justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="text-headline-lg font-bold text-on-surface">Al-Ofuq</div>
+<div class="hidden md:flex flex-row-reverse gap-8 items-center">
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-IBM Plex Sans Arabic text-body-md" href="#">الرئيسية</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-IBM Plex Sans Arabic text-body-md" href="#">من نحن</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-IBM Plex Sans Arabic text-body-md" href="#">خدماتنا</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-IBM Plex Sans Arabic text-body-md" href="#">أعمالنا</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-IBM Plex Sans Arabic text-body-md" href="#">شركاؤنا</a>
+<a class="text-secondary font-bold border-b-2 border-secondary font-IBM Plex Sans Arabic text-body-md" href="#">عملاؤنا</a>
+</div>
+<button class="brand-gradient text-white px-6 py-2 rounded-lg font-bold active:scale-95 transition-transform">
+                اطلب عرض سعر
+            </button>
+</div>
+</nav>
+<!-- 2. Hero Section -->
+<section class="relative h-screen flex items-center justify-center overflow-hidden">
+<!-- STITCH_SHADER_START:ANIMATION_19 class="absolute inset-0 w-full h-full" -->
+<div class="absolute inset-0 w-full h-full" style="display:block;">
+<canvas id="shader-canvas-ANIMATION_19" style="display:block;width:100%;height:100%"></canvas>
+<script>
+(function() {
+  const canvas = document.getElementById('shader-canvas-ANIMATION_19');
+
+  // Sync the WebGL drawing-buffer size with the CSS-driven layout size.
+  // This fires on initial layout and whenever the element is resized.
+  function syncSize() {
+    const w = canvas.clientWidth  || 1280;
+    const h = canvas.clientHeight || 720;
+    if (canvas.width !== w || canvas.height !== h) {
+      canvas.width  = w;
+      canvas.height = h;
+    }
+  }
+  if (typeof ResizeObserver !== 'undefined') {
+    new ResizeObserver(syncSize).observe(canvas);
+  }
+  syncSize();
+
+  const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+  if (!gl) return;
+  const vs = `attribute vec2 a_position;
+varying vec2 v_texCoord;
+void main() {
+  v_texCoord = a_position * 0.5 + 0.5;
+  gl_Position = vec4(a_position, 0.0, 1.0);
+}`;
+  const fs = `precision highp float;
+varying vec2 v_texCoord;
+uniform float u_time;
+uniform vec2 u_resolution;
+
+void main() {
+    vec2 uv = v_texCoord;
+    float t = u_time * 0.15;
+    
+    // Base surface color
+    vec3 color = vec3(0.97, 0.97, 0.97); 
+    
+    // Brand Colors (converted to vec3)
+    vec3 red = vec3(0.88, 0.13, 0.10);    // #E0201A
+    vec3 orange = vec3(0.94, 0.42, 0.09); // #F06A17
+    vec3 gold = vec3(0.96, 0.69, 0.0);    // #F6B000
+    vec3 teal = vec3(0.24, 0.62, 0.57);   // #3C9E91
+    
+    // Soft moving blobs for the clients hero
+    float d1 = distance(uv, vec2(0.2 + 0.1 * sin(t), 0.8 + 0.1 * cos(t)));
+    float b1 = smoothstep(0.7, 0.0, d1);
+    color = mix(color, red, b1 * 0.04);
+    
+    float d2 = distance(uv, vec2(0.9 + 0.2 * cos(t * 0.8), 0.3 + 0.2 * sin(t * 1.2)));
+    float b2 = smoothstep(0.8, 0.0, d2);
+    color = mix(color, gold, b2 * 0.05);
+    
+    float d3 = distance(uv, vec2(0.1 + 0.3 * cos(t * 0.5), 0.1 + 0.3 * sin(t * 0.7)));
+    float b3 = smoothstep(0.6, 0.0, d3);
+    color = mix(color, teal, b3 * 0.06);
+
+    // Subtle diagonal lines movement - characteristic of the Al-Ofuq brand
+    float lines = sin((uv.x - uv.y * 1.2) * 20.0 + t * 1.8);
+    lines = smoothstep(0.98, 1.0, lines);
+    color = mix(color, vec3(0.9, 0.9, 0.9), lines * 0.1);
+
+    gl_FragColor = vec4(color, 1.0);
+}`;
+  function cs(type, src) {
+    const s = gl.createShader(type);
+    gl.shaderSource(s, src);
+    gl.compileShader(s);
+    return s;
+  }
+  const prog = gl.createProgram();
+  gl.attachShader(prog, cs(gl.VERTEX_SHADER, vs));
+  gl.attachShader(prog, cs(gl.FRAGMENT_SHADER, fs));
+  gl.linkProgram(prog);
+  gl.useProgram(prog);
+  const buf = gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1, 1,-1, -1,1, 1,1]), gl.STATIC_DRAW);
+  const pos = gl.getAttribLocation(prog, 'a_position');
+  gl.enableVertexAttribArray(pos);
+  gl.vertexAttribPointer(pos, 2, gl.FLOAT, false, 0, 0);
+  const uTime = gl.getUniformLocation(prog, 'u_time');
+  const uRes = gl.getUniformLocation(prog, 'u_resolution');
+  const uMouse = gl.getUniformLocation(prog, 'u_mouse');
+
+  // u_mouse is in pixel coordinates matching u_resolution (ShaderToy convention).
+  // Shaders that need normalized coords should use: u_mouse / u_resolution.
+  let mouse = { x: canvas.width / 2, y: canvas.height / 2 };
+  window.addEventListener('mousemove', (event) => {
+    const rect = canvas.getBoundingClientRect();
+    if (rect.width && rect.height) {
+      const nx = (event.clientX - rect.left) / rect.width;
+      const ny = 1.0 - (event.clientY - rect.top) / rect.height;
+      mouse.x = nx * canvas.width;
+      mouse.y = ny * canvas.height;
+    }
+  });
+
+  function render(t) {
+    if (typeof ResizeObserver === 'undefined') syncSize();
+    gl.viewport(0, 0, canvas.width, canvas.height);
+    if (uTime) gl.uniform1f(uTime, t * 0.001);
+    if (uRes) gl.uniform2f(uRes, canvas.width, canvas.height);
+    if (uMouse) gl.uniform2f(uMouse, mouse.x, mouse.y);
+    gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+    requestAnimationFrame(render);
+  }
+  render(0);
+})();
+</script>
+</div>
+<!-- STITCH_SHADER_END:ANIMATION_19 -->
+<!-- Decorative Shapes -->
+<div class="absolute top-1/4 right-10 w-32 h-32 border-2 border-secondary/20 rounded-xl animate-float opacity-30"></div>
+<div class="absolute bottom-1/4 left-10 w-48 h-48 border-2 border-primary/20 rounded-full animate-float opacity-20" style="animation-delay: 2s;"></div>
+<div class="relative z-10 text-center px-margin-mobile max-w-4xl">
+<h1 class="font-display-lg text-display-lg text-on-surface mb-6 reveal">عملاؤنا</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 leading-relaxed reveal" style="transition-delay: 0.2s;">
+                نعتز بثقة عملائنا من مختلف القطاعات، ونسعى دائمًا لبناء حلول رقمية تساعدهم على النمو وتحقيق أهدافهم بكفاءة واحترافية.
+            </p>
+<button class="reveal brand-gradient text-white px-10 py-4 rounded-xl font-bold text-title-md hover:shadow-lg hover:shadow-secondary/20 transition-all" style="transition-delay: 0.4s;">
+                انضم إلى عملائنا
+            </button>
+</div>
+</section>
+<!-- 3. Introduction Section -->
+<section class="py-stack-section px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto overflow-hidden">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter items-center">
+<div class="reveal">
+<h2 class="font-headline-lg text-headline-lg mb-6 brand-gradient-text">ثقة نعتز بها</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12 leading-relaxed">
+                    نجاح عملائنا هو الدافع الأساسي وراء كل مشروع ننفذه. نعمل مع الشركات والمؤسسات لفهم احتياجاتهم وبناء حلول رقمية تناسب طبيعة أعمالهم وتدعم نموهم المستمر.
+                </p>
+<div class="space-y-6">
+<div class="flex items-start gap-4 p-4 rounded-xl hover:bg-surface-container transition-colors group">
+<div class="w-12 h-12 flex items-center justify-center rounded-lg bg-secondary/10 text-secondary group-hover:bg-secondary group-hover:text-white transition-all">
+<span class="material-symbols-outlined">auto_fix_high</span>
+</div>
+<div>
+<h4 class="font-title-md text-title-md mb-1">حلول تناسب كل قطاع</h4>
+<p class="text-on-surface-variant">تخصيص كامل للأدوات والأنظمة لتلبية المتطلبات الفريدة.</p>
+</div>
+</div>
+<div class="flex items-start gap-4 p-4 rounded-xl hover:bg-surface-container transition-colors group">
+<div class="w-12 h-12 flex items-center justify-center rounded-lg bg-secondary/10 text-secondary group-hover:bg-secondary group-hover:text-white transition-all">
+<span class="material-symbols-outlined">touch_app</span>
+</div>
+<div>
+<h4 class="font-title-md text-title-md mb-1">تجربة استخدام احترافية</h4>
+<p class="text-on-surface-variant">واجهات عصرية تضمن سهولة الاستخدام والكفاءة التشغيلية.</p>
+</div>
+</div>
+<div class="flex items-start gap-4 p-4 rounded-xl hover:bg-surface-container transition-colors group">
+<div class="w-12 h-12 flex items-center justify-center rounded-lg bg-secondary/10 text-secondary group-hover:bg-secondary group-hover:text-white transition-all">
+<span class="material-symbols-outlined">support_agent</span>
+</div>
+<div>
+<h4 class="font-title-md text-title-md mb-1">دعم وتطوير مستمر</h4>
+<p class="text-on-surface-variant">نحن شركاؤكم في النجاح قبل وبعد إطلاق المشروع.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="relative reveal h-[500px]" style="transition-delay: 0.3s;">
+
+</div>
+</div>
+</section>
+<!-- 4. Clients Logos Section -->
+<section class="py-stack-section bg-surface-container-low diagonal-cut">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<h2 class="font-headline-lg text-headline-lg text-center mb-16 reveal">عملاء نفتخر بخدمتهم</h2>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+<!-- Client Card Loop -->
+<div class="bg-white p-8 rounded-xl flex items-center justify-center h-40 shadow-sm border border-outline/5 filter grayscale hover:grayscale-0 hover:shadow-lg hover:border-secondary/20 transition-all duration-500 reveal group">
+<img class="max-h-16 opacity-60 group-hover:opacity-100 transition-opacity" data-alt="A minimalist tech logo for Client 01, featuring clean geometric lines and professional typography, presented in a crisp vector style on a white background, embodying corporate trust and modern software aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuArguGlfyu6m7t45GZPzh0vR2a-gmpEoTQzs_ZWF1zhQn4aK5SgNLVo-ls3Ksizrls7ZqTCPOYb33t1zWzB0IqrIH_NeqPWV-Ibo6ZWg3_GTU0AAE8cEX4RQi2ArYC6KUnYUIHb0RdpT3RgjmPI5typCgijkrDYYRmYo7LIXA8cXBQ1_g1MGffXyaxYwPtZLlfyUn2og93urCwwO776BalPOaMeXmjv0bD7_dMjIO7q0SPGBMJ7zeguwLM9RQEv2dO_qDZqSVZ7dJI"/>
+</div>
+<div class="bg-white p-8 rounded-xl flex items-center justify-center h-40 shadow-sm border border-outline/5 filter grayscale hover:grayscale-0 hover:shadow-lg hover:border-secondary/20 transition-all duration-500 reveal group" style="transition-delay: 0.1s;">
+<img class="max-h-16 opacity-60 group-hover:opacity-100 transition-opacity" data-alt="Professional logo for Client 02, focusing on industrial strength and digital innovation, sharp metallic edges and deep navy accents, set against a pristine white studio backdrop with soft ambient lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnpRwg3aM_M8zJBIkHWKZMxOj-yF7XnANNBqzS4Ix-tM3hz4pj5-XrxFapAsAl1Hl9Xtd_150AKPI5uhnbJMlKfhieahXE46z1VlVohv1xwaUakY-YJD1sjl3WJWIv6xpPaAm6MgD2JCBQ6ggyP_kXMqBFp7tBCGPSwEqJh9TxLZns3XnlGLJEyQXFwOmtdRBbSG1ZqXIXXR3aIPZrFPtdRvdKukrLWTUeS7MjklxNgWmjjRVfEUCDU2kkVWXpRo9w7rSIYkDlCYs"/>
+</div>
+<div class="bg-white p-8 rounded-xl flex items-center justify-center h-40 shadow-sm border border-outline/5 filter grayscale hover:grayscale-0 hover:shadow-lg hover:border-secondary/20 transition-all duration-500 reveal group" style="transition-delay: 0.2s;">
+<img class="max-h-16 opacity-60 group-hover:opacity-100 transition-opacity" data-alt="Elegant logo for Client 03, combining organic shapes with technical precision, soft teal and red accents representing the Al-Ofuq brand palette, modern and high-end visual style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDU2tKTzwwuxZfPEq_dshvZ-B3V3BP20mYT2HUn_xZQ7f1rBgW9poUg_sAqUH9BV8AG-A-_jPUC8Hh5iBIG71fpu4y8b8LCbBbR585KqC-ROMxCzvFoibb-ydxDxj68Kxe1yc4QAgzodv3kqjPUYIM1qVwOl8iRiahZ3topxkE2kEtPbMYYdWbr4YviTmlM37zlOuB0aBHgmQQY2YhaLMXVoQLEMcuK1kDeONQc2t2N64cWz7eBBz1HmrjWTV7tKRRAiD6p2oObURg"/>
+</div>
+<div class="bg-white p-8 rounded-xl flex items-center justify-center h-40 shadow-sm border border-outline/5 filter grayscale hover:grayscale-0 hover:shadow-lg hover:border-secondary/20 transition-all duration-500 reveal group" style="transition-delay: 0.3s;">
+<img class="max-h-16 opacity-60 group-hover:opacity-100 transition-opacity" data-alt="Bold typography-based logo for Client 04, showcasing futuristic tech-forward branding, high contrast black and white with a subtle spectrum glow, clean and minimalist professional design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDox7LaxdYsx3xkymqpTNAamgRIAvsB3bQkw_KxZrlfSRrhlLurLaKZ9_E7MYN5z4tL1zcC6U4_XY3Wjwd8XN5ZvKn-_dgmJiooPBD55WmGzJAm---trzDRfdeDj72KtUaj6OuJ6iSSy-2k0PqEQPG7zq5Mx8Rks_r-iXMZu02dIIA0aZXuhBuaiJXiyPBAh6-vMm3BR6VqRZfz0NyJpdapjd-M5COSa2MEP0VIhCQOICrLQbs3kpiypdzacYj3arqLaLAuwbaQo58"/>
+</div>
+<div class="bg-white p-8 rounded-xl flex items-center justify-center h-40 shadow-sm border border-outline/5 filter grayscale hover:grayscale-0 hover:shadow-lg hover:border-secondary/20 transition-all duration-500 reveal group" style="transition-delay: 0.4s;">
+<img class="max-h-16 opacity-60 group-hover:opacity-100 transition-opacity" data-alt="Circular geometric logo for Client 05, representing connectivity and networks, vibrant red and deep gray tones, clean corporate presentation with soft shadows and premium feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoGS92Wu80-gSxD0cJN6ixOMuXm72JgZz0aaLi4iIZqcgRbrM5Ejoz_Kenfd7ij-_o0Fh9REYiADatkw224QqFkN3XfLbtot5-r7zroF0LqLzhXMJf1E9l8C9im9d_k2fOzMKFzgBpHeY4-2RHMd5BmOji1j5oCexhrk9g0MPoLxwGd7a9qYjaLppZ23eVet-kDyCScaZMC33aSN7BcYinAv4oo9-0Oq_Y9xYdffefLazDMMCEbJVz5u8OgkWrNGF6XZybGFytaIY"/>
+</div>
+<div class="bg-white p-8 rounded-xl flex items-center justify-center h-40 shadow-sm border border-outline/5 filter grayscale hover:grayscale-0 hover:shadow-lg hover:border-secondary/20 transition-all duration-500 reveal group" style="transition-delay: 0.5s;">
+<img class="max-h-16 opacity-60 group-hover:opacity-100 transition-opacity" data-alt="Modern abstract logo for Client 06, symbolizing growth and digital transformation, sleek professional lines in industrial gray and bright red, high-end software company aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxwRepHY4Fyg9G274hd9gUxM1Q4E49ky_psIdqkVGK5AibFR0Lx4UKBWqjyHRF3tGnGQ1zuj_Ok0tnkL5n60yc0KCv3HITk7cxLATDEO6V2iZ5UYVLWRrobGnYwCOBRSWlkF1grFAvr5TGz3dvHVApZM0TVPexEslIky7QEzl1Iw-qlCyAZpxCnqaC3jxJVBMkP65JcqlYtZTCsUMpUC0aPcfIK3fs9xF4W5oAVZCHmoSNe3mWQpJunJRapMQJnfOyUhACM6Apaew"/>
+</div>
+<div class="bg-white p-8 rounded-xl flex items-center justify-center h-40 shadow-sm border border-outline/5 filter grayscale hover:grayscale-0 hover:shadow-lg hover:border-secondary/20 transition-all duration-500 reveal group" style="transition-delay: 0.6s;">
+<img class="max-h-16 opacity-60 group-hover:opacity-100 transition-opacity" data-alt="Technological shield-inspired logo for Client 07, denoting security and reliability, minimalist vector design with professional finish and subtle depth on white background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDjVyWdWfL9zaH77iZhdYbIxvveEvuqkOcOb7CRYD-YUk2Sf8DNZBKJQC4lk7MY2be89dvkY5wZ6kT6EZiOAJ6ccSHuyfyqVIF6ycJnC0KAl847PLKY_0pt6cpu07z6E2ce8rC4YXE1pmI6MSYq4JlgqM9aMLh5GI_glMV03qRioZHqKX_YXC28crKIglF72BGLQQXxS7b9z7rkcVgOHXY9vCrqyHhiG_IYJ852NNCL_YG8amj3bbPk3rhggFpUBvmSXWXs2IpcJ8"/>
+</div>
+<div class="bg-white p-8 rounded-xl flex items-center justify-center h-40 shadow-sm border border-outline/5 filter grayscale hover:grayscale-0 hover:shadow-lg hover:border-secondary/20 transition-all duration-500 reveal group" style="transition-delay: 0.7s;">
+<img class="max-h-16 opacity-60 group-hover:opacity-100 transition-opacity" data-alt="Dynamic fluid logo for Client 08, capturing movement and innovation, featuring the Al-Ofuq signature red gradient, ultra-clean professional branding for a software client." src="https://lh3.googleusercontent.com/aida-public/AB6AXuByy9l_rb51vHXGWZg_UM-OxU23ti-rJzNU3hkk4klG-o22G39-4-CU7I77sLnRtJvUpScZDqkWS6tXmJXazdeHiTXfXXZ7zxZpXVzRVDsjERnfifpbhLQFOySmPnRgrSNMZXV6IP4p9XEa0YwKL3KGpUles6kA3ek41q6nh87vUm1Cy_q1XmigwUw3obwYWrAzUFyL9P8Ajo4Nl12N4Yo3ysixWZFf0aZQzsdlv7tNz4f_JIA8hc7OtEEUp3BWVcju5gJaeWeYDCA"/>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. Industries Section -->
+<section class="py-stack-section px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<h2 class="font-headline-lg text-headline-lg text-center mb-16 reveal">قطاعات نخدمها</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Industry Card -->
+<div class="group relative bg-white p-10 rounded-2xl border border-outline/10 overflow-hidden reveal hover:shadow-2xl transition-all duration-500">
+<div class="absolute inset-0 bg-gradient-to-br from-secondary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="absolute bottom-0 right-0 w-1 h-0 bg-secondary transition-all duration-500 group-hover:h-full"></div>
+<div class="relative z-10">
+<span class="material-symbols-outlined text-display-lg text-secondary mb-6 block group-hover:scale-110 transition-transform duration-500">rocket_launch</span>
+<h3 class="font-title-md text-title-md mb-4">الشركات الناشئة</h3>
+<p class="text-on-surface-variant leading-relaxed">تطوير نماذج الأعمال الأولية (MVP) وحلول برمجية قابلة للتوسع السريع.</p>
+</div>
+</div>
+<div class="group relative bg-white p-10 rounded-2xl border border-outline/10 overflow-hidden reveal hover:shadow-2xl transition-all duration-500" style="transition-delay: 0.1s;">
+<div class="absolute inset-0 bg-gradient-to-br from-secondary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="absolute bottom-0 right-0 w-1 h-0 bg-secondary transition-all duration-500 group-hover:h-full"></div>
+<div class="relative z-10">
+<span class="material-symbols-outlined text-display-lg text-secondary mb-6 block group-hover:scale-110 transition-transform duration-500">shopping_cart</span>
+<h3 class="font-title-md text-title-md mb-4">المتاجر الإلكترونية</h3>
+<p class="text-on-surface-variant leading-relaxed">بناء منصات تجارة إلكترونية متكاملة مع أنظمة دفع وشحن ذكية.</p>
+</div>
+</div>
+<div class="group relative bg-white p-10 rounded-2xl border border-outline/10 overflow-hidden reveal hover:shadow-2xl transition-all duration-500" style="transition-delay: 0.2s;">
+<div class="absolute inset-0 bg-gradient-to-br from-secondary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="absolute bottom-0 right-0 w-1 h-0 bg-secondary transition-all duration-500 group-hover:h-full"></div>
+<div class="relative z-10">
+<span class="material-symbols-outlined text-display-lg text-secondary mb-6 block group-hover:scale-110 transition-transform duration-500">business_center</span>
+<h3 class="font-title-md text-title-md mb-4">شركات الخدمات</h3>
+<p class="text-on-surface-variant leading-relaxed">أتمتة العمليات الإدارية وتطوير أنظمة إدارة علاقات العملاء (CRM).</p>
+</div>
+</div>
+<div class="group relative bg-white p-10 rounded-2xl border border-outline/10 overflow-hidden reveal hover:shadow-2xl transition-all duration-500" style="transition-delay: 0.3s;">
+<div class="absolute inset-0 bg-gradient-to-br from-secondary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="absolute bottom-0 right-0 w-1 h-0 bg-secondary transition-all duration-500 group-hover:h-full"></div>
+<div class="relative z-10">
+<span class="material-symbols-outlined text-display-lg text-secondary mb-6 block group-hover:scale-110 transition-transform duration-500">school</span>
+<h3 class="font-title-md text-title-md mb-4">المؤسسات التعليمية</h3>
+<p class="text-on-surface-variant leading-relaxed">أنظمة إدارة التعلم الإلكتروني ومنصات التدريب التفاعلية.</p>
+</div>
+</div>
+<div class="group relative bg-white p-10 rounded-2xl border border-outline/10 overflow-hidden reveal hover:shadow-2xl transition-all duration-500" style="transition-delay: 0.4s;">
+<div class="absolute inset-0 bg-gradient-to-br from-secondary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="absolute bottom-0 right-0 w-1 h-0 bg-secondary transition-all duration-500 group-hover:h-full"></div>
+<div class="relative z-10">
+<span class="material-symbols-outlined text-display-lg text-secondary mb-6 block group-hover:scale-110 transition-transform duration-500">directions_car</span>
+<h3 class="font-title-md text-title-md mb-4">شركات السيارات</h3>
+<p class="text-on-surface-variant leading-relaxed">حلول إدارة الأساطيل وتطبيقات حجز الخدمات والصيانة.</p>
+</div>
+</div>
+<div class="group relative bg-white p-10 rounded-2xl border border-outline/10 overflow-hidden reveal hover:shadow-2xl transition-all duration-500" style="transition-delay: 0.5s;">
+<div class="absolute inset-0 bg-gradient-to-br from-secondary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="absolute bottom-0 right-0 w-1 h-0 bg-secondary transition-all duration-500 group-hover:h-full"></div>
+<div class="relative z-10">
+<span class="material-symbols-outlined text-display-lg text-secondary mb-6 block group-hover:scale-110 transition-transform duration-500">memory</span>
+<h3 class="font-title-md text-title-md mb-4">الشركات التقنية</h3>
+<p class="text-on-surface-variant leading-relaxed">تكامل الأنظمة المعقدة وبناء البنية التحتية السحابية المتقدمة.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. Stats Section -->
+<section class="py-stack-section bg-surface-dim relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none">
+<svg class="w-full h-full" viewbox="0 0 100 100"><path d="M0,50 Q25,0 50,50 T100,50" fill="none" stroke="currentColor" stroke-width="0.5"></path></svg>
+</div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center relative z-10">
+<h2 class="font-headline-lg text-headline-lg mb-16 reveal">أرقام تعكس ثقة عملائنا</h2>
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-gutter">
+<div class="reveal">
+<div class="text-display-lg font-bold brand-gradient-text mb-2 counter" data-target="50">+0</div>
+<p class="font-title-md">مشروع منفذ</p>
+</div>
+<div class="reveal" style="transition-delay: 0.1s;">
+<div class="text-display-lg font-bold brand-gradient-text mb-2 counter" data-target="20">+0</div>
+<p class="font-title-md">عميل مميز</p>
+</div>
+<div class="reveal" style="transition-delay: 0.2s;">
+<div class="text-display-lg font-bold brand-gradient-text mb-2 counter" data-target="5">+0</div>
+<p class="font-title-md">سنوات خبرة</p>
+</div>
+<div class="reveal" style="transition-delay: 0.3s;">
+<div class="text-display-lg font-bold brand-gradient-text mb-2 counter" data-target="10">+0</div>
+<p class="font-title-md">قطاعات مختلفة</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. Testimonials Section -->
+<section class="py-stack-section px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<h2 class="font-headline-lg text-headline-lg text-center mb-16 reveal">ماذا يقول عملاؤنا؟</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="glass-card p-8 rounded-3xl reveal border-r-4 border-secondary">
+<div class="flex gap-1 text-[#FFD700] mb-6">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-body-lg italic mb-8 leading-relaxed">"تجربة العمل مع الأفق كانت استثنائية. فهموا احتياجاتنا البرمجية الدقيقة وقدموا حلولاً تجاوزت توقعاتنا من حيث السرعة والأداء."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest"></div>
+<div>
+<h4 class="font-bold">أحمد المنصور</h4>
+<p class="text-label-sm text-on-surface-variant">المدير التقني، شركة نماء</p>
+</div>
+</div>
+</div>
+<div class="glass-card p-8 rounded-3xl reveal border-r-4 border-secondary" style="transition-delay: 0.2s;">
+<div class="flex gap-1 text-[#FFD700] mb-6">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-body-lg italic mb-8 leading-relaxed">"الدعم الفني والاحترافية في التعامل هي أكثر ما يميز فريق الأفق. مشروعنا تم إنجازه في وقت قياسي وبجودة عالية جداً."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest"></div>
+<div>
+<h4 class="font-bold">سارة القحطاني</h4>
+<p class="text-label-sm text-on-surface-variant">مؤسسة متجر إشراق</p>
+</div>
+</div>
+</div>
+<div class="glass-card p-8 rounded-3xl reveal border-r-4 border-secondary" style="transition-delay: 0.4s;">
+<div class="flex gap-1 text-[#FFD700] mb-6">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-body-lg italic mb-8 leading-relaxed">"ساعدونا في أتمتة كافة عملياتنا الورقية وتحويلها إلى نظام رقمي ذكي، مما وفر علينا الكثير من الوقت والجهد."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest"></div>
+<div>
+<h4 class="font-bold">خالد الحربي</h4>
+<p class="text-label-sm text-on-surface-variant">المدير العام، لوجستيات الخليج</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 8. Final CTA -->
+<section class="py-stack-section px-margin-mobile md:px-margin-desktop mb-20">
+<div class="max-w-4xl mx-auto p-[2px] rounded-[2rem] brand-gradient overflow-hidden reveal">
+<div class="bg-white rounded-[1.95rem] p-12 md:p-20 text-center">
+<h2 class="font-display-lg text-headline-lg md:text-display-lg mb-6">هل تريد أن تكون ضمن عملائنا؟</h2>
+<p class="text-body-lg text-on-surface-variant mb-12 max-w-2xl mx-auto">
+                    شاركنا فكرتك أو احتياج شركتك، وسنساعدك في بناء حل رقمي احترافي يناسب أهدافك ويدعم نمو أعمالهم.
+                </p>
+<div class="flex flex-col md:flex-row justify-center gap-4">
+<button class="brand-gradient text-white px-10 py-4 rounded-xl font-bold active:scale-95 transition-transform">
+                        اطلب عرض سعر
+                    </button>
+<button class="border-2 border-outline text-on-surface hover:bg-surface-container-low px-10 py-4 rounded-xl font-bold active:scale-95 transition-transform">
+                        تواصل معنا
+                    </button>
+</div>
+</div>
+</div>
+</section>
+<!-- 9. Footer -->
+<footer class="bg-surface-container-highest dark:bg-inverse-surface w-full border-t border-outline/10">
+<div class="flex flex-col md:flex-row-reverse justify-between items-center px-margin-mobile md:px-margin-desktop py-stack-section gap-gutter max-w-container-max mx-auto">
+<div class="text-headline-lg font-bold text-on-surface">Al-Ofuq</div>
+<div class="flex flex-row-reverse gap-8 my-8 md:my-0">
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-IBM Plex Sans Arabic text-body-md" href="#">سياسة الخصوصية</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-IBM Plex Sans Arabic text-body-md" href="#">الشروط والأحكام</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-IBM Plex Sans Arabic text-body-md" href="#">خريطة الموقع</a>
+</div>
+<div class="font-IBM Plex Sans Arabic text-body-md text-on-surface-variant">
+                © 2024 الأفق للبرمجيات. جميع الحقوق محفوظة
+            </div>
+</div>
+</footer>
+<script>
+        // Reveal Animations on Scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    
+                    // Trigger counters if element is a counter
+                    if(entry.target.classList.contains('counter')) {
+                        const target = +entry.target.getAttribute('data-target');
+                        let count = 0;
+                        const increment = target / 50;
+                        const updateCount = () => {
+                            if(count < target) {
+                                count += increment;
+                                entry.target.innerText = `+${Math.ceil(count)}`;
+                                setTimeout(updateCount, 40);
+                            } else {
+                                entry.target.innerText = `+${target}`;
+                            }
+                        };
+                        updateCount();
+                    }
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal, .counter').forEach(el => observer.observe(el));
+
+        // Smooth Parallax for floating shapes
+        window.addEventListener('mousemove', (e) => {
+            const x = e.clientX / window.innerWidth;
+            const y = e.clientY / window.innerHeight;
+            
+            document.querySelectorAll('.animate-float').forEach(shape => {
+                const speed = 20;
+                const moveX = (x - 0.5) * speed;
+                const moveY = (y - 0.5) * speed;
+                shape.style.transform = `translate(${moveX}px, ${moveY}px)`;
+            });
+        });
+    </script>
+</body></html>

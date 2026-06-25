@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>اطلب عرض سعر | الأفق للبرمجيات</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-bright": "#fcf8f8",
+                    "tertiary-container": "#696463",
+                    "on-error": "#ffffff",
+                    "on-secondary-container": "#fffbff",
+                    "on-primary-fixed": "#1b1c1c",
+                    "secondary-fixed": "#ffdad5",
+                    "inverse-primary": "#c7c6c6",
+                    "surface-container": "#f1edec",
+                    "surface-container-high": "#ebe7e7",
+                    "on-surface": "#1c1b1b",
+                    "surface-container-low": "#f7f3f2",
+                    "error": "#ba1a1a",
+                    "secondary-fixed-dim": "#ffb4a9",
+                    "on-primary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "surface-tint": "#5e5e5e",
+                    "primary-fixed-dim": "#c7c6c6",
+                    "secondary-container": "#e3231c",
+                    "primary": "#4d4d4d",
+                    "on-secondary": "#ffffff",
+                    "background": "#fcf8f8",
+                    "surface-dim": "#ddd9d8",
+                    "secondary": "#bc0007",
+                    "outline-variant": "#c4c7c7",
+                    "on-error-container": "#93000a",
+                    "surface-container-highest": "#e5e2e1",
+                    "on-primary-fixed-variant": "#464747",
+                    "tertiary": "#514c4b",
+                    "outline": "#747878",
+                    "surface": "#fcf8f8",
+                    "surface-variant": "#e5e2e1",
+                    "tertiary-fixed-dim": "#ccc5c3",
+                    "on-tertiary-fixed": "#1e1b1a",
+                    "inverse-on-surface": "#f4f0ef",
+                    "on-secondary-fixed": "#410001",
+                    "on-tertiary": "#ffffff",
+                    "on-tertiary-fixed-variant": "#4a4645",
+                    "primary-fixed": "#e4e2e2",
+                    "on-background": "#1c1b1b",
+                    "inverse-surface": "#313030",
+                    "on-tertiary-container": "#e9e2e0",
+                    "primary-container": "#656565",
+                    "on-surface-variant": "#444748",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-fixed": "#e9e1df",
+                    "on-secondary-fixed-variant": "#930004",
+                    "on-primary-container": "#e4e3e3"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-desktop": "64px",
+                    "unit": "8px",
+                    "stack-section": "80px",
+                    "gutter": "24px",
+                    "container-max": "1440px",
+                    "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                    "body-lg": ["IBM Plex Sans Arabic"],
+                    "label-sm": ["IBM Plex Sans Arabic"],
+                    "body-md": ["IBM Plex Sans Arabic"],
+                    "headline-lg": ["IBM Plex Sans Arabic"],
+                    "title-md": ["IBM Plex Sans Arabic"],
+                    "display-lg": ["IBM Plex Sans Arabic"],
+                    "headline-lg-mobile": ["IBM Plex Sans Arabic"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "label-sm": ["13px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "title-md": ["20px", {"lineHeight": "28px", "fontWeight": "500"}],
+                    "display-lg": ["48px", {"lineHeight": "60px", "letterSpacing": "0", "fontWeight": "700"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'IBM Plex Sans Arabic', sans-serif; scroll-behavior: smooth; }
+        .brand-gradient { background: linear-gradient(135deg, #E0201A 0%, #3C9E91 100%); }
+        .brand-gradient-text { background: linear-gradient(135deg, #E0201A 0%, #3C9E91 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .diagonal-cut { clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
+        .glass-card { background: rgba(255, 255, 255, 0.75); backdrop-filter: blur(12px); border: 1px solid rgba(101, 101, 101, 0.1); }
+        .hover-lift { transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease; }
+        .hover-lift:hover { transform: translateY(-8px); box-shadow: 0 12px 30px rgba(0,0,0,0.08); }
+        .active-ring { border: 2px solid; border-image: linear-gradient(135deg, #E0201A, #3C9E91) 1; }
+        
+        /* Reveal Animations */
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+
+        /* Custom Radio/Check Styling */
+        .input-check:checked + label { border-color: transparent; background-image: linear-gradient(135deg, #E0201A 0%, #3C9E91 100%); color: white; }
+    </style>
+</head>
+<body class="bg-surface-bright text-on-surface overflow-x-hidden">
+<!-- Navbar (Shared Component Mapping) -->
+<nav class="fixed top-0 w-full z-50 bg-surface/70 backdrop-blur-md border-b border-outline/10 shadow-sm transition-all duration-300">
+<div class="flex flex-row-reverse justify-between items-center px-margin-desktop py-4 max-w-container-max mx-auto">
+<!-- Brand -->
+<div class="text-headline-lg font-bold text-on-surface">Al-Ofuq</div>
+<!-- Links (Desktop) -->
+<div class="hidden md:flex flex-row-reverse gap-8 items-center">
+<a class="font-body-md text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#">الرئيسية</a>
+<a class="font-body-md text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#">من نحن</a>
+<a class="font-body-md text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#">خدماتنا</a>
+<a class="font-body-md text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#">أعمالنا</a>
+<a class="font-body-md text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#">شركاؤنا</a>
+<a class="font-body-md text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#">عملاؤنا</a>
+</div>
+<!-- CTA -->
+<button class="brand-gradient text-white px-6 py-2.5 rounded-lg font-body-md font-bold hover:scale-105 active:scale-95 transition-all">
+                اطلب عرض سعر
+            </button>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative min-h-[716px] flex items-center justify-center pt-24 overflow-hidden">
+<!-- Shader Background -->
+
+<!-- Floating Shapes -->
+<div class="absolute top-1/4 right-10 w-32 h-32 brand-gradient opacity-20 blur-3xl animate-pulse rounded-full"></div>
+<div class="absolute bottom-1/4 left-10 w-48 h-48 bg-secondary opacity-10 blur-3xl animate-bounce rounded-full" style="animation-duration: 5s;"></div>
+<div class="relative z-10 text-center px-4 max-w-4xl mx-auto reveal" id="hero-text">
+<h1 class="font-display-lg text-display-lg md:text-[64px] mb-6 font-bold leading-tight">
+                اطلب <span class="brand-gradient-text">عرض سعر</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-2xl mx-auto">
+                شاركنا تفاصيل مشروعك القادم، وسيقوم فريقنا التقني بتحليل متطلباتك وتقديم حلول برمجية مبتكرة تناسب تطلعاتك.
+            </p>
+<div class="flex flex-col sm:flex-row-reverse gap-4 justify-center">
+<a class="brand-gradient text-white px-10 py-4 rounded-xl font-bold text-lg hover-lift" href="#quote-form">
+                    ابدأ الآن
+                </a>
+<a class="border-2 border-outline/30 px-10 py-4 rounded-xl font-bold text-lg hover:bg-surface-container transition-colors" href="#">
+                    تواصل معنا
+                </a>
+</div>
+</div>
+</header>
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-stack-section">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- Sidebar -->
+<aside class="lg:col-span-4 order-2 lg:order-1 space-y-gutter">
+<!-- Help Card -->
+<div class="glass-card p-8 rounded-2xl sticky top-28">
+<h3 class="font-title-md text-title-md mb-4 font-bold">تحتاج مساعدة سريعة؟</h3>
+<p class="font-body-md text-on-surface-variant mb-8 leading-relaxed">
+                        نحن هنا لمساعدتك في صياغة متطلباتك التقنية. لا تتردد في التواصل معنا مباشرة.
+                    </p>
+<div class="space-y-4">
+<a class="flex items-center gap-4 p-4 rounded-xl hover:bg-white transition-all group border border-transparent hover:border-outline/10" href="#">
+<div class="w-12 h-12 rounded-full bg-green-500/10 flex items-center justify-center text-green-600">
+<span class="material-symbols-outlined">chat</span>
+</div>
+<div>
+<div class="font-bold">واتساب</div>
+<div class="text-sm opacity-60">رد سريع ومباشر</div>
+</div>
+</a>
+<a class="flex items-center gap-4 p-4 rounded-xl hover:bg-white transition-all group border border-transparent hover:border-outline/10" href="#">
+<div class="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined">call</span>
+</div>
+<div>
+<div class="font-bold">اتصل بنا</div>
+<div class="text-sm opacity-60">+966 500 000 000</div>
+</div>
+</a>
+<a class="flex items-center gap-4 p-4 rounded-xl hover:bg-white transition-all group border border-transparent hover:border-outline/10" href="#">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div>
+<div class="font-bold">البريد الإلكتروني</div>
+<div class="text-sm opacity-60">hi@al-ofuq.com</div>
+</div>
+</a>
+</div>
+</div>
+<!-- Trust Badge -->
+<div class="p-8 rounded-2xl bg-surface-container-high border border-outline/10">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-bold">بياناتك آمنة معنا</span>
+</div>
+<p class="text-sm text-on-surface-variant">نحن نلتزم بسياسة خصوصية صارمة، لن يتم مشاركة تفاصيل مشروعك مع أي طرف ثالث.</p>
+</div>
+</aside>
+<!-- Main Form Section -->
+<section class="lg:col-span-8 order-1 lg:order-2" id="quote-form">
+<div class="bg-white p-8 md:p-12 rounded-[32px] shadow-sm border border-outline/10 reveal">
+<form class="space-y-10">
+<!-- Step 1: Basic Info -->
+<div class="space-y-6">
+<div class="flex items-center gap-3 mb-4">
+<span class="w-8 h-8 rounded-full brand-gradient text-white flex items-center justify-center font-bold text-sm">1</span>
+<h3 class="font-title-md text-title-md font-bold">المعلومات الأساسية</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="relative">
+<label class="block text-sm font-bold mb-2 mr-1">الاسم بالكامل</label>
+<input class="w-full bg-surface-container-low border-b-2 border-outline/20 focus:border-secondary focus:ring-0 px-4 py-3 transition-all duration-300" placeholder="أدخل اسمك هنا" type="text"/>
+</div>
+<div class="relative">
+<label class="block text-sm font-bold mb-2 mr-1">رقم الجوال</label>
+<input class="w-full bg-surface-container-low border-b-2 border-outline/20 focus:border-secondary focus:ring-0 px-4 py-3 transition-all duration-300 text-left" dir="ltr" placeholder="+966 --- --- ---" type="tel"/>
+</div>
+<div class="relative">
+<label class="block text-sm font-bold mb-2 mr-1">البريد الإلكتروني</label>
+<input class="w-full bg-surface-container-low border-b-2 border-outline/20 focus:border-secondary focus:ring-0 px-4 py-3 transition-all duration-300 text-left" dir="ltr" placeholder="example@domain.com" type="email"/>
+</div>
+<div class="relative">
+<label class="block text-sm font-bold mb-2 mr-1">اسم المنشأة / الشركة</label>
+<input class="w-full bg-surface-container-low border-b-2 border-outline/20 focus:border-secondary focus:ring-0 px-4 py-3 transition-all duration-300" placeholder="اسم الشركة (اختياري)" type="text"/>
+</div>
+</div>
+</div>
+<!-- Step 2: Project Type -->
+<div class="space-y-6">
+<div class="flex items-center gap-3 mb-4">
+<span class="w-8 h-8 rounded-full brand-gradient text-white flex items-center justify-center font-bold text-sm">2</span>
+<h3 class="font-title-md text-title-md font-bold">نوع المشروع</h3>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+<input class="hidden input-check" id="type_app" name="project_type" type="radio"/>
+<label class="flex flex-col items-center justify-center p-6 border-2 border-outline/10 rounded-2xl cursor-pointer hover:bg-surface-container transition-all text-center" for="type_app">
+<span class="material-symbols-outlined text-3xl mb-2">smartphone</span>
+<span class="font-bold text-sm">تطبيق جوال</span>
+</label>
+<input class="hidden input-check" id="type_web" name="project_type" type="radio"/>
+<label class="flex flex-col items-center justify-center p-6 border-2 border-outline/10 rounded-2xl cursor-pointer hover:bg-surface-container transition-all text-center" for="type_web">
+<span class="material-symbols-outlined text-3xl mb-2">language</span>
+<span class="font-bold text-sm">موقع إلكتروني</span>
+</label>
+<input class="hidden input-check" id="type_system" name="project_type" type="radio"/>
+<label class="flex flex-col items-center justify-center p-6 border-2 border-outline/10 rounded-2xl cursor-pointer hover:bg-surface-container transition-all text-center" for="type_system">
+<span class="material-symbols-outlined text-3xl mb-2">data_thresholding</span>
+<span class="font-bold text-sm">نظام إداري (ERP)</span>
+</label>
+<input class="hidden input-check" id="type_ux" name="project_type" type="radio"/>
+<label class="flex flex-col items-center justify-center p-6 border-2 border-outline/10 rounded-2xl cursor-pointer hover:bg-surface-container transition-all text-center" for="type_ux">
+<span class="material-symbols-outlined text-3xl mb-2">design_services</span>
+<span class="font-bold text-sm">تصميم UI/UX</span>
+</label>
+<input class="hidden input-check" id="type_ai" name="project_type" type="radio"/>
+<label class="flex flex-col items-center justify-center p-6 border-2 border-outline/10 rounded-2xl cursor-pointer hover:bg-surface-container transition-all text-center" for="type_ai">
+<span class="material-symbols-outlined text-3xl mb-2">neurology</span>
+<span class="font-bold text-sm">ذكاء اصطناعي</span>
+</label>
+<input class="hidden input-check" id="type_other" name="project_type" type="radio"/>
+<label class="flex flex-col items-center justify-center p-6 border-2 border-outline/10 rounded-2xl cursor-pointer hover:bg-surface-container transition-all text-center" for="type_other">
+<span class="material-symbols-outlined text-3xl mb-2">more_horiz</span>
+<span class="font-bold text-sm">شيء آخر</span>
+</label>
+</div>
+</div>
+<!-- Step 3: Details -->
+<div class="space-y-6">
+<div class="flex items-center gap-3 mb-4">
+<span class="w-8 h-8 rounded-full brand-gradient text-white flex items-center justify-center font-bold text-sm">3</span>
+<h3 class="font-title-md text-title-md font-bold">تفاصيل إضافية</h3>
+</div>
+<div class="space-y-4">
+<label class="block text-sm font-bold">الميزانية المتوقعة (ريال)</label>
+<div class="flex flex-wrap gap-3">
+<input class="hidden input-check" id="b1" name="budget" type="radio"/>
+<label class="px-6 py-2 border border-outline/20 rounded-full cursor-pointer hover:bg-surface-container transition-all text-sm font-medium" for="b1">أقل من 50,000</label>
+<input class="hidden input-check" id="b2" name="budget" type="radio"/>
+<label class="px-6 py-2 border border-outline/20 rounded-full cursor-pointer hover:bg-surface-container transition-all text-sm font-medium" for="b2">50,000 - 150,000</label>
+<input class="hidden input-check" id="b3" name="budget" type="radio"/>
+<label class="px-6 py-2 border border-outline/20 rounded-full cursor-pointer hover:bg-surface-container transition-all text-sm font-medium" for="b3">أكثر من 150,000</label>
+</div>
+</div>
+<div class="space-y-4 pt-4">
+<label class="block text-sm font-bold">وصف المشروع</label>
+<textarea class="w-full bg-surface-container-low border-b-2 border-outline/20 focus:border-secondary focus:ring-0 px-4 py-3 transition-all duration-300 resize-none" placeholder="اشرح لنا فكرتك أو المتطلبات التقنية الأساسية..." rows="5"></textarea>
+</div>
+</div>
+<!-- Submit -->
+<div class="pt-6">
+<button class="w-full brand-gradient text-white py-5 rounded-2xl font-bold text-xl hover-lift flex items-center justify-center gap-3" type="submit">
+<span>إرسال طلب عرض السعر</span>
+<span class="material-symbols-outlined">send</span>
+</button>
+<p class="text-center text-sm text-on-surface-variant mt-4">سنقوم بالرد عليك خلال 24-48 ساعة عمل.</p>
+</div>
+</form>
+</div>
+</section>
+</div>
+</main>
+<!-- Process Section -->
+<section class="bg-surface-container-low py-stack-section">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-16 reveal">
+<h2 class="font-headline-lg text-headline-lg font-bold mb-4">ماذا يحدث بعد إرسال الطلب؟</h2>
+<div class="w-24 h-1 brand-gradient mx-auto rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+<!-- Step 1 -->
+<div class="relative reveal" style="transition-delay: 100ms;">
+<div class="bg-white p-8 rounded-2xl border border-outline/10 h-full hover-lift">
+<div class="w-14 h-14 rounded-2xl brand-gradient flex items-center justify-center text-white mb-6 text-2xl font-bold">1</div>
+<h4 class="font-bold mb-3">استلام الطلب</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">نقوم بتأكيد استلام طلبك وتعيين مدير حسابات لمتابعة مشروعك.</p>
+</div>
+<span class="hidden md:block absolute top-1/2 -left-4 translate-x-1/2 text-outline/20 material-symbols-outlined text-4xl">arrow_back</span>
+</div>
+<!-- Step 2 -->
+<div class="relative reveal" style="transition-delay: 200ms;">
+<div class="bg-white p-8 rounded-2xl border border-outline/10 h-full hover-lift">
+<div class="w-14 h-14 rounded-2xl brand-gradient flex items-center justify-center text-white mb-6 text-2xl font-bold">2</div>
+<h4 class="font-bold mb-3">تحليل المتطلبات</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">فريقنا التقني يدرس الجدوى والمتطلبات التقنية بدقة عالية.</p>
+</div>
+<span class="hidden md:block absolute top-1/2 -left-4 translate-x-1/2 text-outline/20 material-symbols-outlined text-4xl">arrow_back</span>
+</div>
+<!-- Step 3 -->
+<div class="relative reveal" style="transition-delay: 300ms;">
+<div class="bg-white p-8 rounded-2xl border border-outline/10 h-full hover-lift">
+<div class="w-14 h-14 rounded-2xl brand-gradient flex items-center justify-center text-white mb-6 text-2xl font-bold">3</div>
+<h4 class="font-bold mb-3">إعداد العرض</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">نقدم لك عرضاً مالياً وفنياً مفصلاً مع جدول زمني دقيق.</p>
+</div>
+<span class="hidden md:block absolute top-1/2 -left-4 translate-x-1/2 text-outline/20 material-symbols-outlined text-4xl">arrow_back</span>
+</div>
+<!-- Step 4 -->
+<div class="reveal" style="transition-delay: 400ms;">
+<div class="bg-white p-8 rounded-2xl border border-outline/10 h-full hover-lift active-ring">
+<div class="w-14 h-14 rounded-2xl brand-gradient flex items-center justify-center text-white mb-6 text-2xl font-bold">4</div>
+<h4 class="font-bold mb-3">بدء التنفيذ</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">بمجرد الموافقة، يبدأ فريق التطوير في تحويل رؤيتك إلى واقع.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Benefits Section -->
+<section class="py-stack-section">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-16 reveal">
+<h2 class="font-headline-lg text-headline-lg font-bold mb-4">لماذا تطلب عرضك من الأفق؟</h2>
+<p class="text-on-surface-variant max-w-xl mx-auto">نحن نجمع بين الخبرة التقنية العميقة وفهم السوق المحلي لنقدم حلولاً تتفوق على التوقعات.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Benefit 1 -->
+<div class="p-8 rounded-3xl bg-white border border-outline/10 hover-lift reveal">
+<span class="material-symbols-outlined text-4xl mb-4 text-secondary">speed</span>
+<h4 class="font-bold text-lg mb-2">سرعة الاستجابة</h4>
+<p class="text-on-surface-variant text-sm">نحن نقدر وقتك، لذلك نلتزم بتقديم الردود والعروض في أوقات قياسية.</p>
+</div>
+<!-- Benefit 2 -->
+<div class="p-8 rounded-3xl bg-white border border-outline/10 hover-lift reveal">
+<span class="material-symbols-outlined text-4xl mb-4 text-secondary">verified_user</span>
+<h4 class="font-bold text-lg mb-2">خبرة موثقة</h4>
+<p class="text-on-surface-variant text-sm">فريقنا مكون من خبراء عملوا على مشاريع ضخمة في مختلف القطاعات.</p>
+</div>
+<!-- Benefit 3 -->
+<div class="p-8 rounded-3xl bg-white border border-outline/10 hover-lift reveal">
+<span class="material-symbols-outlined text-4xl mb-4 text-secondary">architecture</span>
+<h4 class="font-bold text-lg mb-2">بنية تقنية حديثة</h4>
+<p class="text-on-surface-variant text-sm">نستخدم أحدث التقنيات لضمان قابلية التوسع والأمان العالي لمشروعك.</p>
+</div>
+<!-- Benefit 4 -->
+<div class="p-8 rounded-3xl bg-white border border-outline/10 hover-lift reveal">
+<span class="material-symbols-outlined text-4xl mb-4 text-secondary">support_agent</span>
+<h4 class="font-bold text-lg mb-2">دعم مستمر</h4>
+<p class="text-on-surface-variant text-sm">علاقتنا لا تنتهي بالتسليم، نحن معك في كل خطوة لضمان استمرارية النجاح.</p>
+</div>
+<!-- Benefit 5 -->
+<div class="p-8 rounded-3xl bg-white border border-outline/10 hover-lift reveal">
+<span class="material-symbols-outlined text-4xl mb-4 text-secondary">payments</span>
+<h4 class="font-bold text-lg mb-2">شفافية مالية</h4>
+<p class="text-on-surface-variant text-sm">عروضنا مفصلة وواضحة، لا توجد تكاليف خفية أو مفاجآت غير سارة.</p>
+</div>
+<!-- Benefit 6 -->
+<div class="p-8 rounded-3xl bg-white border border-outline/10 hover-lift reveal">
+<span class="material-symbols-outlined text-4xl mb-4 text-secondary">lightbulb</span>
+<h4 class="font-bold text-lg mb-2">حلول ابتكارية</h4>
+<p class="text-on-surface-variant text-sm">لا نكتفي بالتنفيذ، بل نقترح أفكاراً إبداعية لزيادة كفاءة مشروعك.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mb-stack-section reveal">
+<div class="brand-gradient rounded-[40px] p-12 md:p-20 text-white text-center relative overflow-hidden">
+<!-- Decorative Elements -->
+<div class="absolute top-0 right-0 w-64 h-64 bg-white/10 blur-[100px] -mr-32 -mt-32"></div>
+<div class="absolute bottom-0 left-0 w-64 h-64 bg-black/10 blur-[100px] -ml-32 -mb-32"></div>
+<div class="relative z-10">
+<h2 class="font-display-lg text-display-lg font-bold mb-6">جاهز لتحويل فكرتك إلى واقع؟</h2>
+<p class="font-body-lg text-body-lg opacity-90 max-w-2xl mx-auto mb-10">
+                    انضم إلى قائمة شركاء النجاح الذين وضعوا ثقتهم في الأفق للبرمجيات. دعنا نبدأ رحلة التحول الرقمي الخاص بك اليوم.
+                </p>
+<button class="bg-white text-secondary px-12 py-5 rounded-2xl font-bold text-xl hover:scale-105 active:scale-95 transition-all shadow-xl shadow-black/20" onclick="document.getElementById('quote-form').scrollIntoView({behavior: 'smooth'})">
+                    احصل على استشارتك المجانية
+                </button>
+</div>
+</div>
+</section>
+<!-- Footer (Shared Component Mapping) -->
+<footer class="bg-surface-container-highest border-t border-outline/10 py-stack-section">
+<div class="flex flex-col md:flex-row-reverse justify-between items-center px-margin-desktop gap-gutter max-w-container-max mx-auto">
+<!-- Brand -->
+<div class="text-headline-lg font-bold text-on-surface">Al-Ofuq</div>
+<!-- Copyright -->
+<div class="font-body-md text-on-surface-variant">
+                © 2024 الأفق للبرمجيات. جميع الحقوق محفوظة
+            </div>
+<!-- Links -->
+<div class="flex flex-row-reverse gap-6">
+<a class="font-body-md text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#">سياسة الخصوصية</a>
+<a class="font-body-md text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#">الشروط والأحكام</a>
+<a class="font-body-md text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#">خريطة الموقع</a>
+</div>
+</div>
+</footer>
+<script>
+        // Simple Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Form interaction handling
+        const radioGroups = ['project_type', 'budget'];
+        radioGroups.forEach(name => {
+            const inputs = document.querySelectorAll(`input[name="${name}"]`);
+            inputs.forEach(input => {
+                input.addEventListener('change', function() {
+                    // Reset all siblings in the visual group
+                    const labels = this.closest('.grid, .flex').querySelectorAll('label');
+                    labels.forEach(l => l.classList.remove('active-ring'));
+                    
+                    if(this.checked) {
+                        this.nextElementSibling.classList.add('active-ring');
+                    }
+                });
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('py-2', 'bg-white/90');
+                nav.classList.remove('py-4', 'bg-surface/70');
+            } else {
+                nav.classList.remove('py-2', 'bg-white/90');
+                nav.classList.add('py-4', 'bg-surface/70');
+            }
+        });
+    </script>
+</body></html>

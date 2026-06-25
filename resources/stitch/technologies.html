@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>تقنياتنا | Al-Ofuq IT</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-high": "#ebe7e7",
+                    "error-container": "#ffdad6",
+                    "tertiary": "#514c4b",
+                    "on-surface-variant": "#444748",
+                    "on-background": "#1c1b1b",
+                    "outline-variant": "#c4c7c7",
+                    "on-tertiary-container": "#e9e2e0",
+                    "surface-variant": "#e5e2e1",
+                    "on-secondary-fixed-variant": "#930004",
+                    "on-primary": "#ffffff",
+                    "background": "#fcf8f8",
+                    "surface-tint": "#5e5e5e",
+                    "on-primary-fixed-variant": "#464747",
+                    "surface-container": "#f1edec",
+                    "on-surface": "#1c1b1b",
+                    "on-secondary-fixed": "#410001",
+                    "on-tertiary-fixed": "#1e1b1a",
+                    "surface-dim": "#ddd9d8",
+                    "surface-container-highest": "#e5e2e1",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-container": "#e3231c",
+                    "on-secondary-container": "#fffbff",
+                    "on-error": "#ffffff",
+                    "surface-bright": "#fcf8f8",
+                    "secondary-fixed-dim": "#ffb4a9",
+                    "tertiary-fixed": "#e9e1df",
+                    "surface": "#fcf8f8",
+                    "primary-fixed-dim": "#c7c6c6",
+                    "on-tertiary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "primary-container": "#656565",
+                    "secondary": "#bc0007",
+                    "secondary-fixed": "#ffdad5",
+                    "inverse-on-surface": "#f4f0ef",
+                    "on-tertiary-fixed-variant": "#4a4645",
+                    "on-primary-container": "#e4e3e3",
+                    "primary": "#4d4d4d",
+                    "primary-fixed": "#e4e2e2",
+                    "on-error-container": "#93000a",
+                    "inverse-surface": "#313030",
+                    "on-secondary": "#ffffff",
+                    "on-primary-fixed": "#1b1c1c",
+                    "inverse-primary": "#c7c6c6",
+                    "tertiary-fixed-dim": "#ccc5c3",
+                    "surface-container-low": "#f7f3f2",
+                    "outline": "#747878",
+                    "tertiary-container": "#696463"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "unit": "8px",
+                    "container-max": "1440px",
+                    "stack-section": "80px",
+                    "margin-desktop": "64px",
+                    "gutter": "24px",
+                    "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                    "title-md": ["IBM Plex Sans Arabic"],
+                    "headline-lg-mobile": ["IBM Plex Sans Arabic"],
+                    "headline-lg": ["IBM Plex Sans Arabic"],
+                    "display-lg": ["IBM Plex Sans Arabic"],
+                    "label-sm": ["IBM Plex Sans Arabic"],
+                    "body-md": ["IBM Plex Sans Arabic"],
+                    "body-lg": ["IBM Plex Sans Arabic"]
+            },
+            "fontSize": {
+                    "title-md": ["20px", {"lineHeight": "28px", "fontWeight": "500"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "60px", "letterSpacing": "0", "fontWeight": "700"}],
+                    "label-sm": ["13px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            font-family: 'IBM Plex Sans Arabic', sans-serif;
+            background-color: #fcf8f8;
+            color: #1c1b1b;
+            overflow-x: hidden;
+        }
+
+        .brand-gradient-text {
+            background: linear-gradient(90deg, #E0201A, #F06A17, #F6B000, #F9DD05, #9ACC32, #58D860, #13E19C, #3C9E91);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .brand-gradient-bg {
+            background: linear-gradient(135deg, #E0201A, #F06A17, #F6B000, #F9DD05, #9ACC32, #58D860, #13E19C, #3C9E91);
+        }
+
+        .diagonal-cut {
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+            100% { transform: translateY(0px) rotate(0deg); }
+        }
+
+        .float-element {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .reveal-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .reveal-up.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .animated-underline::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #E0201A, #3C9E91);
+            transition: width .3s;
+            margin-top: 8px;
+        }
+
+        .animated-underline:hover::after {
+            width: 100%;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .step-line::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: -50%;
+            width: 100%;
+            height: 2px;
+            background: #outline-variant;
+            z-index: -1;
+        }
+
+        @media (max-width: 768px) {
+            .step-line::after {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body class="light">
+<!-- Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-surface-container-lowest/70 backdrop-blur-xl border-b border-outline-variant/10 shadow-sm h-20 transition-all duration-300 ease-in-out">
+<div class="flex flex-row-reverse justify-between items-center px-margin-desktop w-full max-w-container-max mx-auto h-full">
+<div class="flex items-center gap-4">
+<span class="font-display-lg text-headline-lg font-bold text-primary">Al-Ofuq IT</span>
+</div>
+<div class="hidden md:flex flex-row-reverse items-center gap-8">
+<a class="font-title-md text-title-md text-on-surface-variant hover:text-primary transition-colors" href="#">الرئيسية</a>
+<a class="font-title-md text-title-md text-on-surface-variant hover:text-primary transition-colors" href="#">خدماتنا</a>
+<a class="font-title-md text-title-md text-secondary font-bold border-b-2 border-secondary" href="#">تقنياتنا</a>
+<a class="font-title-md text-title-md text-on-surface-variant hover:text-primary transition-colors" href="#">من نحن</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="bg-primary text-on-primary px-6 py-2 rounded-lg font-title-md hover:scale-105 transition-all">تواصل معنا</button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+<!-- STITCH_SHADER_START:ANIMATION_43 class="absolute inset-0 w-full h-full -z-10 opacity-40" -->
+<div class="absolute inset-0 w-full h-full -z-10 opacity-40" style="display:block;">
+<canvas id="shader-canvas-ANIMATION_43" style="display:block;width:100%;height:100%"></canvas>
+<script>
+(function() {
+  const canvas = document.getElementById('shader-canvas-ANIMATION_43');
+
+  // Sync the WebGL drawing-buffer size with the CSS-driven layout size.
+  // This fires on initial layout and whenever the element is resized.
+  function syncSize() {
+    const w = canvas.clientWidth  || 1280;
+    const h = canvas.clientHeight || 720;
+    if (canvas.width !== w || canvas.height !== h) {
+      canvas.width  = w;
+      canvas.height = h;
+    }
+  }
+  if (typeof ResizeObserver !== 'undefined') {
+    new ResizeObserver(syncSize).observe(canvas);
+  }
+  syncSize();
+
+  const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+  if (!gl) return;
+  const vs = `attribute vec2 a_position;
+varying vec2 v_texCoord;
+void main() {
+  v_texCoord = a_position * 0.5 + 0.5;
+  gl_Position = vec4(a_position, 0.0, 1.0);
+}`;
+  const fs = `precision highp float;
+varying vec2 v_texCoord;
+uniform float u_time;
+uniform vec2 u_resolution;
+
+void main() {
+    vec2 uv = v_texCoord;
+    float t = u_time * 0.12;
+    
+    // Base surface color (Clean White)
+    vec3 color = vec3(0.98, 0.98, 0.98); 
+    
+    // Brand Gradient Colors
+    vec3 red = vec3(0.88, 0.13, 0.10);    // #E0201A
+    vec3 orange = vec3(0.94, 0.42, 0.09); // #F06A17
+    vec3 gold = vec3(0.96, 0.69, 0.0);    // #F6B000
+    vec3 lime = vec3(0.60, 0.80, 0.20);   // #9ACC32
+    vec3 teal = vec3(0.24, 0.62, 0.57);   // #3C9E91
+    
+    // Smooth flowing "technical" digital fluid
+    float d1 = distance(uv, vec2(0.8 + 0.1 * sin(t), 0.2 + 0.15 * cos(t * 0.8)));
+    float b1 = smoothstep(0.85, 0.0, d1);
+    color = mix(color, red, b1 * 0.025);
+    
+    float d2 = distance(uv, vec2(0.15 + 0.15 * cos(t * 0.7), 0.85 + 0.1 * sin(t * 1.1)));
+    float b2 = smoothstep(0.75, 0.0, d2);
+    color = mix(color, teal, b2 * 0.035);
+    
+    float d3 = distance(uv, vec2(0.5 + 0.3 * cos(t * 0.5), 0.5 + 0.3 * sin(t * 0.6)));
+    float b3 = smoothstep(0.7, 0.0, d3);
+    color = mix(color, gold, b3 * 0.02);
+
+    float d4 = distance(uv, vec2(0.9 + 0.1 * sin(t * 1.3), 0.9 + 0.1 * cos(t * 0.9)));
+    float b4 = smoothstep(0.6, 0.0, d4);
+    color = mix(color, lime, b4 * 0.02);
+
+    // Subtle technical grid lines / scanning effect
+    float grid = sin(uv.x * 60.0) * sin(uv.y * 60.0);
+    grid = smoothstep(0.995, 1.0, grid);
+    color = mix(color, vec3(0.9, 0.9, 0.9), grid * 0.05);
+
+    // Signature Al-Ofuq diagonal movement
+    float lines = sin((uv.x + uv.y * 0.8) * 32.0 - t * 1.5);
+    lines = smoothstep(0.985, 1.0, lines);
+    color = mix(color, vec3(0.94, 0.94, 0.94), lines * 0.12);
+
+    gl_FragColor = vec4(color, 1.0);
+}`;
+  function cs(type, src) {
+    const s = gl.createShader(type);
+    gl.shaderSource(s, src);
+    gl.compileShader(s);
+    return s;
+  }
+  const prog = gl.createProgram();
+  gl.attachShader(prog, cs(gl.VERTEX_SHADER, vs));
+  gl.attachShader(prog, cs(gl.FRAGMENT_SHADER, fs));
+  gl.linkProgram(prog);
+  gl.useProgram(prog);
+  const buf = gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1, 1,-1, -1,1, 1,1]), gl.STATIC_DRAW);
+  const pos = gl.getAttribLocation(prog, 'a_position');
+  gl.enableVertexAttribArray(pos);
+  gl.vertexAttribPointer(pos, 2, gl.FLOAT, false, 0, 0);
+  const uTime = gl.getUniformLocation(prog, 'u_time');
+  const uRes = gl.getUniformLocation(prog, 'u_resolution');
+  const uMouse = gl.getUniformLocation(prog, 'u_mouse');
+
+  // u_mouse is in pixel coordinates matching u_resolution (ShaderToy convention).
+  // Shaders that need normalized coords should use: u_mouse / u_resolution.
+  let mouse = { x: canvas.width / 2, y: canvas.height / 2 };
+  window.addEventListener('mousemove', (event) => {
+    const rect = canvas.getBoundingClientRect();
+    if (rect.width && rect.height) {
+      const nx = (event.clientX - rect.left) / rect.width;
+      const ny = 1.0 - (event.clientY - rect.top) / rect.height;
+      mouse.x = nx * canvas.width;
+      mouse.y = ny * canvas.height;
+    }
+  });
+
+  function render(t) {
+    if (typeof ResizeObserver === 'undefined') syncSize();
+    gl.viewport(0, 0, canvas.width, canvas.height);
+    if (uTime) gl.uniform1f(uTime, t * 0.001);
+    if (uRes) gl.uniform2f(uRes, canvas.width, canvas.height);
+    if (uMouse) gl.uniform2f(uMouse, mouse.x, mouse.y);
+    gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+    requestAnimationFrame(render);
+  }
+  render(0);
+})();
+</script>
+</div>
+<!-- STITCH_SHADER_END:ANIMATION_43 -->
+<!-- Floating Shapes -->
+<div class="absolute top-1/4 right-10 w-32 h-32 float-element opacity-20 pointer-events-none">
+<div class="w-full h-full brand-gradient-bg transform rotate-45 rounded-xl"></div>
+</div>
+<div class="absolute bottom-1/4 left-10 w-24 h-24 float-element opacity-20 pointer-events-none" style="animation-delay: 2s;">
+<div class="w-full h-full bg-secondary transform -rotate-12 rounded-full"></div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop w-full text-right relative z-10">
+<div class="max-w-3xl">
+<h1 class="font-display-lg text-display-lg mb-6 leading-tight">
+<span class="block">تقنيات نبني بها</span>
+<span class="brand-gradient-text">حلولك الرقمية</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 leading-relaxed">
+                    نستخدم مجموعة متنوعة من التقنيات الحديثة في تطوير تطبيقات الجوال، المواقع الإلكترونية، الأنظمة الخلفية، تحليل البيانات، وهندسة البيانات، لبناء حلول رقمية قوية وقابل للتوسع.
+                </p>
+<div class="flex flex-row-reverse gap-4 justify-end">
+<button class="brand-gradient-bg text-white px-8 py-4 rounded-xl font-title-md hover:scale-105 transition-all shadow-lg">
+                        استكشف التقنيات
+                    </button>
+<button class="border-2 border-primary-container text-primary-container px-8 py-4 rounded-xl font-title-md hover:bg-primary-container hover:text-white transition-all">
+                        اطلب عرض سعر
+                    </button>
+</div>
+</div>
+</div>
+</header>
+<!-- Categories & Filter Section -->
+<section class="py-stack-section bg-surface-container-low relative">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg mb-4">مجالاتنا التقنية</h2>
+<div class="w-24 h-1 brand-gradient-bg mx-auto rounded-full"></div>
+</div>
+<!-- Filter Pills -->
+<div class="flex flex-wrap justify-center gap-3 mb-12">
+<button class="px-6 py-2 rounded-full bg-secondary text-white font-label-sm shadow-md transition-all">الكل</button>
+<button class="px-6 py-2 rounded-full bg-white text-on-surface-variant hover:bg-surface-container-high font-label-sm transition-all border border-outline-variant/30">موبايل</button>
+<button class="px-6 py-2 rounded-full bg-white text-on-surface-variant hover:bg-surface-container-high font-label-sm transition-all border border-outline-variant/30">فرونت إند</button>
+<button class="px-6 py-2 rounded-full bg-white text-on-surface-variant hover:bg-surface-container-high font-label-sm transition-all border border-outline-variant/30">باك إند</button>
+<button class="px-6 py-2 rounded-full bg-white text-on-surface-variant hover:bg-surface-container-high font-label-sm transition-all border border-outline-variant/30">قواعد بيانات</button>
+<button class="px-6 py-2 rounded-full bg-white text-on-surface-variant hover:bg-surface-container-high font-label-sm transition-all border border-outline-variant/30">تحليل بيانات</button>
+<button class="px-6 py-2 rounded-full bg-white text-on-surface-variant hover:bg-surface-container-high font-label-sm transition-all border border-outline-variant/30">UI/UX</button>
+</div>
+<!-- Bento-style Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Mobile App Card -->
+<div class="reveal-up glass-card p-8 rounded-2xl hover:scale-[1.02] transition-all group relative overflow-hidden">
+<div class="absolute top-0 right-0 w-1 h-full brand-gradient-bg opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<span class="material-symbols-outlined text-4xl text-secondary mb-4 block" data-icon="smartphone">smartphone</span>
+<h3 class="font-title-md text-title-md mb-3">تطبيقات الجوال</h3>
+<p class="font-body-md text-on-surface-variant mb-6">نطور تطبيقات أصلية وهجينة بأداء عالٍ وتجربة مستخدم سلسة.</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-surface-container text-label-sm rounded-full">Flutter</span>
+<span class="px-3 py-1 bg-surface-container text-label-sm rounded-full">Swift</span>
+<span class="px-3 py-1 bg-surface-container text-label-sm rounded-full">Kotlin</span>
+<span class="px-3 py-1 bg-surface-container text-label-sm rounded-full">React Native</span>
+</div>
+</div>
+<!-- Frontend Card -->
+<div class="reveal-up glass-card p-8 rounded-2xl hover:scale-[1.02] transition-all group relative overflow-hidden" style="transition-delay: 100ms;">
+<div class="absolute top-0 right-0 w-1 h-full brand-gradient-bg opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<span class="material-symbols-outlined text-4xl text-secondary mb-4 block" data-icon="language">language</span>
+<h3 class="font-title-md text-title-md mb-3">الواجهات الأمامية</h3>
+<p class="font-body-md text-on-surface-variant mb-6">واجهات تفاعلية سريعة الاستجابة تعتمد على أحدث تقنيات الويب.</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-surface-container text-label-sm rounded-full">React.js</span>
+<span class="px-3 py-1 bg-surface-container text-label-sm rounded-full">Next.js</span>
+<span class="px-3 py-1 bg-surface-container text-label-sm rounded-full">Vue.js</span>
+<span class="px-3 py-1 bg-surface-container text-label-sm rounded-full">Tailwind CSS</span>
+</div>
+</div>
+<!-- Backend Card -->
+<div class="reveal-up glass-card p-8 rounded-2xl hover:scale-[1.02] transition-all group relative overflow-hidden" style="transition-delay: 200ms;">
+<div class="absolute top-0 right-0 w-1 h-full brand-gradient-bg opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<span class="material-symbols-outlined text-4xl text-secondary mb-4 block" data-icon="dns">dns</span>
+<h3 class="font-title-md text-title-md mb-3">الأنظمة الخلفية</h3>
+<p class="font-body-md text-on-surface-variant mb-6">خوادم قوية آمنة قادرة على معالجة ملايين الطلبات بكفاءة.</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-surface-container text-label-sm rounded-full">Node.js</span>
+<span class="px-3 py-1 bg-surface-container text-label-sm rounded-full">Python</span>
+<span class="px-3 py-1 bg-surface-container text-label-sm rounded-full">Go</span>
+<span class="px-3 py-1 bg-surface-container text-label-sm rounded-full">Laravel</span>
+</div>
+</div>
+<!-- Database Card -->
+<div class="reveal-up glass-card p-8 rounded-2xl hover:scale-[1.02] transition-all group relative overflow-hidden" style="transition-delay: 300ms;">
+<div class="absolute top-0 right-0 w-1 h-full brand-gradient-bg opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<span class="material-symbols-outlined text-4xl text-secondary mb-4 block" data-icon="database">database</span>
+<h3 class="font-title-md text-title-md mb-3">قواعد البيانات</h3>
+<p class="font-body-md text-on-surface-variant mb-6">تصميم بنية بيانات متطورة لضمان سرعة الوصول وتكامل المعلومات.</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-surface-container text-label-sm rounded-full">PostgreSQL</span>
+<span class="px-3 py-1 bg-surface-container text-label-sm rounded-full">MongoDB</span>
+<span class="px-3 py-1 bg-surface-container text-label-sm rounded-full">Redis</span>
+</div>
+</div>
+<!-- Data Analysis Card -->
+<div class="reveal-up glass-card p-8 rounded-2xl hover:scale-[1.02] transition-all group relative overflow-hidden" style="transition-delay: 400ms;">
+<div class="absolute top-0 right-0 w-1 h-full brand-gradient-bg opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<span class="material-symbols-outlined text-4xl text-secondary mb-4 block" data-icon="query_stats">query_stats</span>
+<h3 class="font-title-md text-title-md mb-3">تحليل البيانات</h3>
+<p class="font-body-md text-on-surface-variant mb-6">تحويل البيانات الخام إلى رؤى استراتيجية تدعم اتخاذ القرار.</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-surface-container text-label-sm rounded-full">Python</span>
+<span class="px-3 py-1 bg-surface-container text-label-sm rounded-full">PowerBI</span>
+<span class="px-3 py-1 bg-surface-container text-label-sm rounded-full">Pandas</span>
+</div>
+</div>
+<!-- DevOps Card -->
+<div class="reveal-up glass-card p-8 rounded-2xl hover:scale-[1.02] transition-all group relative overflow-hidden" style="transition-delay: 500ms;">
+<div class="absolute top-0 right-0 w-1 h-full brand-gradient-bg opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<span class="material-symbols-outlined text-4xl text-secondary mb-4 block" data-icon="cloud_done">cloud_done</span>
+<h3 class="font-title-md text-title-md mb-3">DevOps &amp; السحابة</h3>
+<p class="font-body-md text-on-surface-variant mb-6">أتمتة العمليات وإدارة البنية التحتية لضمان استمرارية الخدمة.</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-surface-container text-label-sm rounded-full">Docker</span>
+<span class="px-3 py-1 bg-surface-container text-label-sm rounded-full">Kubernetes</span>
+<span class="px-3 py-1 bg-surface-container text-label-sm rounded-full">AWS</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Us (Benefits) -->
+<section class="py-stack-section bg-surface">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="flex flex-col md:flex-row-reverse items-center gap-16">
+<div class="w-full md:w-1/2">
+<h2 class="font-headline-lg text-headline-lg mb-6">لماذا نختار هذه التقنيات؟</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8">
+                        اختيار التقنية ليس مجرد ترند، بل هو قرار استراتيجي يؤثر على مستقبل عملك الرقمي. نحن نحرص على التوازن بين الحداثة والاستقرار.
+                    </p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined p-3 bg-secondary-container text-on-secondary-container rounded-xl" data-icon="speed">speed</span>
+<div>
+<h4 class="font-title-md text-title-md">الأداء الفائق</h4>
+<p class="font-label-sm text-on-surface-variant">تقنيات محسنة لأسرع استجابة.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined p-3 bg-secondary-container text-on-secondary-container rounded-xl" data-icon="security">security</span>
+<div>
+<h4 class="font-title-md text-title-md">الأمان العالي</h4>
+<p class="font-label-sm text-on-surface-variant">حماية قصوى لبياناتك ومستخدميك.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined p-3 bg-secondary-container text-on-secondary-container rounded-xl" data-icon="trending_up">trending_up</span>
+<div>
+<h4 class="font-title-md text-title-md">قابلية التوسع</h4>
+<p class="font-label-sm text-on-surface-variant">أنظمة تنمو مع نمو أعمالك.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined p-3 bg-secondary-container text-on-secondary-container rounded-xl" data-icon="update">update</span>
+<div>
+<h4 class="font-title-md text-title-md">دعم مستقبلي</h4>
+<p class="font-label-sm text-on-surface-variant">تقنيات مدعومة بمجتمعات برمجية كبيرة.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full md:w-1/2 relative">
+<div class="aspect-square bg-surface-container-high rounded-3xl overflow-hidden shadow-2xl relative">
+<img class="w-full h-full object-cover" data-alt="A futuristic 3D visualization of a central processing unit (CPU) illuminated by neon brand gradient lights. The scene features floating digital particles and transparent circuit lines, representing high-performance technology and data engineering. Professional corporate lighting with soft shadows and high-end tech aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuRdzCr_8jygks7UB5J71heCE1UYVboczNRJU3TGBqxcOu2-yPge_6ruTRVR3s9Z10mdS-6ijnuuLs-gnV0tZlNeQS_LyH1l0SluJBuGaG7KbwggC9glIJ5eCbA-mFzjjYXpt9rrc4rkziF1eQULK0MIliyfjalcnNjcrPBclxPlquE0UhBYHXuUiPQM740uen2CeGDC2gRokbnsays2-XLFlMz8r46R1kFeomgxgfJBgfcA9oeDXkqUa9Ifj0SPNZnYvlRV9iOmY"/>
+<div class="absolute inset-0 brand-gradient-bg opacity-10"></div>
+</div>
+<!-- Decorative floating card -->
+<div class="absolute -bottom-10 -right-10 glass-card p-6 rounded-2xl shadow-xl border-l-4 border-secondary max-w-[240px] float-element">
+<div class="flex items-center gap-3 mb-2">
+<div class="w-3 h-3 rounded-full brand-gradient-bg animate-pulse"></div>
+<span class="font-title-md text-title-md">كفاءة تشغيلية</span>
+</div>
+<p class="font-label-sm text-on-surface-variant">تحسين أداء الأنظمة بنسبة تصل إلى 40% عبر اختيار الأكواد الأمثل.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Workflow Section -->
+<section class="py-stack-section bg-surface-container-lowest">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg mb-4">كيف نختار التقنية المناسبة لمشروعك؟</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">عملية منهجية لضمان اختيار المسار التقني الأفضل</p>
+</div>
+<div class="relative">
+<!-- Timeline Desktop Line -->
+<div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 brand-gradient-bg opacity-20 -translate-y-1/2"></div>
+<div class="grid grid-cols-1 md:grid-cols-6 gap-gutter relative z-10">
+<!-- Step 1 -->
+<div class="flex flex-col items-center text-center group">
+<div class="w-16 h-16 rounded-full bg-white shadow-lg border border-outline-variant flex items-center justify-center mb-6 relative group-hover:scale-110 group-hover:border-secondary transition-all">
+<span class="material-symbols-outlined text-secondary" data-icon="search">search</span>
+<div class="absolute -top-2 -right-2 w-6 h-6 brand-gradient-bg text-white text-[10px] flex items-center justify-center rounded-full font-bold">01</div>
+</div>
+<h4 class="font-title-md text-title-md mb-2">تحليل المتطلبات</h4>
+<p class="font-label-sm text-on-surface-variant">فهم عميق لأهداف العمل والجمهور المستهدف.</p>
+</div>
+<!-- Step 2 -->
+<div class="flex flex-col items-center text-center group">
+<div class="w-16 h-16 rounded-full bg-white shadow-lg border border-outline-variant flex items-center justify-center mb-6 relative group-hover:scale-110 group-hover:border-secondary transition-all">
+<span class="material-symbols-outlined text-secondary" data-icon="architecture">architecture</span>
+<div class="absolute -top-2 -right-2 w-6 h-6 brand-gradient-bg text-white text-[10px] flex items-center justify-center rounded-full font-bold">02</div>
+</div>
+<h4 class="font-title-md text-title-md mb-2">هندسة الحل</h4>
+<p class="font-label-sm text-on-surface-variant">رسم مخططات النظام وتدفق البيانات.</p>
+</div>
+<!-- Step 3 -->
+<div class="flex flex-col items-center text-center group">
+<div class="w-16 h-16 rounded-full bg-white shadow-lg border border-outline-variant flex items-center justify-center mb-6 relative group-hover:scale-110 group-hover:border-secondary transition-all">
+<span class="material-symbols-outlined text-secondary" data-icon="fact_check">fact_check</span>
+<div class="absolute -top-2 -right-2 w-6 h-6 brand-gradient-bg text-white text-[10px] flex items-center justify-center rounded-full font-bold">03</div>
+</div>
+<h4 class="font-title-md text-title-md mb-2">مقارنة التقنيات</h4>
+<p class="font-label-sm text-on-surface-variant">اختيار الأطر البرمجية (Frameworks) الأنسب.</p>
+</div>
+<!-- Step 4 -->
+<div class="flex flex-col items-center text-center group">
+<div class="w-16 h-16 rounded-full bg-white shadow-lg border border-outline-variant flex items-center justify-center mb-6 relative group-hover:scale-110 group-hover:border-secondary transition-all">
+<span class="material-symbols-outlined text-secondary" data-icon="bug_report">bug_report</span>
+<div class="absolute -top-2 -right-2 w-6 h-6 brand-gradient-bg text-white text-[10px] flex items-center justify-center rounded-full font-bold">04</div>
+</div>
+<h4 class="font-title-md text-title-md mb-2">إثبات المفهوم</h4>
+<p class="font-label-sm text-on-surface-variant">تطوير نموذج أولي (PoC) للتأكد من الجدوى.</p>
+</div>
+<!-- Step 5 -->
+<div class="flex flex-col items-center text-center group">
+<div class="w-16 h-16 rounded-full bg-white shadow-lg border border-outline-variant flex items-center justify-center mb-6 relative group-hover:scale-110 group-hover:border-secondary transition-all">
+<span class="material-symbols-outlined text-secondary" data-icon="code">code</span>
+<div class="absolute -top-2 -right-2 w-6 h-6 brand-gradient-bg text-white text-[10px] flex items-center justify-center rounded-full font-bold">05</div>
+</div>
+<h4 class="font-title-md text-title-md mb-2">التطوير الفعلي</h4>
+<p class="font-label-sm text-on-surface-variant">بدء عملية البرمجة باتباع منهجية Agile.</p>
+</div>
+<!-- Step 6 -->
+<div class="flex flex-col items-center text-center group">
+<div class="w-16 h-16 rounded-full bg-white shadow-lg border border-outline-variant flex items-center justify-center mb-6 relative group-hover:scale-110 group-hover:border-secondary transition-all">
+<span class="material-symbols-outlined text-secondary" data-icon="rocket_launch">rocket_launch</span>
+<div class="absolute -top-2 -right-2 w-6 h-6 brand-gradient-bg text-white text-[10px] flex items-center justify-center rounded-full font-bold">06</div>
+</div>
+<h4 class="font-title-md text-title-md mb-2">الإطلاق والدعم</h4>
+<p class="font-label-sm text-on-surface-variant">نشر الحل ومراقبته لضمان الاستقرار.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-stack-section">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="relative p-1 rounded-3xl brand-gradient-bg overflow-hidden group">
+<div class="absolute inset-0 opacity-20 group-hover:scale-110 transition-transform duration-700 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-from)_0%,_transparent_70%)] from-white"></div>
+<div class="bg-inverse-surface rounded-[calc(1.5rem-2px)] py-16 px-8 md:px-20 text-center relative z-10">
+<h2 class="font-headline-lg text-headline-lg text-white mb-6">لديك مشروع وتحتاج اختيار التقنية المناسبة؟</h2>
+<p class="font-body-lg text-body-lg text-surface-container-high/80 mb-10 max-w-2xl mx-auto">
+                        شاركنا فكرتك، وسنساعدك في اختيار أفضل التقنيات لبناء حل رقمي قوي، آمن، وقابل للتوسع.
+                    </p>
+<div class="flex flex-col sm:flex-row-reverse gap-4 justify-center">
+<button class="brand-gradient-bg text-white px-10 py-4 rounded-xl font-title-md hover:shadow-[0_0_20px_rgba(224,32,26,0.4)] transition-all">
+                            اطلب عرض سعر
+                        </button>
+<button class="border border-white/30 text-white px-10 py-4 rounded-xl font-title-md hover:bg-white hover:text-on-background transition-all">
+                            تواصل معنا
+                        </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="relative w-full mt-stack-section bg-surface-container-highest border-t border-outline-variant/30">
+<div class="flex flex-col md:flex-row-reverse justify-between items-center px-margin-desktop py-12 w-full max-w-container-max mx-auto">
+<div class="flex items-center gap-8 mb-6 md:mb-0">
+<span class="font-headline-lg text-headline-lg text-primary font-bold">Al-Ofuq IT</span>
+</div>
+<div class="flex flex-row-reverse gap-8 mb-6 md:mb-0">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-all" href="#">سياسة الخصوصية</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-all" href="#">الشروط والأحكام</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-all" href="#">خريطة الموقع</a>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">
+                © 2024 الأفق لتقنية المعلومات. جميع الحقوق محفوظة.
+            </p>
+</div>
+</footer>
+<script>
+        // Reveal animation on scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal-up').forEach(el => observer.observe(el));
+
+        // Floating shapes interactivity
+        document.addEventListener('mousemove', (e) => {
+            const shapes = document.querySelectorAll('.float-element');
+            const x = (window.innerWidth - e.pageX * 2) / 100;
+            const y = (window.innerHeight - e.pageY * 2) / 100;
+
+            shapes.forEach(shape => {
+                shape.style.transform = `translateX(${x}px) translateY(${y}px)`;
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('py-2', 'bg-surface-container-lowest/90');
+                nav.classList.remove('h-20');
+            } else {
+                nav.classList.remove('py-2', 'bg-surface-container-lowest/90');
+                nav.classList.add('h-20');
+            }
+        });
+    </script>
+</body></html>

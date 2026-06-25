@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>شكرًا لك | الأفق للبرمجيات</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style>
+        :root {
+            --brand-gradient: linear-gradient(90deg, #bc0007, #e3231c, #4d4d4d, #656565, #1c1b1b, #bc0007, #e3231c, #514c4b);
+        }
+
+        body {
+            font-family: 'IBM Plex Sans Arabic', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .brand-gradient-text {
+            background: var(--brand-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .brand-gradient-bg {
+            background: var(--brand-gradient);
+            background-size: 200% 200%;
+            animation: gradientMove 5s ease infinite;
+        }
+
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .checkmark-circle {
+            stroke-dasharray: 166;
+            stroke-dashoffset: 166;
+            stroke-width: 2;
+            stroke-miterlimit: 10;
+            stroke: #bc0007;
+            fill: none;
+            animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+        }
+
+        .checkmark {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            display: block;
+            stroke-width: 2;
+            stroke: #fff;
+            stroke-miterlimit: 10;
+            box-shadow: inset 0px 0px 0px #bc0007;
+            animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+        }
+
+        .checkmark-check {
+            transform-origin: 50% 50%;
+            stroke-dasharray: 48;
+            stroke-dashoffset: 48;
+            animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+        }
+
+        @keyframes stroke { 100% { stroke-dashoffset: 0; } }
+        @keyframes scale { 0%, 100% { transform: none; } 50% { transform: scale3d(1.1, 1.1, 1); } }
+        @keyframes fill { 100% { box-shadow: inset 0px 0px 0px 50px #bc0007; } }
+
+        .stagger-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(101, 101, 101, 0.1);
+        }
+        
+        .diagonal-cut {
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 95% 100%, 0 100%);
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-container": "#696463",
+                        "error-container": "#ffdad6",
+                        "surface-tint": "#5e5e5e",
+                        "on-surface-variant": "#444748",
+                        "secondary-fixed": "#ffdad5",
+                        "on-surface": "#1c1b1b",
+                        "inverse-on-surface": "#f4f0ef",
+                        "secondary": "#bc0007",
+                        "on-tertiary-container": "#e9e2e0",
+                        "tertiary-fixed-dim": "#ccc5c3",
+                        "surface-bright": "#fcf8f8",
+                        "primary-fixed": "#e4e2e2",
+                        "outline": "#747878",
+                        "on-primary": "#ffffff",
+                        "surface-container": "#f1edec",
+                        "background": "#fcf8f8",
+                        "on-secondary": "#ffffff",
+                        "inverse-surface": "#313030",
+                        "secondary-fixed-dim": "#ffb4a9",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-container": "#656565",
+                        "surface-container-highest": "#e5e2e1",
+                        "primary": "#4d4d4d",
+                        "on-tertiary-fixed-variant": "#4a4645",
+                        "on-background": "#1c1b1b",
+                        "on-secondary-fixed-variant": "#930004",
+                        "on-secondary-fixed": "#410001",
+                        "surface-dim": "#ddd9d8",
+                        "secondary-container": "#e3231c",
+                        "surface-variant": "#e5e2e1",
+                        "surface-container-high": "#ebe7e7",
+                        "inverse-primary": "#c7c6c6",
+                        "on-primary-fixed-variant": "#464747",
+                        "on-primary-fixed": "#1b1c1c",
+                        "primary-fixed-dim": "#c7c6c6",
+                        "error": "#ba1a1a",
+                        "tertiary": "#514c4b",
+                        "surface-container-low": "#f7f3f2",
+                        "surface": "#fcf8f8",
+                        "on-primary-container": "#e4e3e3",
+                        "on-secondary-container": "#fffbff",
+                        "on-error": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "outline-variant": "#c4c7c7",
+                        "on-tertiary-fixed": "#1e1b1a",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed": "#e9e1df"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "margin-desktop": "64px",
+                        "unit": "8px",
+                        "stack-section": "80px",
+                        "container-max": "1440px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "title-md": ["IBM Plex Sans Arabic"],
+                        "headline-lg-mobile": ["IBM Plex Sans Arabic"],
+                        "body-md": ["IBM Plex Sans Arabic"],
+                        "label-sm": ["IBM Plex Sans Arabic"],
+                        "body-lg": ["IBM Plex Sans Arabic"],
+                        "display-lg": ["IBM Plex Sans Arabic"],
+                        "headline-lg": ["IBM Plex Sans Arabic"]
+                    },
+                    "fontSize": {
+                        "title-md": ["20px", { "lineHeight": "28px", "fontWeight": "500" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-sm": ["13px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "display-lg": ["48px", { "lineHeight": "60px", "letterSpacing": "0", "fontWeight": "700" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-surface text-on-surface antialiased overflow-x-hidden">
+<!-- Global Background Shader -->
+<!-- STITCH_SHADER_START:ANIMATION_30 class="fixed inset-0 w-full h-full -z-10" -->
+<div class="fixed inset-0 w-full h-full -z-10" style="display:block;">
+<canvas id="shader-canvas-ANIMATION_30" style="display:block;width:100%;height:100%"></canvas>
+<script>
+(function() {
+  const canvas = document.getElementById('shader-canvas-ANIMATION_30');
+
+  // Sync the WebGL drawing-buffer size with the CSS-driven layout size.
+  // This fires on initial layout and whenever the element is resized.
+  function syncSize() {
+    const w = canvas.clientWidth  || 1280;
+    const h = canvas.clientHeight || 720;
+    if (canvas.width !== w || canvas.height !== h) {
+      canvas.width  = w;
+      canvas.height = h;
+    }
+  }
+  if (typeof ResizeObserver !== 'undefined') {
+    new ResizeObserver(syncSize).observe(canvas);
+  }
+  syncSize();
+
+  const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+  if (!gl) return;
+  const vs = `attribute vec2 a_position;
+varying vec2 v_texCoord;
+void main() {
+  v_texCoord = a_position * 0.5 + 0.5;
+  gl_Position = vec4(a_position, 0.0, 1.0);
+}`;
+  const fs = `precision highp float;
+varying vec2 v_texCoord;
+uniform float u_time;
+uniform vec2 u_resolution;
+
+void main() {
+    vec2 uv = v_texCoord;
+    float t = u_time * 0.15;
+    
+    // Base surface color
+    vec3 color = vec3(0.98, 0.98, 0.98); 
+    
+    // Brand Colors
+    vec3 red = vec3(0.88, 0.13, 0.10);
+    vec3 orange = vec3(0.94, 0.42, 0.09);
+    vec3 gold = vec3(0.96, 0.69, 0.0);
+    vec3 teal = vec3(0.24, 0.62, 0.57);
+    vec3 mint = vec3(0.07, 0.88, 0.61);
+    
+    // Soft, celebratory flowing blobs
+    float d1 = distance(uv, vec2(0.5 + 0.2 * sin(t), 0.5 + 0.2 * cos(t * 0.8)));
+    float b1 = smoothstep(0.8, 0.0, d1);
+    color = mix(color, mint, b1 * 0.04);
+    
+    float d2 = distance(uv, vec2(0.2 + 0.1 * cos(t * 1.2), 0.8 + 0.1 * sin(t * 0.9)));
+    float b2 = smoothstep(0.7, 0.0, d2);
+    color = mix(color, teal, b2 * 0.03);
+    
+    float d3 = distance(uv, vec2(0.8 + 0.1 * sin(t * 1.1), 0.2 + 0.1 * cos(t * 1.3)));
+    float b3 = smoothstep(0.75, 0.0, d3);
+    color = mix(color, orange, b3 * 0.02);
+
+    // Subtle celebration particles (simulated via noise)
+    float particles = sin(uv.x * 50.0 + t) * cos(uv.y * 50.0 - t);
+    particles = smoothstep(0.99, 1.0, particles);
+    color = mix(color, gold, particles * 0.2);
+
+    // Diagonal brand lines
+    float lines = sin((uv.x + uv.y) * 25.0 - t * 1.2);
+    lines = smoothstep(0.98, 1.0, lines);
+    color = mix(color, vec3(0.94, 0.94, 0.94), lines * 0.15);
+
+    gl_FragColor = vec4(color, 1.0);
+}`;
+  function cs(type, src) {
+    const s = gl.createShader(type);
+    gl.shaderSource(s, src);
+    gl.compileShader(s);
+    return s;
+  }
+  const prog = gl.createProgram();
+  gl.attachShader(prog, cs(gl.VERTEX_SHADER, vs));
+  gl.attachShader(prog, cs(gl.FRAGMENT_SHADER, fs));
+  gl.linkProgram(prog);
+  gl.useProgram(prog);
+  const buf = gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1, 1,-1, -1,1, 1,1]), gl.STATIC_DRAW);
+  const pos = gl.getAttribLocation(prog, 'a_position');
+  gl.enableVertexAttribArray(pos);
+  gl.vertexAttribPointer(pos, 2, gl.FLOAT, false, 0, 0);
+  const uTime = gl.getUniformLocation(prog, 'u_time');
+  const uRes = gl.getUniformLocation(prog, 'u_resolution');
+  const uMouse = gl.getUniformLocation(prog, 'u_mouse');
+
+  // u_mouse is in pixel coordinates matching u_resolution (ShaderToy convention).
+  // Shaders that need normalized coords should use: u_mouse / u_resolution.
+  let mouse = { x: canvas.width / 2, y: canvas.height / 2 };
+  window.addEventListener('mousemove', (event) => {
+    const rect = canvas.getBoundingClientRect();
+    if (rect.width && rect.height) {
+      const nx = (event.clientX - rect.left) / rect.width;
+      const ny = 1.0 - (event.clientY - rect.top) / rect.height;
+      mouse.x = nx * canvas.width;
+      mouse.y = ny * canvas.height;
+    }
+  });
+
+  function render(t) {
+    if (typeof ResizeObserver === 'undefined') syncSize();
+    gl.viewport(0, 0, canvas.width, canvas.height);
+    if (uTime) gl.uniform1f(uTime, t * 0.001);
+    if (uRes) gl.uniform2f(uRes, canvas.width, canvas.height);
+    if (uMouse) gl.uniform2f(uMouse, mouse.x, mouse.y);
+    gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+    requestAnimationFrame(render);
+  }
+  render(0);
+})();
+</script>
+</div>
+<!-- STITCH_SHADER_END:ANIMATION_30 -->
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/70 dark:bg-surface-dim/70 backdrop-blur-xl border-b border-outline/10 shadow-sm">
+<div class="flex flex-row-reverse justify-between items-center px-margin-desktop w-full max-w-container-max mx-auto h-20">
+<div class="flex items-center gap-2">
+<span class="font-display-lg text-display-lg font-bold bg-gradient-to-l from-secondary to-tertiary bg-clip-text text-transparent">الأفق</span>
+</div>
+<div class="hidden md:flex flex-row-reverse items-center gap-8">
+<a class="font-title-md text-title-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">الرئيسية</a>
+<a class="font-title-md text-title-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">خدماتنا</a>
+<a class="font-title-md text-title-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">منتجاتنا</a>
+<a class="font-title-md text-title-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">من نحن</a>
+</div>
+<button class="px-6 py-2 rounded-lg font-title-md text-title-md text-white brand-gradient-bg active:scale-95 transition-transform">
+                تواصل معنا
+            </button>
+</div>
+</nav>
+<main class="relative pt-32 pb-stack-section px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto flex flex-col items-center text-center">
+<!-- Hero Section -->
+<section class="stagger-in flex flex-col items-center mb-stack-section" style="animation-delay: 0.1s;">
+<div class="mb-8">
+<svg class="checkmark" viewbox="0 0 52 52" xmlns="http://www.w3.org/2000/svg">
+<circle class="checkmark-circle" cx="26" cy="26" fill="none" r="25"></circle>
+<path class="checkmark-check" d="M14.1 27.2l7.1 7.2 16.7-16.8" fill="none"></path>
+</svg>
+</div>
+<h1 class="font-display-lg text-display-lg mb-4 text-on-surface">شكرًا لتواصلك معنا</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                تم إرسال رسالتك بنجاح، وسنقوم بالتواصل معك قريبًا لمناقشة التفاصيل.
+            </p>
+</section>
+<!-- What Happens Next Section -->
+<section class="w-full mb-stack-section">
+<h2 class="font-headline-lg text-headline-lg mb-12 stagger-in text-on-surface" style="animation-delay: 0.3s;">ماذا يحدث الآن؟</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Step 1 -->
+<div class="glass-card p-8 rounded-xl diagonal-cut flex flex-col items-center text-center hover:shadow-lg transition-all duration-300 border-r-4 border-secondary/50 stagger-in" style="animation-delay: 0.4s;">
+<div class="w-16 h-16 rounded-full bg-secondary-container flex items-center justify-center mb-6 text-white">
+<span class="material-symbols-outlined text-3xl" data-icon="search">search</span>
+</div>
+<h3 class="font-title-md text-title-md mb-4 text-on-surface">مراجعة الطلب</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">يقوم فريقنا بمراجعة تفاصيل الرسالة أو طلب عرض السعر.</p>
+</div>
+<!-- Step 2 -->
+<div class="glass-card p-8 rounded-xl diagonal-cut flex flex-col items-center text-center hover:shadow-lg transition-all duration-300 border-r-4 border-secondary/50 stagger-in" style="animation-delay: 0.5s;">
+<div class="w-16 h-16 rounded-full bg-secondary-container flex items-center justify-center mb-6 text-white">
+<span class="material-symbols-outlined text-3xl" data-icon="call">call</span>
+</div>
+<h3 class="font-title-md text-title-md mb-4 text-on-surface">التواصل معك</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">سنتواصل معك عبر الهاتف أو البريد الإلكتروني لتوضيح المتطلبات.</p>
+</div>
+<!-- Step 3 -->
+<div class="glass-card p-8 rounded-xl diagonal-cut flex flex-col items-center text-center hover:shadow-lg transition-all duration-300 border-r-4 border-secondary/50 stagger-in" style="animation-delay: 0.6s;">
+<div class="w-16 h-16 rounded-full bg-secondary-container flex items-center justify-center mb-6 text-white">
+<span class="material-symbols-outlined text-3xl" data-icon="rocket_launch">rocket_launch</span>
+</div>
+<h3 class="font-title-md text-title-md mb-4 text-on-surface">إعداد الخطوة التالية</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">سنساعدك في تحديد الحل الأنسب لمشروعك.</p>
+</div>
+</div>
+</section>
+<!-- Quick Actions -->
+<section class="flex flex-wrap justify-center gap-4 stagger-in mb-stack-section" style="animation-delay: 0.7s;">
+<a class="px-8 py-3 rounded-lg font-title-md text-title-md text-white brand-gradient-bg active:scale-95 transition-all shadow-md hover:shadow-xl flex items-center gap-2" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+                العودة للرئيسية
+            </a>
+<a class="px-8 py-3 rounded-lg font-title-md text-title-md text-on-surface border-2 border-outline/30 hover:border-secondary transition-all flex items-center gap-2 active:scale-95" href="#">
+<span class="material-symbols-outlined" data-icon="apps">apps</span>
+                تصفح خدماتنا
+            </a>
+<a class="px-8 py-3 rounded-lg font-title-md text-title-md text-on-surface border-2 border-outline/30 hover:border-green-500 transition-all flex items-center gap-2 active:scale-95" href="https://wa.me/yournumber">
+<span class="material-symbols-outlined" data-icon="chat">chat</span>
+                تواصل عبر واتساب
+            </a>
+</section>
+<!-- Help Card -->
+<section class="stagger-in w-full max-w-xl mx-auto glass-card p-8 rounded-xl shadow-sm border-secondary/10" style="animation-delay: 0.8s;">
+<h3 class="font-headline-lg text-headline-lg mb-4 text-on-surface">تحتاج مساعدة أسرع؟</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">يمكنك التحدث مباشرة مع أحد خبرائنا التقنيين عبر القنوات التالية:</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<button class="flex items-center justify-center gap-3 bg-on-surface text-surface py-3 px-6 rounded-lg font-title-md hover:bg-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="phone_in_talk">phone_in_talk</span>
+                    اتصال هاتفي
+                </button>
+<button class="flex items-center justify-center gap-3 border-2 border-on-surface text-on-surface py-3 px-6 rounded-lg font-title-md hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+                    بريد إلكتروني
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-stack-section bg-surface-container-lowest dark:bg-surface-container border-t border-outline/10">
+<div class="flex flex-col md:flex-row-reverse justify-between items-center px-margin-desktop gap-gutter max-w-container-max mx-auto w-full">
+<div class="flex flex-col items-center md:items-end gap-2">
+<span class="font-headline-lg text-headline-lg font-bold text-primary">الأفق</span>
+<p class="font-body-md text-body-md text-on-surface-variant">© 2024 الأفق للبرمجيات. جميع الحقوق محفوظة.</p>
+</div>
+<div class="flex flex-row-reverse gap-8">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-opacity" href="#">سياسة الخصوصية</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-opacity" href="#">الشروط والأحكام</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-opacity" href="#">الدعم الفني</a>
+</div>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full flex items-center justify-center bg-surface-container-high hover:bg-secondary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="public">public</span>
+</a>
+<a class="w-10 h-10 rounded-full flex items-center justify-center bg-surface-container-high hover:bg-secondary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="share">share</span>
+</a>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interactions and entrance effects
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.glass-card');
+            
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', () => {
+                    card.style.transform = 'translateY(-8px)';
+                });
+                card.addEventListener('mouseleave', () => {
+                    card.style.transform = 'translateY(0)';
+                });
+            });
+
+            // Smooth entrance for page components
+            const observerOptions = {
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('stagger-in');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('section').forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+</body></html>

@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>الأفق المتعددة لتقنية المعلومات | حلول برمجية تقود أعمالك نحو المستقبل</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface": "#fcf8f8",
+                        "tertiary": "#514c4b",
+                        "surface-tint": "#5e5e5e",
+                        "surface-dim": "#ddd9d8",
+                        "on-tertiary-fixed-variant": "#4a4645",
+                        "on-error-container": "#93000a",
+                        "on-background": "#1c1b1b",
+                        "surface-container-low": "#f7f3f2",
+                        "primary-fixed": "#e4e2e2",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed": "#e9e1df",
+                        "error": "#ba1a1a",
+                        "primary-fixed-dim": "#c7c6c6",
+                        "tertiary-container": "#696463",
+                        "surface-variant": "#e5e2e1",
+                        "on-secondary-container": "#fffbff",
+                        "on-primary-fixed-variant": "#464747",
+                        "on-tertiary-fixed": "#1e1b1a",
+                        "inverse-surface": "#313030",
+                        "on-error": "#ffffff",
+                        "secondary": "#bc0007",
+                        "secondary-fixed-dim": "#ffb4a9",
+                        "secondary-fixed": "#ffdad5",
+                        "surface-bright": "#fcf8f8",
+                        "on-secondary-fixed": "#410001",
+                        "tertiary-fixed-dim": "#ccc5c3",
+                        "outline": "#747878",
+                        "surface-container-high": "#ebe7e7",
+                        "outline-variant": "#c4c7c7",
+                        "background": "#ffffff",
+                        "on-surface": "#1c1b1b",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-container": "#e9e2e0",
+                        "inverse-on-surface": "#f4f0ef",
+                        "surface-container-highest": "#e5e2e1",
+                        "secondary-container": "#e3231c",
+                        "primary-container": "#656565",
+                        "on-primary-container": "#e4e3e3",
+                        "surface-container": "#f1edec",
+                        "error-container": "#ffdad6",
+                        "on-primary-fixed": "#1b1c1c",
+                        "inverse-primary": "#c7c6c6",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface-variant": "#444748",
+                        "on-secondary-fixed-variant": "#930004",
+                        "on-secondary": "#ffffff",
+                        "primary": "#4d4d4d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "gutter": "24px",
+                        "container-max": "1440px",
+                        "unit": "8px",
+                        "stack-section": "80px",
+                        "margin-mobile": "20px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["IBM Plex Sans Arabic"],
+                        "headline-lg-mobile": ["IBM Plex Sans Arabic"],
+                        "body-md": ["IBM Plex Sans Arabic"],
+                        "title-md": ["IBM Plex Sans Arabic"],
+                        "label-sm": ["IBM Plex Sans Arabic"],
+                        "body-lg": ["IBM Plex Sans Arabic"],
+                        "display-lg": ["IBM Plex Sans Arabic"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "title-md": ["20px", {"lineHeight": "28px", "fontWeight": "500"}],
+                        "label-sm": ["13px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "display-lg": ["48px", {"lineHeight": "60px", "letterSpacing": "0", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'IBM Plex Sans Arabic', sans-serif;
+            background-color: #ffffff;
+            color: #1c1b1b;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        .brand-gradient {
+            background: linear-gradient(135deg, #bc0007 0%, #4d4d4d 100%);
+        }
+
+        .brand-gradient-text {
+            background: linear-gradient(135deg, #bc0007 0%, #4d4d4d 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .stagger-item {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .reveal.active .stagger-item {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal.active .stagger-item:nth-child(1) { transition-delay: 100ms; }
+        .reveal.active .stagger-item:nth-child(2) { transition-delay: 200ms; }
+        .reveal.active .stagger-item:nth-child(3) { transition-delay: 300ms; }
+        .reveal.active .stagger-item:nth-child(4) { transition-delay: 400ms; }
+
+        @keyframes pulse-shine {
+            0% { box-shadow: 0 0 0 0 rgba(188, 0, 7, 0.4); }
+            70% { box-shadow: 0 0 0 15px rgba(188, 0, 7, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(188, 0, 7, 0); }
+        }
+
+        .btn-pulse:hover {
+            animation: pulse-shine 1.5s infinite;
+        }
+
+        .hover-float {
+            transition: transform 0.3s ease;
+        }
+
+        .hover-float:hover {
+            transform: translateY(-8px);
+        }
+
+        .marquee-container {
+            overflow: hidden;
+            white-space: nowrap;
+            width: 100%;
+        }
+
+        .marquee-content {
+            display: inline-flex;
+            animation: marquee 40s linear infinite;
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(50%); }
+        }
+
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        #threejs-canvas-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="bg-white">
+<!-- Header -->
+<header class="fixed top-0 w-full z-50 glass-nav border-b border-outline-variant/10 h-20 flex items-center">
+<div class="flex flex-row-reverse justify-between items-center w-full px-margin-desktop max-w-container-max mx-auto">
+<div class="flex items-center gap-8 flex-row-reverse">
+<a class="font-headline-lg text-headline-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-secondary via-primary to-primary hover:scale-105 transition-transform" href="#">الأفق المتعددة</a>
+<nav class="hidden md:flex flex-row-reverse gap-8">
+<a class="text-secondary font-bold border-b-2 border-secondary pb-1 font-title-md text-title-md" href="#">الرئيسية</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-title-md text-title-md" href="#">المنتجات</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-title-md text-title-md" href="#">الحلول</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-title-md text-title-md" href="#">من نحن</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="brand-gradient text-white px-8 py-3 rounded-lg font-title-md text-title-md active:scale-95 transition-all btn-pulse">اطلب عرض سعر</button>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center pt-20 overflow-hidden bg-white">
+<!-- Three.js Background -->
+<div id="threejs-canvas-container"></div>
+<div class="container mx-auto px-margin-desktop relative z-20 text-right reveal">
+<div class="max-w-3xl">
+<h1 class="font-display-lg text-display-lg text-primary mb-6 leading-tight stagger-item">
+                حلول برمجية <span class="brand-gradient-text">تقود أعمالك</span> نحو المستقبل
+            </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12 max-w-2xl stagger-item">
+                نحن في <span class="font-bold text-primary">الأفق المتعددة لتقنية المعلومات</span> نبتكر تجارب رقمية متكاملة تساعد الشركات على النمو والتحول الرقمي من خلال تقنيات الذكاء الاصطناعي وتطوير النظم السحابية المتقدمة.
+            </p>
+<div class="flex flex-row-reverse gap-4 stagger-item">
+<button class="brand-gradient text-white px-10 py-4 rounded-xl font-title-md text-title-md shadow-lg hover:shadow-xl transition-all btn-pulse">ابدأ رحلتك الآن</button>
+<button class="border-2 border-primary text-primary px-10 py-4 rounded-xl font-title-md text-title-md hover:bg-surface-container transition-all">اكتشف حلولنا</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Highlights -->
+<section class="py-stack-section bg-white">
+<div class="container mx-auto px-margin-desktop reveal">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="p-8 bg-white rounded-2xl shadow-sm border border-outline-variant/20 hover-float group stagger-item">
+<div class="w-16 h-16 rounded-xl bg-surface-container flex items-center justify-center mb-6 transition-colors group-hover:bg-primary-container">
+<span class="material-symbols-outlined text-4xl text-primary group-hover:text-white transition-colors" data-icon="rocket_launch">rocket_launch</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg mb-4 text-primary">سرعة التنفيذ</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">نلتزم بأعلى معايير السرعة في تسليم المشاريع دون المساس بجودة الكود البرمجي.</p>
+</div>
+<div class="p-8 bg-white rounded-2xl shadow-sm border border-outline-variant/20 hover-float group stagger-item">
+<div class="w-16 h-16 rounded-xl bg-surface-container flex items-center justify-center mb-6 transition-colors group-hover:bg-primary-container">
+<span class="material-symbols-outlined text-4xl text-primary group-hover:text-white transition-colors" data-icon="shield_with_heart">shield_with_heart</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg mb-4 text-primary">أمان البيانات</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">أنظمتنا مشفرة بأحدث بروتوكولات الأمان العالمية لضمان حماية معلومات مؤسستك.</p>
+</div>
+<div class="p-8 bg-white rounded-2xl shadow-sm border border-outline-variant/20 hover-float group stagger-item">
+<div class="w-16 h-16 rounded-xl bg-surface-container flex items-center justify-center mb-6 transition-colors group-hover:bg-primary-container">
+<span class="material-symbols-outlined text-4xl text-primary group-hover:text-white transition-colors" data-icon="auto_awesome">auto_awesome</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg mb-4 text-primary">ابتكار مستمر</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">نواكب أحدث التوجهات التقنية لنقدم لك حلولاً سابقة لعصرها تمنحك ميزة تنافسية.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-stack-section bg-white">
+<div class="container mx-auto px-margin-desktop text-center mb-16 reveal">
+<h2 class="font-display-lg text-display-lg text-primary mb-4 stagger-item">خدماتنا التقنية</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto stagger-item">مجموعة متكاملة من الخدمات البرمجية المصممة لتغطية كافة احتياجات مشروعك الرقمي</p>
+</div>
+<div class="container mx-auto px-margin-desktop reveal">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter stagger-item">
+<script>
+                const services = [
+                    { icon: 'web', title: 'تطوير المواقع', desc: 'مواقع تفاعلية سريعة' },
+                    { icon: 'smartphone', title: 'تطبيقات الجوال', desc: 'تجربة مستخدم استثنائية' },
+                    { icon: 'cloud', title: 'الحوسبة السحابية', desc: 'بنية تحتية مرنة' },
+                    { icon: 'psychology', title: 'الذكاء الاصطناعي', desc: 'تحليل بيانات ذكي' },
+                    { icon: 'security', title: 'الأمن السيبراني', desc: 'حماية شاملة من التهديدات' },
+                    { icon: 'api', title: 'تطوير API', desc: 'ربط الأنظمة بكفاءة' },
+                    { icon: 'design_services', title: 'تصميم UI/UX', desc: 'واجهات عصرية وجذابة' },
+                    { icon: 'database', title: 'إدارة البيانات', desc: 'تنظيم وتخزين آمن' }
+                ];
+                services.forEach((s) => {
+                    document.write(`
+                        <div class="p-8 bg-white rounded-3xl border border-outline-variant/10 hover:border-secondary/20 transition-all duration-300 group hover-float mb-4">
+                            <div class="w-12 h-12 rounded-full brand-gradient flex items-center justify-center mb-6 opacity-80 group-hover:opacity-100 transition-opacity">
+                                <span class="material-symbols-outlined text-white" data-icon="${s.icon}">${s.icon}</span>
+                            </div>
+                            <h4 class="font-title-md text-title-md mb-2 text-primary">${s.title}</h4>
+                            <p class="font-body-md text-body-md text-on-surface-variant">${s.desc}</p>
+                        </div>
+                    `);
+                });
+            </script>
+</div>
+</div>
+</section>
+<!-- Solutions -->
+<!-- Why Choose Us Section -->
+<section class="py-stack-section bg-white">
+<div class="container mx-auto px-margin-desktop text-center mb-16 reveal">
+<h2 class="font-display-lg text-display-lg text-primary mb-4 stagger-item">لماذا تختار الأفق؟</h2>
+<div class="w-24 h-1 brand-gradient mx-auto rounded-full stagger-item"></div>
+</div>
+<div class="container mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-3 gap-gutter reveal">
+<div class="bg-white p-8 rounded-2xl shadow-sm border border-outline-variant/20 hover-float stagger-item">
+<div class="w-14 h-14 brand-gradient flex items-center justify-center rounded-xl mb-6">
+<span class="material-symbols-outlined text-white text-3xl">code</span>
+</div>
+<h3 class="font-title-md text-title-md mb-4 text-primary">خبرة في تطوير المواقع والتطبيقات</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">نمتلك فريقاً من الخبراء المتخصصين في بناء حلول رقمية متطورة تلبي تطلعاتك.</p>
+</div>
+<div class="bg-white p-8 rounded-2xl shadow-sm border border-outline-variant/20 hover-float stagger-item">
+<div class="w-14 h-14 brand-gradient flex items-center justify-center rounded-xl mb-6">
+<span class="material-symbols-outlined text-white text-3xl">settings_suggest</span>
+</div>
+<h3 class="font-title-md text-title-md mb-4 text-primary">حلول مخصصة حسب احتياج العميل</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">لا نؤمن بالحلول الجاهزة، بل نصمم كل نظام ليتناسب تماماً مع طبيعة عملك.</p>
+</div>
+<div class="bg-white p-8 rounded-2xl shadow-sm border border-outline-variant/20 hover-float stagger-item">
+<div class="w-14 h-14 brand-gradient flex items-center justify-center rounded-xl mb-6">
+<span class="material-symbols-outlined text-white text-3xl">palette</span>
+</div>
+<h3 class="font-title-md text-title-md mb-4 text-primary">تصميم واجهات حديثة وسهلة الاستخدام</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">نركز على تجربة المستخدم لضمان تفاعل سلس وجذاب مع منصاتك الرقمية.</p>
+</div>
+<div class="bg-white p-8 rounded-2xl shadow-sm border border-outline-variant/20 hover-float stagger-item">
+<div class="w-14 h-14 brand-gradient flex items-center justify-center rounded-xl mb-6">
+<span class="material-symbols-outlined text-white text-3xl">trending_up</span>
+</div>
+<h3 class="font-title-md text-title-md mb-4 text-primary">أنظمة قابلة للتوسع</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">نبني أنظمتنا لتنمو مع نمو أعمالك، مما يضمن استدامة استثمارك التقني.</p>
+</div>
+<div class="bg-white p-8 rounded-2xl shadow-sm border border-outline-variant/20 hover-float stagger-item">
+<div class="w-14 h-14 brand-gradient flex items-center justify-center rounded-xl mb-6">
+<span class="material-symbols-outlined text-white text-3xl">support_agent</span>
+</div>
+<h3 class="font-title-md text-title-md mb-4 text-primary">دعم فني بعد التسليم</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">شراكتنا لا تنتهي بالتسليم، نحن معك دائماً لضمان استقرار وتطور أنظمتك.</p>
+</div>
+<div class="bg-white p-8 rounded-2xl shadow-sm border border-outline-variant/20 hover-float stagger-item">
+<div class="w-14 h-14 brand-gradient flex items-center justify-center rounded-xl mb-6">
+<span class="material-symbols-outlined text-white text-3xl">security</span>
+</div>
+<h3 class="font-title-md text-title-md mb-4 text-primary">اهتمام بالأمان والأداء</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">نطبق أعلى معايير الحماية لضمان سلامة بياناتك وسرعة استجابة أنظمتك.</p>
+</div>
+</div>
+</section>
+<!-- Work Journey Section -->
+<section class="py-stack-section bg-white">
+<div class="container mx-auto px-margin-desktop">
+<h2 class="font-display-lg text-display-lg text-center mb-16 reveal text-primary">رحلة العمل معنا</h2>
+<div class="relative max-w-4xl mx-auto reveal">
+<!-- Vertical Line -->
+<div class="absolute right-[27px] md:right-1/2 top-0 bottom-0 w-[2px] bg-outline-variant/30">
+<div class="w-full brand-gradient h-full"></div>
+</div>
+<!-- Step 1 -->
+<div class="relative flex flex-row-reverse items-center mb-16 stagger-item">
+<div class="w-full md:w-1/2 pr-12 text-right">
+<h3 class="font-title-md text-title-md text-secondary">01. فهم الفكرة</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">نجلس معك لنفهم تطلعاتك وأهدافك بدقة.</p>
+</div>
+<div class="absolute right-0 md:right-1/2 translate-x-1/2 w-14 h-14 rounded-full bg-white border-4 border-secondary flex items-center justify-center z-10">
+<span class="material-symbols-outlined text-secondary">psychology</span>
+</div>
+<div class="hidden md:block w-1/2"></div>
+</div>
+<!-- Step 2 -->
+<div class="relative flex items-center mb-16 stagger-item">
+<div class="hidden md:block w-1/2"></div>
+<div class="absolute right-0 md:right-1/2 translate-x-1/2 w-14 h-14 rounded-full bg-white border-4 border-primary flex items-center justify-center z-10">
+<span class="material-symbols-outlined text-primary">design_services</span>
+</div>
+<div class="w-full md:w-1/2 pl-0 md:pl-12 pr-12 md:pr-0 text-right md:text-left">
+<h3 class="font-title-md text-title-md text-primary">02. التخطيط والتصميم</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">نرسم خارطة الطريق ونبني واجهات تجربة المستخدم.</p>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="relative flex flex-row-reverse items-center mb-16 stagger-item">
+<div class="w-full md:w-1/2 pr-12 text-right">
+<h3 class="font-title-md text-title-md text-tertiary">03. البرمجة والتطوير</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">نحول التصاميم إلى واقع تقني صلب وسريع.</p>
+</div>
+<div class="absolute right-0 md:right-1/2 translate-x-1/2 w-14 h-14 rounded-full bg-white border-4 border-tertiary flex items-center justify-center z-10">
+<span class="material-symbols-outlined text-tertiary">code</span>
+</div>
+<div class="hidden md:block w-1/2"></div>
+</div>
+<!-- Step 4 -->
+<div class="relative flex items-center stagger-item">
+<div class="hidden md:block w-1/2"></div>
+<div class="absolute right-0 md:right-1/2 translate-x-1/2 w-14 h-14 rounded-full bg-white border-4 border-secondary flex items-center justify-center z-10">
+<span class="material-symbols-outlined text-secondary">rocket_launch</span>
+</div>
+<div class="w-full md:w-1/2 pl-0 md:pl-12 pr-12 md:pr-0 text-right md:text-left">
+<h3 class="font-title-md text-title-md text-secondary">04. الإطلاق والدعم</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">نحتفل بالنجاح ونبقى بجانبك لضمان الاستمرارية.</p>
+</div>
+</div>
+</div>
+</div>
+</section><section class="py-stack-section bg-white">
+<div class="container mx-auto px-margin-desktop reveal">
+<div class="flex flex-col lg:flex-row-reverse items-center gap-16">
+<div class="lg:w-1/2 text-right stagger-item">
+<span class="text-secondary font-bold font-label-sm tracking-widest uppercase mb-4 block">أنظمة متكاملة</span>
+<h2 class="font-display-lg text-display-lg mb-8 leading-tight text-primary">حلول برمجية مخصصة لقطاع الأعمال</h2>
+<div class="space-y-6">
+<div class="p-6 bg-white border border-outline-variant/10 hover:bg-surface-container-low transition-all rounded-2xl flex flex-row-reverse gap-6 items-start border-r-4 border-secondary hover-float cursor-pointer">
+<span class="material-symbols-outlined text-3xl text-secondary" data-icon="groups">groups</span>
+<div>
+<h4 class="font-title-md text-title-md mb-2 text-primary">نظام إدارة العملاء (CRM)</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">تتبع مبيعاتك وعلاقاتك مع العملاء في لوحة تحكم واحدة متكاملة.</p>
+</div>
+</div>
+<div class="p-6 bg-white border border-outline-variant/10 hover:bg-surface-container-low transition-all rounded-2xl flex flex-row-reverse gap-6 items-start border-r-4 border-outline-variant hover-float cursor-pointer">
+<span class="material-symbols-outlined text-3xl text-primary" data-icon="inventory_2">inventory_2</span>
+<div>
+<h4 class="font-title-md text-title-md mb-2 text-primary">نظام تخطيط الموارد (ERP)</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">أتمتة العمليات المالية والإدارية والمخزون بكفاءة عالية.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:w-1/2 stagger-item">
+<div class="relative rounded-3xl overflow-hidden shadow-2xl hover-float">
+<div class="w-full aspect-video bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAAlh1rPx_rxQjRXG1xby4l2BjoDlqPmor5RbUxU7L7-p1fgGql_62IPayI8y__aiqUVGCE_5FHDU3VjunJiefOFV0LHl_bc8xIMzYKPrC4jA484ga41vyZAtLgyaNA7brnJbxvYUub2uYj5gFXyCwsBrBifODVUg13upGEJZHP6q7AGItM9udx3-KBs3InAokPYCwYH0yWjIv70hxICB2R9xEfKOFjDlcFKJVKHzmjmyWZuOz3TC_gXFl-vSPc3X5RPGvCUnMvBSo')"></div>
+<div class="absolute inset-0 brand-gradient opacity-10"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Stats -->
+<section class="py-24 brand-gradient text-white">
+<div class="container mx-auto px-margin-desktop grid grid-cols-2 md:grid-cols-4 gap-gutter text-center reveal">
+<div class="stagger-item">
+<div class="text-5xl font-bold mb-2 counter" data-target="150">0</div>
+<p class="font-body-md opacity-90">مشروع ناجح</p>
+</div>
+<div class="stagger-item">
+<div class="text-5xl font-bold mb-2 counter" data-target="45">0</div>
+<p class="font-body-md opacity-90">خبير تقني</p>
+</div>
+<div class="stagger-item">
+<div class="text-5xl font-bold mb-2 counter" data-target="12">0</div>
+<p class="font-body-md opacity-90">دولة حول العالم</p>
+</div>
+<div class="stagger-item">
+<div class="text-5xl font-bold mb-2 counter" data-target="99">0</div>
+<p class="font-body-md opacity-90">نسبة رضا العملاء %</p>
+</div>
+</div>
+</section>
+<!-- Portfolio -->
+<section class="py-stack-section bg-white">
+<div class="container mx-auto px-margin-desktop mb-12 flex justify-between items-end flex-row-reverse reveal">
+<div class="text-right stagger-item">
+<h2 class="font-display-lg text-display-lg mb-2 text-primary">أعمالنا المميزة</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">قصص نجاح سطرناها مع شركائنا في الأفق المتعددة</p>
+</div>
+<button class="text-primary font-bold border-b-2 border-primary hover:text-secondary hover:border-secondary transition-all stagger-item">مشاهدة الكل</button>
+</div>
+<div class="container mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-3 gap-gutter reveal">
+<div class="relative group overflow-hidden rounded-3xl aspect-[4/5] shadow-lg stagger-item">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-700" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDEyknMedd91JHtGUDqX4jN6_oBZbKNBepjxha40BE9ViZD6yAiuUVZ4J0GIWfxUZa0JW2T5s_4sX_uF3wQq14Xq_tgmz1P5mt3kLTFL0EHJ__uun3Mzqd_X0QR8rI81SuEGEkJZWOS29UuKAuDVmkQV00MgVsGTrbCmpudrc0vegUg3IRPtZplFkF08xgzoVQIOf7f_B3VI85GixP6THEsaUE2q6qcOIOXHPUu_UzfWvikqioWUWbJHfidKAZDhwg1CE30zG31Jcc')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-8 text-white text-right">
+<h4 class="text-2xl font-bold mb-2">منصة "إنجاز" المالية</h4>
+<p class="text-sm opacity-80">نظام مصرفي متطور</p>
+</div>
+</div>
+<div class="relative group overflow-hidden rounded-3xl aspect-[4/5] shadow-lg stagger-item">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-700" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCL_BlQLpfEgsHyFzrO0m5xTx1sIayuZO2rfOm4dYen6kzvA3qfdTLDl-PnGtaBeXdtbtsirNHrXTyZzTnMUNaeZKFuhUTIP_hi9d6xcdGQUBZ07H-p8EwN1vHgjHHN35a4o-FsfD48oQhyclAQrPX_UPMy2fZM9TN7hk12KZXhlgdwC45g9E9ZqcuOFQAZxV9zReB28_IX02Mhq6kTqyhRB2PVqAQ3coy9sPgy8w3g4DMu1c1QaEMaIHzZIBpm_KaxeR5fk5XzFFI')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-8 text-white text-right">
+<h4 class="text-2xl font-bold mb-2">تطبيق "صحة"</h4>
+<p class="text-sm opacity-80">تطبيق متكامل للرعاية الصحية</p>
+</div>
+</div>
+<div class="relative group overflow-hidden rounded-3xl aspect-[4/5] shadow-lg stagger-item">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-700" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCmnt0ZsxCCRzkw8-Trvp28PJGRIesc4ESP7DeiWtXNs1fuK25jNGGc7PMpCWHw_UgcIOYI1QZPSbqdHy2nUAVcxTSCHj5jcykXzTPKgQtrqzpr3gFtUaE7OU9bqGNgciYDRed-2Y8uiRxoyG4l5USL-cHvQs5m1oQeS_XqUYc0VbdT35LUwgFezNEMSCC5Sbkw3m_C4ilxy0hExzTYOKsr_zu5vLZxJrMEhDvnw0drbPVhrB2Xr6SmRoYZLJbep64fCPNtPYLMO8o')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-8 text-white text-right">
+<h4 class="text-2xl font-bold mb-2">لوجستيات المستقبل</h4>
+<p class="text-sm opacity-80">إدارة سلاسل التوريد بالذكاء الاصطناعي</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-stack-section bg-white">
+<div class="container mx-auto px-margin-desktop">
+<div class="relative p-12 md:p-24 rounded-[40px] overflow-hidden text-center reveal border border-outline-variant/10 shadow-lg">
+<div class="relative z-10 stagger-item">
+<h2 class="font-display-lg text-display-lg mb-6 text-primary">جاهز لبناء مشروعك القادم مع الأفق؟</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12 max-w-2xl mx-auto">تواصل مع <span class="font-bold text-primary">الأفق المتعددة لتقنية المعلومات</span> اليوم للحصول على استشارة مجانية.</p>
+<div class="flex flex-col sm:flex-row-reverse justify-center gap-6">
+<button class="brand-gradient text-white px-12 py-5 rounded-2xl font-headline-lg text-headline-lg shadow-xl hover:scale-105 transition-all btn-pulse">تواصل معنا الآن</button>
+<button class="bg-white border-2 border-primary text-primary px-12 py-5 rounded-2xl font-headline-lg text-headline-lg hover:bg-surface-container-high transition-all">تحميل بروفايل الشركة</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-white pt-stack-section pb-8 border-t border-outline-variant/10">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto text-right reveal">
+<div class="md:col-span-1 stagger-item">
+<h3 class="font-headline-lg text-headline-lg font-bold text-primary mb-6">الأفق المتعددة</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">شريكك الاستراتيجي في رحلة التحول الرقمي والابتكار التقني. حلول "الأفق" تفتح لك آفاقاً جديدة من النجاح.</p>
+</div>
+<div class="stagger-item">
+<h4 class="font-title-md text-title-md mb-6 text-primary">الروابط السريعة</h4>
+<ul class="space-y-4">
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors font-body-md" href="#">من نحن</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors font-body-md" href="#">خدماتنا</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors font-body-md" href="#">أعمالنا</a></li>
+</ul>
+</div>
+<div class="stagger-item">
+<h4 class="font-title-md text-title-md mb-6 text-primary">الدعم</h4>
+<ul class="space-y-4">
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors font-body-md" href="#">سياسة الخصوصية</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors font-body-md" href="#">اتصل بنا</a></li>
+</ul>
+</div>
+<div class="stagger-item">
+<h4 class="font-title-md text-title-md mb-6 text-primary">تواصل معنا</h4>
+<p class="font-body-md text-on-surface-variant mb-4">الرياض، المملكة العربية السعودية</p>
+<p class="font-title-md text-secondary font-bold">9200 123 456</p>
+</div>
+</div>
+<div class="mt-20 pt-8 border-t border-outline-variant/10 text-center px-margin-desktop max-w-container-max mx-auto reveal">
+<p class="font-body-md text-body-md text-on-surface-variant stagger-item">© 2024 الأفق المتعددة لتقنية المعلومات. جميع الحقوق محفوظة.</p>
+</div>
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/threejs/r125/three.min.js"></script>
+<script>
+    // Three.js Animation Integration
+    (function() {
+        const container = document.getElementById('threejs-canvas-container');
+        if (!container) return;
+
+        const width = container.clientWidth || window.innerWidth;
+        const height = container.clientHeight || window.innerHeight;
+
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
+        // Alpha true for transparent background to see the white section bg
+        const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+        renderer.setSize(width, height);
+        renderer.setPixelRatio(window.devicePixelRatio || 1);
+        container.appendChild(renderer.domElement);
+
+        const ambientLight = new THREE.AmbientLight(0xffffff, 0.8);
+        scene.add(ambientLight);
+        const pointLight = new THREE.PointLight(0xffffff, 1);
+        pointLight.position.set(10, 10, 10);
+        scene.add(pointLight);
+
+        // Updated brand colors from design system
+        const colors = [0xbc0007, 0x4d4d4d, 0x514c4b, 0xbc0007, 0x656565, 0x313030];
+
+        const shapes = [];
+        const geometryCount = 15;
+
+        for (let i = 0; i < geometryCount; i++) {
+            const type = Math.floor(Math.random() * 3);
+            let geometry;
+            if (type === 0) {
+                geometry = new THREE.BoxGeometry(0.5, 1.5, 0.2);
+            } else if (type === 1) {
+                geometry = new THREE.CylinderGeometry(0.3, 0.3, 1, 4);
+            } else {
+                geometry = new THREE.BoxGeometry(0.8, 0.8, 0.8);
+            }
+            
+            const color = colors[Math.floor(Math.random() * colors.length)];
+            const material = new THREE.MeshPhongMaterial({ 
+                color: color,
+                transparent: true,
+                opacity: 0.15, // Low opacity for subtle background effect
+                shininess: 80
+            });
+            
+            const mesh = new THREE.Mesh(geometry, material);
+            mesh.position.set(
+                (Math.random() - 0.5) * 20,
+                (Math.random() - 0.5) * 12,
+                (Math.random() - 0.5) * 5
+            );
+            mesh.rotation.set(Math.random() * Math.PI, Math.random() * Math.PI, 0);
+            mesh.userData = {
+                rotationSpeed: (Math.random() - 0.5) * 0.005,
+                floatSpeed: (Math.random() - 0.5) * 0.002,
+                offset: Math.random() * Math.PI * 2
+            };
+            
+            scene.add(mesh);
+            shapes.push(mesh);
+        }
+
+        camera.position.z = 10;
+
+        function animate() {
+            requestAnimationFrame(animate);
+            const time = Date.now() * 0.0005;
+            shapes.forEach(mesh => {
+                mesh.rotation.x += mesh.userData.rotationSpeed;
+                mesh.rotation.y += mesh.userData.rotationSpeed;
+                mesh.position.y += Math.sin(time + mesh.userData.offset) * 0.005;
+            });
+            renderer.render(scene, camera);
+        }
+
+        animate();
+
+        window.addEventListener('resize', () => {
+            const w = container.clientWidth || window.innerWidth;
+            const h = container.clientHeight || window.innerHeight;
+            camera.aspect = w / h;
+            camera.updateProjectionMatrix();
+            renderer.setSize(w, h);
+        });
+    })();
+
+    // Scroll Reveal Logic
+    const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) entry.target.classList.add('active');
+        });
+    }, observerOptions);
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    // Counter Animation
+    const countUp = (el) => {
+        const target = parseInt(el.getAttribute('data-target'));
+        let count = 0;
+        const duration = 2000;
+        const startTime = performance.now();
+        const updateCount = (currentTime) => {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            const easeOutQuad = t => t * (2 - t);
+            count = Math.floor(easeOutQuad(progress) * target);
+            el.innerText = count;
+            if (progress < 1) requestAnimationFrame(updateCount);
+            else el.innerText = target;
+        };
+        requestAnimationFrame(updateCount);
+    };
+    const counterObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
+                countUp(entry.target);
+                entry.target.classList.add('counted');
+            }
+        });
+    }, observerOptions);
+    document.querySelectorAll('.counter').forEach(el => counterObserver.observe(el));
+</script>
+</body></html>

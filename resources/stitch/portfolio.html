@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>أعمالنا | الأفق للبرمجيات - Al-Ofuq</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed": "#1e1b1a",
+                    "inverse-on-surface": "#f4f0ef",
+                    "tertiary-fixed-dim": "#ccc5c3",
+                    "surface-variant": "#e5e2e1",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary-fixed": "#410001",
+                    "surface": "#fcf8f8",
+                    "outline": "#747878",
+                    "tertiary": "#514c4b",
+                    "surface-container-highest": "#e5e2e1",
+                    "on-primary-fixed-variant": "#464747",
+                    "on-surface-variant": "#444748",
+                    "tertiary-fixed": "#e9e1df",
+                    "on-secondary-fixed-variant": "#930004",
+                    "on-primary-container": "#e4e3e3",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-fixed": "#e4e2e2",
+                    "on-background": "#1c1b1b",
+                    "inverse-surface": "#313030",
+                    "on-tertiary-fixed-variant": "#4a4645",
+                    "primary-container": "#656565",
+                    "on-tertiary-container": "#e9e2e0",
+                    "surface-container": "#f1edec",
+                    "secondary-fixed": "#ffdad5",
+                    "inverse-primary": "#c7c6c6",
+                    "on-primary-fixed": "#1b1c1c",
+                    "surface-container-high": "#ebe7e7",
+                    "tertiary-container": "#696463",
+                    "surface-bright": "#fcf8f8",
+                    "on-secondary-container": "#fffbff",
+                    "on-error": "#ffffff",
+                    "surface-dim": "#ddd9d8",
+                    "secondary-container": "#e3231c",
+                    "primary": "#4d4d4d",
+                    "on-secondary": "#ffffff",
+                    "background": "#fcf8f8",
+                    "primary-fixed-dim": "#c7c6c6",
+                    "on-error-container": "#93000a",
+                    "secondary": "#bc0007",
+                    "outline-variant": "#c4c7c7",
+                    "surface-container-low": "#f7f3f2",
+                    "on-surface": "#1c1b1b",
+                    "surface-tint": "#5e5e5e",
+                    "error-container": "#ffdad6",
+                    "secondary-fixed-dim": "#ffb4a9",
+                    "on-primary": "#ffffff",
+                    "error": "#ba1a1a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-section": "80px",
+                    "gutter": "24px",
+                    "container-max": "1440px",
+                    "margin-mobile": "20px",
+                    "margin-desktop": "64px",
+                    "unit": "8px"
+            },
+            "fontFamily": {
+                    "label-sm": ["IBM Plex Sans Arabic"],
+                    "body-md": ["IBM Plex Sans Arabic"],
+                    "body-lg": ["IBM Plex Sans Arabic"],
+                    "title-md": ["IBM Plex Sans Arabic"],
+                    "display-lg": ["IBM Plex Sans Arabic"],
+                    "headline-lg-mobile": ["IBM Plex Sans Arabic"],
+                    "headline-lg": ["IBM Plex Sans Arabic"]
+            },
+            "fontSize": {
+                    "label-sm": ["13px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "title-md": ["20px", {"lineHeight": "28px", "fontWeight": "500"}],
+                    "display-lg": ["48px", {"lineHeight": "60px", "letterSpacing": "0", "fontWeight": "700"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            font-family: 'IBM Plex Sans Arabic', sans-serif;
+            background-color: #fcf8f8;
+            color: #1c1b1b;
+            overflow-x: hidden;
+        }
+        .brand-gradient {
+            background: linear-gradient(135deg, #E0201A 0%, #3C9E91 100%);
+        }
+        .brand-gradient-text {
+            background: linear-gradient(135deg, #E0201A 0%, #3C9E91 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .diagonal-cut {
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+        }
+        .glass-nav {
+            backdrop-filter: blur(12px);
+            background-color: rgba(252, 248, 248, 0.7);
+        }
+        .project-card:hover .project-image {
+            transform: scale(1.05);
+        }
+        .project-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #E0201A, #3C9E91);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+            transform-origin: right;
+        }
+        .project-card:hover::after {
+            transform: scaleX(1);
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="antialiased">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/70 backdrop-blur-md border-b border-outline/10 shadow-sm">
+<div class="flex flex-row-reverse justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="flex items-center gap-2">
+<span class="text-headline-lg font-bold text-on-surface">الأفق</span>
+<div class="w-8 h-8 brand-gradient rounded-lg rotate-45"></div>
+</div>
+<div class="hidden md:flex flex-row-reverse items-center gap-8">
+<a class="text-primary font-bold border-b-2 border-secondary font-body-md text-body-md py-1" href="#">الرئيسية</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-body-md text-body-md py-1" href="#">من نحن</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-body-md text-body-md py-1" href="#">خدماتنا</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-body-md text-body-md py-1" href="#">أعمالنا</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-body-md text-body-md py-1" href="#">شركاؤنا</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-body-md text-body-md py-1" href="#">عملاؤنا</a>
+</div>
+<button class="brand-gradient text-on-primary px-6 py-2.5 rounded-full font-bold active:scale-95 transition-transform text-body-md font-body-md">
+                اطلب عرض سعر
+            </button>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative h-[819px] flex items-center justify-center overflow-hidden diagonal-cut">
+<!-- STITCH_SHADER_START:ANIMATION_16 class="absolute inset-0 w-full h-full" -->
+<div class="absolute inset-0 w-full h-full" style="display:block;">
+<canvas id="shader-canvas-ANIMATION_16" style="display:block;width:100%;height:100%"></canvas>
+<script>
+(function() {
+  const canvas = document.getElementById('shader-canvas-ANIMATION_16');
+
+  // Sync the WebGL drawing-buffer size with the CSS-driven layout size.
+  // This fires on initial layout and whenever the element is resized.
+  function syncSize() {
+    const w = canvas.clientWidth  || 1280;
+    const h = canvas.clientHeight || 720;
+    if (canvas.width !== w || canvas.height !== h) {
+      canvas.width  = w;
+      canvas.height = h;
+    }
+  }
+  if (typeof ResizeObserver !== 'undefined') {
+    new ResizeObserver(syncSize).observe(canvas);
+  }
+  syncSize();
+
+  const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+  if (!gl) return;
+  const vs = `attribute vec2 a_position;
+varying vec2 v_texCoord;
+void main() {
+  v_texCoord = a_position * 0.5 + 0.5;
+  gl_Position = vec4(a_position, 0.0, 1.0);
+}`;
+  const fs = `precision highp float;
+varying vec2 v_texCoord;
+uniform float u_time;
+uniform vec2 u_resolution;
+
+void main() {
+    vec2 uv = v_texCoord;
+    float t = u_time * 0.15;
+    
+    // Base surface color
+    vec3 color = vec3(0.97, 0.97, 0.97); 
+    
+    // Brand Colors (converted to vec3)
+    vec3 red = vec3(0.88, 0.13, 0.10);    // #E0201A
+    vec3 orange = vec3(0.94, 0.42, 0.09); // #F06A17
+    vec3 gold = vec3(0.96, 0.69, 0.0);    // #F6B000
+    vec3 teal = vec3(0.24, 0.62, 0.57);   // #3C9E91
+    
+    // Soft moving blobs for the hero background
+    float d1 = distance(uv, vec2(0.1 + 0.2 * sin(t), 0.2 + 0.2 * cos(t)));
+    float b1 = smoothstep(0.8, 0.0, d1);
+    color = mix(color, red, b1 * 0.06);
+    
+    float d2 = distance(uv, vec2(0.9 + 0.1 * cos(t * 0.8), 0.8 + 0.1 * sin(t * 1.2)));
+    float b2 = smoothstep(0.7, 0.0, d2);
+    color = mix(color, gold, b2 * 0.04);
+    
+    float d3 = distance(uv, vec2(0.5 + 0.3 * cos(t * 0.5), 0.4 + 0.3 * sin(t * 0.7)));
+    float b3 = smoothstep(0.6, 0.0, d3);
+    color = mix(color, teal, b3 * 0.05);
+
+    // Subtle diagonal lines movement
+    float lines = sin((uv.x - uv.y * 1.5) * 30.0 + t * 2.0);
+    lines = smoothstep(0.95, 1.0, lines);
+    color = mix(color, vec3(0.9, 0.9, 0.9), lines * 0.15);
+
+    gl_FragColor = vec4(color, 1.0);
+}`;
+  function cs(type, src) {
+    const s = gl.createShader(type);
+    gl.shaderSource(s, src);
+    gl.compileShader(s);
+    return s;
+  }
+  const prog = gl.createProgram();
+  gl.attachShader(prog, cs(gl.VERTEX_SHADER, vs));
+  gl.attachShader(prog, cs(gl.FRAGMENT_SHADER, fs));
+  gl.linkProgram(prog);
+  gl.useProgram(prog);
+  const buf = gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1, 1,-1, -1,1, 1,1]), gl.STATIC_DRAW);
+  const pos = gl.getAttribLocation(prog, 'a_position');
+  gl.enableVertexAttribArray(pos);
+  gl.vertexAttribPointer(pos, 2, gl.FLOAT, false, 0, 0);
+  const uTime = gl.getUniformLocation(prog, 'u_time');
+  const uRes = gl.getUniformLocation(prog, 'u_resolution');
+  const uMouse = gl.getUniformLocation(prog, 'u_mouse');
+
+  // u_mouse is in pixel coordinates matching u_resolution (ShaderToy convention).
+  // Shaders that need normalized coords should use: u_mouse / u_resolution.
+  let mouse = { x: canvas.width / 2, y: canvas.height / 2 };
+  window.addEventListener('mousemove', (event) => {
+    const rect = canvas.getBoundingClientRect();
+    if (rect.width && rect.height) {
+      const nx = (event.clientX - rect.left) / rect.width;
+      const ny = 1.0 - (event.clientY - rect.top) / rect.height;
+      mouse.x = nx * canvas.width;
+      mouse.y = ny * canvas.height;
+    }
+  });
+
+  function render(t) {
+    if (typeof ResizeObserver === 'undefined') syncSize();
+    gl.viewport(0, 0, canvas.width, canvas.height);
+    if (uTime) gl.uniform1f(uTime, t * 0.001);
+    if (uRes) gl.uniform2f(uRes, canvas.width, canvas.height);
+    if (uMouse) gl.uniform2f(uMouse, mouse.x, mouse.y);
+    gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+    requestAnimationFrame(render);
+  }
+  render(0);
+})();
+</script>
+</div>
+<!-- STITCH_SHADER_END:ANIMATION_16 -->
+<div class="absolute inset-0 bg-on-background/40 backdrop-blur-[2px]"></div>
+<div class="relative z-10 text-center px-margin-mobile max-w-4xl mx-auto">
+<h1 class="text-display-lg font-display-lg text-white mb-6 drop-shadow-lg">أعمالنا</h1>
+<p class="text-body-lg font-body-lg text-white/90 mb-10 leading-relaxed max-w-2xl mx-auto">
+                    نفتخر بتنفيذ حلول رقمية متنوعة تساعد الشركات على النمو، تحسين الأداء، وتقديم تجربة أفضل لعملائها.
+                </p>
+<button class="bg-white text-secondary px-10 py-4 rounded-full font-bold text-title-md font-title-md hover:bg-surface-variant transition-all shadow-xl hover:-translate-y-1 active:scale-95">
+                    ابدأ مشروعك معنا
+                </button>
+</div>
+</section>
+<!-- Filter Section -->
+<section class="py-12 bg-surface">
+<div class="max-w-container-max mx-auto px-margin-mobile">
+<div class="flex flex-wrap justify-center gap-3 md:gap-4 overflow-x-auto pb-4 scrollbar-hide">
+<button class="px-8 py-3 rounded-full border-2 border-secondary bg-secondary text-white font-bold transition-all whitespace-nowrap">الكل</button>
+<button class="px-8 py-3 rounded-full border-2 border-outline/20 hover:border-secondary hover:text-secondary font-medium transition-all text-on-surface-variant whitespace-nowrap">مواقع إلكترونية</button>
+<button class="px-8 py-3 rounded-full border-2 border-outline/20 hover:border-secondary hover:text-secondary font-medium transition-all text-on-surface-variant whitespace-nowrap">تطبيقات موبايل</button>
+<button class="px-8 py-3 rounded-full border-2 border-outline/20 hover:border-secondary hover:text-secondary font-medium transition-all text-on-surface-variant whitespace-nowrap">أنظمة إدارية</button>
+<button class="px-8 py-3 rounded-full border-2 border-outline/20 hover:border-secondary hover:text-secondary font-medium transition-all text-on-surface-variant whitespace-nowrap">متاجر إلكترونية</button>
+<button class="px-8 py-3 rounded-full border-2 border-outline/20 hover:border-secondary hover:text-secondary font-medium transition-all text-on-surface-variant whitespace-nowrap">تصميم UI/UX</button>
+</div>
+</div>
+</section>
+<!-- Projects Grid -->
+<section class="py-stack-section bg-surface-container-low">
+<div class="max-w-container-max mx-auto px-margin-mobile">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Project 1 -->
+<div class="reveal project-card group relative bg-surface overflow-hidden rounded-xl shadow-sm hover:shadow-2xl transition-all duration-500">
+<div class="aspect-video overflow-hidden relative">
+<img class="project-image w-full h-full object-cover transition-transform duration-700" data-alt="A sophisticated business management dashboard interface on a sleek computer monitor. The UI features clean data visualizations, minimalist charts, and professional typography in a light-themed environment with subtle shadows and a premium tech aesthetic. The lighting is bright and airy with Al-Ofuq brand colors as subtle highlights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIXkauukl-F0NHqdn0n085CekHSu52umHJJ1b0cpkIYeowPATDuXYbMxuP2xv4nFrxuv8WEp2GIEfkObdCV1K3ohz2jrKS8p4m2m7SbHDW4MdDyR9Bstxd4v9IPxatAAFDyMYJFcCHdf2l3nu7jEUCCe_AQlBswAYK-SrhyrUmpq0B9uboYN4-6N836N1yWzEppPffdxbKegicAeKi5YmajMkc_dSsi-PfCo1l84Z4xC5euofEH0p-gn0GbvrTi8d0A-j3pJaoMf0"/>
+<div class="absolute inset-0 bg-on-background/20 group-hover:bg-transparent transition-colors"></div>
+</div>
+<div class="p-8">
+<div class="flex items-center gap-2 mb-3">
+<span class="bg-secondary/10 text-secondary px-3 py-1 rounded text-label-sm font-label-sm">نظام إداري</span>
+</div>
+<h3 class="text-headline-lg-mobile font-headline-lg-mobile mb-4 text-on-surface">منصة إدارة أعمال</h3>
+<div class="flex gap-2 flex-wrap mb-6">
+<span class="text-on-surface-variant border border-outline/20 px-2 py-0.5 rounded text-label-sm">Laravel</span>
+<span class="text-on-surface-variant border border-outline/20 px-2 py-0.5 rounded text-label-sm">Flutter</span>
+<span class="text-on-surface-variant border border-outline/20 px-2 py-0.5 rounded text-label-sm">MySQL</span>
+</div>
+<a class="inline-flex items-center gap-2 text-secondary font-bold hover:gap-4 transition-all" href="#">
+                                التفاصيل
+                                <span class="material-symbols-outlined">arrow_back</span>
+</a>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="reveal project-card group relative bg-surface overflow-hidden rounded-xl shadow-sm hover:shadow-2xl transition-all duration-500" style="transition-delay: 100ms;">
+<div class="aspect-video overflow-hidden relative">
+<img class="project-image w-full h-full object-cover transition-transform duration-700" data-alt="A modern mobile service application interface displayed on a high-end smartphone. The screen shows a clean service booking flow with vibrant icons, smooth transitions, and a crisp white background. The overall vibe is futuristic and user-friendly, maintaining the Al-Ofuq corporate identity with red and teal accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZQM2pyNinLiInMDocM7HODNGbN1GQ9CAoyh2laJtnCq4iEUpPGQqJuwSJBaJdDcbfAS4fHmz49o03FdIEiN5AL9OX-cE7zHRwqf9R95J0mtg1_60c5HtilWGHdX4nwi98cLvxnvXmYIeglrI-uY_5Q_Fe-Ge0w2xq0yV6znXKSLqUpB35IYKwcWvqRSg-d7x4HUBtQda3--IKaL1Qgaw5-rBeRJYVpblFHD9AeY89XM9JrU1c4xoO8kk68RK2JIWAnPNc6-6jOK4"/>
+</div>
+<div class="p-8">
+<div class="flex items-center gap-2 mb-3">
+<span class="bg-secondary/10 text-secondary px-3 py-1 rounded text-label-sm font-label-sm">تطبيق موبايل</span>
+</div>
+<h3 class="text-headline-lg-mobile font-headline-lg-mobile mb-4 text-on-surface">تطبيق خدمات</h3>
+<div class="flex gap-2 flex-wrap mb-6">
+<span class="text-on-surface-variant border border-outline/20 px-2 py-0.5 rounded text-label-sm">Flutter</span>
+<span class="text-on-surface-variant border border-outline/20 px-2 py-0.5 rounded text-label-sm">API</span>
+<span class="text-on-surface-variant border border-outline/20 px-2 py-0.5 rounded text-label-sm">Firebase</span>
+</div>
+<a class="inline-flex items-center gap-2 text-secondary font-bold hover:gap-4 transition-all" href="#">
+                                التفاصيل
+                                <span class="material-symbols-outlined">arrow_back</span>
+</a>
+</div>
+</div>
+<!-- Project 3 -->
+<div class="reveal project-card group relative bg-surface overflow-hidden rounded-xl shadow-sm hover:shadow-2xl transition-all duration-500" style="transition-delay: 200ms;">
+<div class="aspect-video overflow-hidden relative">
+<img class="project-image w-full h-full object-cover transition-transform duration-700" data-alt="An elegant e-commerce website layout featuring high-quality product imagery and a seamless checkout process. The design is minimalist, utilizing ample white space and sharp geometric containers. Subtle red accents highlight primary actions like 'Add to Cart', creating a high-end retail experience for a modern tech brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNWSJ2pyqz53nQdYMqpInyOSdyRHDMYeGgPKcM7SrGHQgh1qrADZqdDGoMkA4Boo8248ayH-gFqiiN2ho0tSfS-U3cWTAyb-INGlCw-RQPDnIbUBbq45khfOzcBAlNKWFTH_r9gq7otaBYp9DF3ID0m8WYXoNbwEFMhRAE-aqCcefbBQ9mNf1awh5kc2Az0eAUYaySbCf0XkmfkT956WNMa2jnV1GKkYFMGktfJOoIG4uV2GZf_iKjBU1KLeknLtvbNyy4PcDeAGE"/>
+</div>
+<div class="p-8">
+<div class="flex items-center gap-2 mb-3">
+<span class="bg-secondary/10 text-secondary px-3 py-1 rounded text-label-sm font-label-sm">متجر إلكتروني</span>
+</div>
+<h3 class="text-headline-lg-mobile font-headline-lg-mobile mb-4 text-on-surface">متجر إلكتروني متكامل</h3>
+<div class="flex gap-2 flex-wrap mb-6">
+<span class="text-on-surface-variant border border-outline/20 px-2 py-0.5 rounded text-label-sm">Laravel</span>
+<span class="text-on-surface-variant border border-outline/20 px-2 py-0.5 rounded text-label-sm">Payment Gateway</span>
+</div>
+<a class="inline-flex items-center gap-2 text-secondary font-bold hover:gap-4 transition-all" href="#">
+                                التفاصيل
+                                <span class="material-symbols-outlined">arrow_back</span>
+</a>
+</div>
+</div>
+<!-- Project 4 -->
+<div class="reveal project-card group relative bg-surface overflow-hidden rounded-xl shadow-sm hover:shadow-2xl transition-all duration-500">
+<div class="aspect-video overflow-hidden relative">
+<img class="project-image w-full h-full object-cover transition-transform duration-700" data-alt="A professional corporate website design for a technology firm. The layout features hero sections with diagonal cuts, high-definition photography of modern architecture, and clean typography. The atmosphere is professional and authoritative, using a palette of whites, grays, and brand red highlights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCsMLXIuDSSUULGlJYrEWwHyg7FajgVcDs4nDnHcZhDOME8Mfrz_bwE9r1SQ_h3igoInh05k3-60EOEvkEJeYD1V9AV1k8itjTVIXYETFnQJ8vdUq7C_LgEDrPS5ukL-g2VpJO-mi-Th90eH6x-YjcHyQm6TTlcLxEhtgTxFu3RwyR7uCnRvZETLDg6HFIbQHI0vM2Ke3Ck0iq2NuK88ICrZGA3XYhnPFdOl4R03iABfakdeQFYeZRCKuAaCi6euyRyNhInMU6jtQ"/>
+</div>
+<div class="p-8">
+<div class="flex items-center gap-2 mb-3">
+<span class="bg-secondary/10 text-secondary px-3 py-1 rounded text-label-sm font-label-sm">موقع إلكتروني</span>
+</div>
+<h3 class="text-headline-lg-mobile font-headline-lg-mobile mb-4 text-on-surface">موقع شركة احترافي</h3>
+<div class="flex gap-2 flex-wrap mb-6">
+<span class="text-on-surface-variant border border-outline/20 px-2 py-0.5 rounded text-label-sm">HTML</span>
+<span class="text-on-surface-variant border border-outline/20 px-2 py-0.5 rounded text-label-sm">CSS</span>
+<span class="text-on-surface-variant border border-outline/20 px-2 py-0.5 rounded text-label-sm">JavaScript</span>
+</div>
+<a class="inline-flex items-center gap-2 text-secondary font-bold hover:gap-4 transition-all" href="#">
+                                التفاصيل
+                                <span class="material-symbols-outlined">arrow_back</span>
+</a>
+</div>
+</div>
+<!-- Project 5 -->
+<div class="reveal project-card group relative bg-surface overflow-hidden rounded-xl shadow-sm hover:shadow-2xl transition-all duration-500" style="transition-delay: 100ms;">
+<div class="aspect-video overflow-hidden relative">
+<img class="project-image w-full h-full object-cover transition-transform duration-700" data-alt="Detailed CRM software analytics screen showing complex graphs, customer interaction logs, and automated report generators. The design uses a technical, industrial gray background with glassmorphic overlay panels for key metrics. The mood is precise, efficient, and data-driven with vibrant brand color accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBi8_BNRXUV-hLBeRehf5N7Rq4-ujXD578pnkWXcbP8OnCQUcRg_0pbwVsUQEUEg6dGm4yXgiaTEkJru-q4bDFdt-SyZhP_z765-Uw75wpevhz9pkUOykSGGSado6vcJx3BFD-89s2i-oIPlbSxObXAJ7TAWw7hDGPEjhMuyl2870T20y1gW8Xdzn2Fw737bzrKnCXFukwEANuf9Y5p5tIuv31FSflL5DZd-m-etLZhfDrXL7bDGFZkv3mm8LEvIADJHOQnVLrXQSc"/>
+</div>
+<div class="p-8">
+<div class="flex items-center gap-2 mb-3">
+<span class="bg-secondary/10 text-secondary px-3 py-1 rounded text-label-sm font-label-sm">أنظمة إدارية</span>
+</div>
+<h3 class="text-headline-lg-mobile font-headline-lg-mobile mb-4 text-on-surface">نظام CRM ذكي</h3>
+<div class="flex gap-2 flex-wrap mb-6">
+<span class="text-on-surface-variant border border-outline/20 px-2 py-0.5 rounded text-label-sm">Laravel</span>
+<span class="text-on-surface-variant border border-outline/20 px-2 py-0.5 rounded text-label-sm">Reports</span>
+</div>
+<a class="inline-flex items-center gap-2 text-secondary font-bold hover:gap-4 transition-all" href="#">
+                                التفاصيل
+                                <span class="material-symbols-outlined">arrow_back</span>
+</a>
+</div>
+</div>
+<!-- Project 6 -->
+<div class="reveal project-card group relative bg-surface overflow-hidden rounded-xl shadow-sm hover:shadow-2xl transition-all duration-500" style="transition-delay: 200ms;">
+<div class="aspect-video overflow-hidden relative">
+<img class="project-image w-full h-full object-cover transition-transform duration-700" data-alt="A minimalist UI/UX design workflow mockup featuring multiple mobile app screens in a Figma workspace. The design focuses on user journey mapping, clean wireframes, and high-fidelity prototype screens with smooth gradients and rounded buttons. Soft shadows and clean white surroundings create a creative professional feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCa4IBAlhVXVKvMO9GeYeNN8qgFsyY-fVsAy-4jXZp58WF0VKDyZZUC7PC12vmNtmb2QMY7CW3a1UfWvzweNxixaJlt0Vk-NOnHcIhbicXCQIbYKHfipb1OXZy9QeCYT0lLRzdh8Rt8-icFLZfJgYO1Q8_pj5B52AQZZsaNPqZ7AOP4TfwpemYYBtsuaMPhiJJlB2MN7s1I5xsQi2cHOSA2sX5xUXPCdrPAP8a9ykXU8ZEUtDf0VrOY2ZCaUwKeU81_ANwI7PVwoUo"/>
+</div>
+<div class="p-8">
+<div class="flex items-center gap-2 mb-3">
+<span class="bg-secondary/10 text-secondary px-3 py-1 rounded text-label-sm font-label-sm">UI/UX</span>
+</div>
+<h3 class="text-headline-lg-mobile font-headline-lg-mobile mb-4 text-on-surface">تصميم واجهات تطبيق</h3>
+<div class="flex gap-2 flex-wrap mb-6">
+<span class="text-on-surface-variant border border-outline/20 px-2 py-0.5 rounded text-label-sm">Figma</span>
+<span class="text-on-surface-variant border border-outline/20 px-2 py-0.5 rounded text-label-sm">Prototype</span>
+</div>
+<a class="inline-flex items-center gap-2 text-secondary font-bold hover:gap-4 transition-all" href="#">
+                                التفاصيل
+                                <span class="material-symbols-outlined">arrow_back</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Case Study -->
+<section class="py-stack-section bg-white overflow-hidden">
+<div class="max-w-container-max mx-auto px-margin-mobile">
+<div class="flex flex-col lg:flex-row-reverse gap-16 items-center">
+<div class="flex-1 reveal">
+<div class="relative">
+<div class="absolute -inset-4 brand-gradient opacity-10 blur-3xl rounded-full"></div>
+<img class="relative w-full h-auto rounded-2xl shadow-2xl z-10" data-alt="A comprehensive enterprise resource planning (ERP) system mockup shown on both a desktop monitor and tablet. The UI is complex yet intuitive, featuring stacked vertical modules, diagonal cut-out decorations, and a crisp corporate white aesthetic. Glowing red and teal indicators show real-time performance metrics in a futuristic office setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgoBfIo_jU7Y5Xif5pKvtc7pCE3OSddzB6P61IeAlLuQXt18w84unDbThW9vuqi0H6Peot7Us6K7J7s3B1H_jN_-gCktftf5Cn6gBwu7OqkQb7yzRdudDtm2MTp3oxw6Oyshkn3U4fWRr0_QQrz9ZmgLQNevqYWpLUwrMCCqn4nfK6zuw4ig-fQZFpD2ALoax2Q2TiAqwgXo0cIjva3XCQX-70l8M7pkQeTdlnn8_h7JO4pcYtcLzSPcMYi0M4hg0nnRVlBqWb_M4"/>
+</div>
+</div>
+<div class="flex-1 reveal" style="transition-delay: 200ms;">
+<h2 class="text-display-lg font-display-lg text-on-surface mb-6">نظام إدارة شركات متكامل</h2>
+<p class="text-body-lg font-body-lg text-on-surface-variant mb-8 leading-relaxed">
+                            قمنا بتطوير حل برمجي متكامل يربط بين جميع أقسام الشركة من الموارد البشرية إلى المبيعات والمخازن. يهدف النظام إلى تقليل الأخطاء البشرية وزيادة الإنتاجية من خلال أتمتة العمليات اليومية.
+                        </p>
+<ul class="space-y-4 mb-10">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">check_circle</span>
+<span class="text-body-md font-body-md">تحسين كفاءة العمل بنسبة 40%</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">check_circle</span>
+<span class="text-body-md font-body-md">تقارير لحظية ودقيقة لاتخاذ القرار</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">check_circle</span>
+<span class="text-body-md font-body-md">تكامل تام مع التطبيقات الخارجية</span>
+</li>
+</ul>
+<button class="brand-gradient text-white px-8 py-4 rounded-full font-bold shadow-lg hover:shadow-xl transition-all">
+                            مشاهدة دراسة الحالة
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Project Process Timeline -->
+<section class="py-stack-section bg-surface-container-high">
+<div class="max-w-container-max mx-auto px-margin-mobile">
+<div class="text-center mb-16">
+<h2 class="text-display-lg font-display-lg text-on-surface mb-4">كيف نعمل؟</h2>
+<p class="text-body-lg font-body-lg text-on-surface-variant max-w-2xl mx-auto">نتبع منهجية منظمة تضمن وصول مشروعك إلى النجاح المنشود بأعلى معايير الجودة.</p>
+</div>
+<div class="relative">
+<!-- Progress Line -->
+<div class="absolute top-1/2 left-0 w-full h-1 bg-outline/10 -translate-y-1/2 hidden lg:block"></div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 relative z-10">
+<!-- Step 1 -->
+<div class="reveal group text-center" style="transition-delay: 0ms;">
+<div class="w-16 h-16 rounded-full bg-white shadow-lg mx-auto flex items-center justify-center mb-6 border-2 border-transparent group-hover:border-secondary transition-all">
+<span class="material-symbols-outlined text-secondary text-3xl">lightbulb</span>
+</div>
+<h4 class="text-title-md font-title-md mb-2">فهم الفكرة</h4>
+<p class="text-label-sm font-label-sm text-on-surface-variant px-4">دراسة الرؤية والأهداف الأولية للمشروع.</p>
+</div>
+<!-- Step 2 -->
+<div class="reveal group text-center" style="transition-delay: 100ms;">
+<div class="w-16 h-16 rounded-full bg-white shadow-lg mx-auto flex items-center justify-center mb-6 border-2 border-transparent group-hover:border-secondary transition-all">
+<span class="material-symbols-outlined text-secondary text-3xl">analytics</span>
+</div>
+<h4 class="text-title-md font-title-md mb-2">تحليل المتطلبات</h4>
+<p class="text-label-sm font-label-sm text-on-surface-variant px-4">تحديد الوظائف والتقنيات المناسبة.</p>
+</div>
+<!-- Step 3 -->
+<div class="reveal group text-center" style="transition-delay: 200ms;">
+<div class="w-16 h-16 rounded-full bg-white shadow-lg mx-auto flex items-center justify-center mb-6 border-2 border-transparent group-hover:border-secondary transition-all">
+<span class="material-symbols-outlined text-secondary text-3xl">draw</span>
+</div>
+<h4 class="text-title-md font-title-md mb-2">تصميم UX</h4>
+<p class="text-label-sm font-label-sm text-on-surface-variant px-4">بناء تجربة مستخدم سلسة واحترافية.</p>
+</div>
+<!-- Step 4 -->
+<div class="reveal group text-center" style="transition-delay: 300ms;">
+<div class="w-16 h-16 rounded-full bg-white shadow-lg mx-auto flex items-center justify-center mb-6 border-2 border-transparent group-hover:border-secondary transition-all">
+<span class="material-symbols-outlined text-secondary text-3xl">code</span>
+</div>
+<h4 class="text-title-md font-title-md mb-2">التطوير</h4>
+<p class="text-label-sm font-label-sm text-on-surface-variant px-4">برمجة الواجهات والأنظمة الخلفية.</p>
+</div>
+<!-- Step 5 -->
+<div class="reveal group text-center" style="transition-delay: 400ms;">
+<div class="w-16 h-16 rounded-full bg-white shadow-lg mx-auto flex items-center justify-center mb-6 border-2 border-transparent group-hover:border-secondary transition-all">
+<span class="material-symbols-outlined text-secondary text-3xl">verified</span>
+</div>
+<h4 class="text-title-md font-title-md mb-2">الاختبار</h4>
+<p class="text-label-sm font-label-sm text-on-surface-variant px-4">التأكد من خلو المشروع من الأخطاء.</p>
+</div>
+<!-- Step 6 -->
+<div class="reveal group text-center" style="transition-delay: 500ms;">
+<div class="w-16 h-16 rounded-full bg-white shadow-lg mx-auto flex items-center justify-center mb-6 border-2 border-transparent group-hover:border-secondary transition-all">
+<span class="material-symbols-outlined text-secondary text-3xl">rocket_launch</span>
+</div>
+<h4 class="text-title-md font-title-md mb-2">الإطلاق</h4>
+<p class="text-label-sm font-label-sm text-on-surface-variant px-4">نشر المشروع وتقديم الدعم الفني.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-stack-section relative overflow-hidden">
+<div class="absolute inset-0 brand-gradient opacity-5"></div>
+<div class="max-w-container-max mx-auto px-margin-mobile text-center relative z-10">
+<h2 class="text-display-lg font-display-lg text-on-surface mb-6">هل لديك مشروع تريد تنفيذه؟</h2>
+<p class="text-body-lg font-body-lg text-on-surface-variant mb-12 max-w-xl mx-auto">نحن هنا لنحول رؤيتك إلى واقع رقمي مبهر. تواصل معنا اليوم لنبدأ الرحلة.</p>
+<div class="flex flex-col sm:flex-row justify-center gap-6">
+<button class="brand-gradient text-white px-12 py-4 rounded-full font-bold text-title-md shadow-xl hover:-translate-y-1 transition-all active:scale-95">اطلب عرض سعر</button>
+<button class="border-2 border-primary text-primary px-12 py-4 rounded-full font-bold text-title-md hover:bg-primary hover:text-white transition-all active:scale-95">تواصل معنا</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-highest border-t border-outline/10 w-full">
+<div class="flex flex-col md:flex-row-reverse justify-between items-center px-margin-mobile md:px-margin-desktop py-stack-section gap-gutter max-w-container-max mx-auto">
+<div class="flex items-center gap-2 mb-6 md:mb-0">
+<span class="text-headline-lg font-bold text-on-surface">الأفق</span>
+<div class="w-6 h-6 brand-gradient rounded-sm rotate-45"></div>
+</div>
+<div class="flex flex-col md:flex-row-reverse items-center gap-8 mb-6 md:mb-0">
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-body-md text-body-md" href="#">سياسة الخصوصية</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-body-md text-body-md" href="#">الشروط والأحكام</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-body-md text-body-md" href="#">خريطة الموقع</a>
+</div>
+<p class="text-on-surface-variant font-body-md text-body-md opacity-80">
+                © 2024 الأفق للبرمجيات. جميع الحقوق محفوظة
+            </p>
+</div>
+</footer>
+<script>
+        // Reveal Animations on Scroll
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        // Trigger once on load
+        reveal();
+
+        // Smooth filter button switching (visual only for now)
+        const filterBtns = document.querySelectorAll('button[class*="rounded-full"]');
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                if (btn.innerText !== 'اطلب عرض سعر' && btn.innerText !== 'ابدأ مشروعك معنا' && btn.innerText !== 'تواصل معنا' && btn.innerText !== 'مشاهدة دراسة الحالة') {
+                    filterBtns.forEach(b => {
+                        b.classList.remove('bg-secondary', 'text-white', 'border-secondary');
+                        b.classList.add('border-outline/20', 'text-on-surface-variant');
+                    });
+                    btn.classList.add('bg-secondary', 'text-white', 'border-secondary');
+                    btn.classList.remove('border-outline/20', 'text-on-surface-variant');
+                }
+            });
+        });
+    </script>
+</body></html>

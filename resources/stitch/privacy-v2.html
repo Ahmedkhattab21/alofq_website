@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>سياسة الخصوصية | الأفق لتكنولوجيا المعلومات</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-container": "#e9e2e0",
+                        "on-secondary-fixed-variant": "#930004",
+                        "tertiary-fixed-dim": "#ccc5c3",
+                        "tertiary": "#514c4b",
+                        "surface-variant": "#e5e2e1",
+                        "secondary": "#bc0007",
+                        "inverse-on-surface": "#f4f0ef",
+                        "on-primary-container": "#e4e3e3",
+                        "surface": "#fcf8f8",
+                        "on-primary": "#ffffff",
+                        "inverse-surface": "#313030",
+                        "tertiary-fixed": "#e9e1df",
+                        "surface-container": "#f1edec",
+                        "secondary-fixed-dim": "#ffb4a9",
+                        "outline-variant": "#c4c7c7",
+                        "on-tertiary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "inverse-primary": "#c7c6c6",
+                        "secondary-container": "#e3231c",
+                        "on-secondary": "#ffffff",
+                        "primary-container": "#656565",
+                        "primary": "#4d4d4d",
+                        "surface-container-high": "#ebe7e7",
+                        "on-tertiary-fixed-variant": "#4a4645",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed": "#410001",
+                        "on-error": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-fixed": "#1b1c1c",
+                        "on-background": "#1c1b1b",
+                        "surface-dim": "#ddd9d8",
+                        "on-tertiary-fixed": "#1e1b1a",
+                        "primary-fixed-dim": "#c7c6c6",
+                        "error-container": "#ffdad6",
+                        "surface-bright": "#fcf8f8",
+                        "outline": "#747878",
+                        "on-surface-variant": "#444748",
+                        "secondary-fixed": "#ffdad5",
+                        "on-secondary-container": "#fffbff",
+                        "background": "#fcf8f8",
+                        "surface-tint": "#5e5e5e",
+                        "on-surface": "#1c1b1b",
+                        "surface-container-low": "#f7f3f2",
+                        "primary-fixed": "#e4e2e2",
+                        "on-primary-fixed-variant": "#464747",
+                        "tertiary-container": "#696463",
+                        "surface-container-highest": "#e5e2e1"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "gutter": "24px",
+                        "stack-section": "80px",
+                        "margin-mobile": "20px",
+                        "margin-desktop": "64px",
+                        "container-max": "1440px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["IBM Plex Sans Arabic"],
+                        "body-lg": ["IBM Plex Sans Arabic"],
+                        "headline-lg": ["IBM Plex Sans Arabic"],
+                        "title-md": ["IBM Plex Sans Arabic"],
+                        "label-sm": ["IBM Plex Sans Arabic"],
+                        "headline-lg-mobile": ["IBM Plex Sans Arabic"],
+                        "display-lg": ["IBM Plex Sans Arabic"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "title-md": ["20px", {"lineHeight": "28px", "fontWeight": "500"}],
+                        "label-sm": ["13px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                        "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "60px", "letterSpacing": "0", "fontWeight": "700"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .brand-gradient-text {
+            background: linear-gradient(to left, #E0201A, #3C9E91);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .brand-gradient-bg {
+            background: linear-gradient(to left, #E0201A, #3C9E91);
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .glass-nav {
+            backdrop-filter: blur(12px);
+            background-color: rgba(252, 248, 248, 0.7);
+        }
+        .diagonal-cut {
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .reveal {
+                transition: none;
+                opacity: 1;
+                transform: none;
+            }
+        }
+    </style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<!-- TopNavBar Section -->
+<nav class="fixed top-0 left-0 right-0 z-50 glass-nav border-b border-outline-variant/10 shadow-sm transition-all duration-300">
+<div class="max-w-[1440px] mx-auto flex flex-row-reverse justify-between items-center px-margin-mobile md:px-margin-desktop py-4">
+<div class="flex items-center gap-4">
+<span class="font-headline-lg-mobile text-headline-lg-mobile md:text-headline-lg font-bold text-on-surface">الأفق لتكنولوجيا المعلومات</span>
+</div>
+<div class="hidden md:flex flex-row-reverse gap-8">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="#">الرئيسية</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="#">الخدمات</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="#">عن الشركة</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="#">اتصل بنا</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="brand-gradient-bg text-on-primary px-6 py-2.5 rounded-lg font-title-md text-title-md hover:opacity-90 transition-opacity scale-95 active:scale-90 duration-200">
+                    ابدأ مشروعك
+                </button>
+<div class="hidden md:block w-10 h-10 rounded-full overflow-hidden border border-outline-variant/30">
+<img class="w-full h-full object-cover" data-alt="A professional headshot of a corporate executive in a modern tech office, styled with soft, cinematic lighting and a minimalist high-end software company background. The aesthetic is clean, professional, and reliable with neutral tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmzBzb2s9aUbpULINUEE2WZyrtdh50KX4F6OTOiS8fdEM8achIF_6XkY6ohVJUnaf_5uxezGqkSWpYUnEFAAewPjoIZX9o8pyrL1E_FNPnZhof4cNVM-s8daheyGAAjlh0wOU5hnihPHbrVezuPuF1FUoybqi06X5RpDXokWA1-gPGXeBigXpKnixlbyTCPjcWwQdtIWzL3Q491_Q0iAAeuwr_01Tn4HIK1F62lSlZXoZwHhmoeZnN50I-zkRTkRdIsmQFDxAXMW4"/>
+</div>
+</div>
+</div>
+</nav>
+<!-- Privacy Hero Section -->
+<section class="relative h-[614px] flex items-center justify-center pt-20 diagonal-cut">
+<!-- STITCH_SHADER_START:ANIMATION_28 class="absolute inset-0 w-full h-full" -->
+<div class="absolute inset-0 w-full h-full" style="display:block;">
+<canvas id="shader-canvas-ANIMATION_28" style="display:block;width:100%;height:100%"></canvas>
+<script>
+(function() {
+  const canvas = document.getElementById('shader-canvas-ANIMATION_28');
+
+  // Sync the WebGL drawing-buffer size with the CSS-driven layout size.
+  // This fires on initial layout and whenever the element is resized.
+  function syncSize() {
+    const w = canvas.clientWidth  || 1280;
+    const h = canvas.clientHeight || 720;
+    if (canvas.width !== w || canvas.height !== h) {
+      canvas.width  = w;
+      canvas.height = h;
+    }
+  }
+  if (typeof ResizeObserver !== 'undefined') {
+    new ResizeObserver(syncSize).observe(canvas);
+  }
+  syncSize();
+
+  const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+  if (!gl) return;
+  const vs = `attribute vec2 a_position;
+varying vec2 v_texCoord;
+void main() {
+  v_texCoord = a_position * 0.5 + 0.5;
+  gl_Position = vec4(a_position, 0.0, 1.0);
+}`;
+  const fs = `precision highp float;
+varying vec2 v_texCoord;
+uniform float u_time;
+uniform vec2 u_resolution;
+
+void main() {
+    vec2 uv = v_texCoord;
+    float t = u_time * 0.1;
+    
+    // Base surface color (Clean White/Gray)
+    vec3 color = vec3(0.98, 0.98, 0.98); 
+    
+    // Brand Gradient Colors
+    vec3 red = vec3(0.88, 0.13, 0.10);    // #E0201A
+    vec3 orange = vec3(0.94, 0.42, 0.09); // #F06A17
+    vec3 gold = vec3(0.96, 0.69, 0.0);    // #F6B000
+    vec3 teal = vec3(0.24, 0.62, 0.57);   // #3C9E91
+    
+    // Soft flowing blobs for a calm, professional privacy page
+    float d1 = distance(uv, vec2(0.8 + 0.1 * sin(t), 0.2 + 0.1 * cos(t * 0.9)));
+    float b1 = smoothstep(0.8, 0.0, d1);
+    color = mix(color, orange, b1 * 0.02);
+    
+    float d2 = distance(uv, vec2(0.1 + 0.2 * cos(t * 0.7), 0.9 + 0.1 * sin(t * 1.1)));
+    float b2 = smoothstep(0.7, 0.0, d2);
+    color = mix(color, teal, b2 * 0.03);
+    
+    float d3 = distance(uv, vec2(0.5 + 0.3 * cos(t * 0.5), 0.5 + 0.3 * sin(t * 0.6)));
+    float b3 = smoothstep(0.65, 0.0, d3);
+    color = mix(color, gold, b3 * 0.02);
+
+    // Subtle diagonal movement
+    float lines = sin((uv.x + uv.y) * 18.0 - t * 0.8);
+    lines = smoothstep(0.98, 1.0, lines);
+    color = mix(color, vec3(0.94, 0.94, 0.94), lines * 0.1);
+
+    gl_FragColor = vec4(color, 1.0);
+}`;
+  function cs(type, src) {
+    const s = gl.createShader(type);
+    gl.shaderSource(s, src);
+    gl.compileShader(s);
+    return s;
+  }
+  const prog = gl.createProgram();
+  gl.attachShader(prog, cs(gl.VERTEX_SHADER, vs));
+  gl.attachShader(prog, cs(gl.FRAGMENT_SHADER, fs));
+  gl.linkProgram(prog);
+  gl.useProgram(prog);
+  const buf = gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1, 1,-1, -1,1, 1,1]), gl.STATIC_DRAW);
+  const pos = gl.getAttribLocation(prog, 'a_position');
+  gl.enableVertexAttribArray(pos);
+  gl.vertexAttribPointer(pos, 2, gl.FLOAT, false, 0, 0);
+  const uTime = gl.getUniformLocation(prog, 'u_time');
+  const uRes = gl.getUniformLocation(prog, 'u_resolution');
+  const uMouse = gl.getUniformLocation(prog, 'u_mouse');
+
+  // u_mouse is in pixel coordinates matching u_resolution (ShaderToy convention).
+  // Shaders that need normalized coords should use: u_mouse / u_resolution.
+  let mouse = { x: canvas.width / 2, y: canvas.height / 2 };
+  window.addEventListener('mousemove', (event) => {
+    const rect = canvas.getBoundingClientRect();
+    if (rect.width && rect.height) {
+      const nx = (event.clientX - rect.left) / rect.width;
+      const ny = 1.0 - (event.clientY - rect.top) / rect.height;
+      mouse.x = nx * canvas.width;
+      mouse.y = ny * canvas.height;
+    }
+  });
+
+  function render(t) {
+    if (typeof ResizeObserver === 'undefined') syncSize();
+    gl.viewport(0, 0, canvas.width, canvas.height);
+    if (uTime) gl.uniform1f(uTime, t * 0.001);
+    if (uRes) gl.uniform2f(uRes, canvas.width, canvas.height);
+    if (uMouse) gl.uniform2f(uMouse, mouse.x, mouse.y);
+    gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+    requestAnimationFrame(render);
+  }
+  render(0);
+})();
+</script>
+</div>
+<!-- STITCH_SHADER_END:ANIMATION_28 -->
+<div class="absolute inset-0 bg-surface/40 backdrop-blur-[2px]"></div>
+<div class="relative z-10 text-center px-margin-mobile max-w-4xl reveal active">
+<h1 class="font-display-lg text-display-lg md:text-[64px] mb-6 font-bold text-on-surface">سياسة الخصوصية</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed max-w-2xl mx-auto">
+                نلتزم بحماية خصوصية زوار موقعنا وعملائنا، ونوضح في هذه الصفحة كيفية جمع واستخدام وحماية البيانات.
+            </p>
+<div class="w-24 h-1 brand-gradient-bg mx-auto mt-10 rounded-full"></div>
+</div>
+</section>
+<!-- Content Layout -->
+<main class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop py-stack-section">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 flex flex-row-reverse">
+<!-- SideNavBar Component (Right Side) -->
+<aside class="lg:col-span-3">
+<div class="sticky top-32 bg-surface shadow-md rounded-xl overflow-hidden border border-outline-variant/10">
+<div class="p-6 bg-surface-container-high border-b border-outline-variant/10">
+<h3 class="font-title-md text-title-md text-on-surface font-bold">المحتويات</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">سياسة الخصوصية</p>
+</div>
+<nav class="flex flex-col">
+<a class="flex items-center gap-3 px-6 py-4 text-secondary font-bold border-r-4 border-secondary bg-secondary/5 transition-all duration-200" href="#intro" id="nav-intro">
+<span class="material-symbols-outlined">info</span>
+<span class="font-title-md text-title-md">المقدمة</span>
+</a>
+<a class="flex items-center gap-3 px-6 py-4 text-on-surface-variant hover:bg-surface-container-low transition-all duration-200" href="#data-collection" id="nav-data-collection">
+<span class="material-symbols-outlined">database</span>
+<span class="font-title-md text-title-md">جمع البيانات</span>
+</a>
+<a class="flex items-center gap-3 px-6 py-4 text-on-surface-variant hover:bg-surface-container-low transition-all duration-200" href="#usage" id="nav-usage">
+<span class="material-symbols-outlined">visibility</span>
+<span class="font-title-md text-title-md">استخدام المعلومات</span>
+</a>
+<a class="flex items-center gap-3 px-6 py-4 text-on-surface-variant hover:bg-surface-container-low transition-all duration-200" href="#security" id="nav-security">
+<span class="material-symbols-outlined">security</span>
+<span class="font-title-md text-title-md">أمن البيانات</span>
+</a>
+<a class="flex items-center gap-3 px-6 py-4 text-on-surface-variant hover:bg-surface-container-low transition-all duration-200" href="#rights" id="nav-rights">
+<span class="material-symbols-outlined">verified_user</span>
+<span class="font-title-md text-title-md">حقوق المستخدم</span>
+</a>
+</nav>
+</div>
+</aside>
+<!-- Policy Content Sections (Left Side) -->
+<div class="lg:col-span-9 space-y-8">
+<!-- مقدمة -->
+<section class="reveal bg-surface-container-lowest p-8 rounded-xl shadow-sm border border-outline-variant/10 group hover:shadow-md transition-shadow" id="intro">
+<div class="flex items-start gap-4">
+<div class="w-1.5 h-12 brand-gradient-bg rounded-full"></div>
+<div>
+<h2 class="font-headline-lg text-headline-lg mb-4 text-on-surface">مقدمة</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                                تهدف سياسة الخصوصية إلى توضيح كيفية تعاملنا مع البيانات التي يتم إرسالها من خلال موقعنا، نماذج التواصل، أو طلبات عروض الأسعار. نحن ندرك أهمية بياناتك ونتعامل معها بأقصى درجات المسؤولية والشفافية.
+                            </p>
+</div>
+</div>
+</section>
+<!-- البيانات التي نجمعها -->
+<section class="reveal bg-surface-container-lowest p-8 rounded-xl shadow-sm border border-outline-variant/10 group hover:shadow-md transition-shadow" id="data-collection">
+<div class="flex items-start gap-4">
+<div class="w-1.5 h-12 brand-gradient-bg rounded-full"></div>
+<div>
+<h2 class="font-headline-lg text-headline-lg mb-4 text-on-surface">البيانات التي نجمعها</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed mb-4">
+                                قد نقوم بجمع بعض البيانات مثل الاسم، رقم الجوال، البريد الإلكتروني، اسم الشركة، تفاصيل المشروع، والبيانات التي يرسلها المستخدم من خلال النماذج الموجودة في الموقع.
+                            </p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+<div class="bg-surface p-4 rounded-lg flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">person</span>
+<span class="font-body-md text-body-md">المعلومات الشخصية</span>
+</div>
+<div class="bg-surface p-4 rounded-lg flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">business</span>
+<span class="font-body-md text-body-md">تفاصيل الشركة</span>
+</div>
+<div class="bg-surface p-4 rounded-lg flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">mail</span>
+<span class="font-body-md text-body-md">وسائل التواصل</span>
+</div>
+<div class="bg-surface p-4 rounded-lg flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">description</span>
+<span class="font-body-md text-body-md">متطلبات المشروع</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- كيفية استخدام البيانات -->
+<section class="reveal bg-surface-container-lowest p-8 rounded-xl shadow-sm border border-outline-variant/10 group hover:shadow-md transition-shadow" id="usage">
+<div class="flex items-start gap-4">
+<div class="w-1.5 h-12 brand-gradient-bg rounded-full"></div>
+<div>
+<h2 class="font-headline-lg text-headline-lg mb-4 text-on-surface">كيفية استخدام البيانات</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                                نستخدم البيانات للتواصل معك، فهم احتياجات مشروعك، إعداد عروض الأسعار، تحسين خدماتنا، والرد على الاستفسارات والطلبات. تهدف جميع استخداماتنا لرفع جودة الخدمة المقدمة لك.
+                            </p>
+</div>
+</div>
+</section>
+<!-- حماية البيانات -->
+<section class="reveal bg-surface-container-lowest p-8 rounded-xl shadow-sm border border-outline-variant/10 group hover:shadow-md transition-shadow" id="security">
+<div class="flex items-start gap-4">
+<div class="w-1.5 h-12 brand-gradient-bg rounded-full"></div>
+<div>
+<h2 class="font-headline-lg text-headline-lg mb-4 text-on-surface">حماية البيانات</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                                نحرص على اتخاذ إجراءات مناسبة لحماية البيانات من الوصول غير المصرح به أو الاستخدام غير المناسب. نستخدم تقنيات تشفير متقدمة وبروتوكولات أمان صارمة لضمان سلامة معلوماتك.
+                            </p>
+</div>
+</div>
+</section>
+<!-- مشاركة البيانات -->
+<section class="reveal bg-surface-container-lowest p-8 rounded-xl shadow-sm border border-outline-variant/10 group hover:shadow-md transition-shadow">
+<div class="flex items-start gap-4">
+<div class="w-1.5 h-12 brand-gradient-bg rounded-full"></div>
+<div>
+<h2 class="font-headline-lg text-headline-lg mb-4 text-on-surface">مشاركة البيانات</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                                لا نقوم ببيع بيانات المستخدمين أو مشاركتها مع أطراف خارجية إلا عند الحاجة لتقديم الخدمة أو الالتزام بالمتطلبات النظامية. خصوصيتك هي أولويتنا القصوى.
+                            </p>
+</div>
+</div>
+</section>
+<!-- ملفات تعريف الارتباط -->
+<section class="reveal bg-surface-container-lowest p-8 rounded-xl shadow-sm border border-outline-variant/10 group hover:shadow-md transition-shadow">
+<div class="flex items-start gap-4">
+<div class="w-1.5 h-12 brand-gradient-bg rounded-full"></div>
+<div>
+<h2 class="font-headline-lg text-headline-lg mb-4 text-on-surface">ملفات تعريف الارتباط</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                                قد يستخدم الموقع ملفات تعريف الارتباط (Cookies) لتحسين تجربة المستخدم وتحليل أداء الموقع. يمكنك التحكم في إعدادات ملفات تعريف الارتباط من خلال متصفحك الخاص.
+                            </p>
+</div>
+</div>
+</section>
+<!-- حقوق المستخدم -->
+<section class="reveal bg-surface-container-lowest p-8 rounded-xl shadow-sm border border-outline-variant/10 group hover:shadow-md transition-shadow" id="rights">
+<div class="flex items-start gap-4">
+<div class="w-1.5 h-12 brand-gradient-bg rounded-full"></div>
+<div>
+<h2 class="font-headline-lg text-headline-lg mb-4 text-on-surface">حقوق المستخدم</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                                يمكنك طلب تعديل أو حذف بياناتك أو الاستفسار عن طريقة استخدامها من خلال التواصل معنا. نلتزم بالرد على جميع طلبات المستخدمين المتعلقة بالبيانات في أسرع وقت ممكن.
+                            </p>
+</div>
+</div>
+</section>
+</div>
+</div>
+</main>
+<!-- Final CTA Section -->
+<section class="reveal max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop pb-stack-section">
+<div class="brand-gradient-bg rounded-2xl p-12 text-center text-on-primary relative overflow-hidden">
+<div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -mr-32 -mt-32"></div>
+<div class="absolute bottom-0 left-0 w-64 h-64 bg-white/5 rounded-full blur-3xl -ml-32 -mb-32"></div>
+<div class="relative z-10">
+<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-6">هل لديك استفسار بخصوص بياناتك؟</h2>
+<p class="font-body-lg text-body-lg mb-10 opacity-90 max-w-2xl mx-auto">
+                    يسعدنا الرد على أي سؤال متعلق بالخصوصية أو استخدام بياناتك. فريقنا متاح دائماً لتقديم المساعدة.
+                </p>
+<button class="bg-surface text-secondary px-10 py-4 rounded-full font-title-md text-title-md hover:scale-105 active:scale-95 transition-all shadow-xl font-bold">
+                    تواصل معنا
+                </button>
+</div>
+</div>
+</section>
+<!-- Footer Section -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant/20 py-stack-section">
+<div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row-reverse justify-between items-center gap-8">
+<div class="flex flex-col items-center md:items-end gap-2">
+<span class="font-headline-lg text-headline-lg text-on-surface font-bold">الأفق</span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2024 الأفق لتكنولوجيا المعلومات. جميع الحقوق محفوظة.</p>
+</div>
+<div class="flex gap-8">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary hover:underline transition-all" href="#">سياسة الخصوصية</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary hover:underline transition-all" href="#">شروط الخدمة</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary hover:underline transition-all" href="#">اتفاقية مستوى الخدمة</a>
+</div>
+<div class="flex gap-4">
+<a class="w-10 h-10 flex items-center justify-center rounded-full bg-surface border border-outline-variant/20 hover:text-secondary transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">public</span>
+</a>
+<a class="w-10 h-10 flex items-center justify-center rounded-full bg-surface border border-outline-variant/20 hover:text-secondary transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">mail</span>
+</a>
+</div>
+</div>
+</footer>
+<script>
+        // Reveal Animations on Scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Side Navigation Active State
+        window.addEventListener('scroll', () => {
+            const sections = ['intro', 'data-collection', 'usage', 'security', 'rights'];
+            let current = '';
+
+            sections.forEach(section => {
+                const element = document.getElementById(section);
+                if (element) {
+                    const rect = element.getBoundingClientRect();
+                    if (rect.top <= 150) {
+                        current = section;
+                    }
+                }
+            });
+
+            document.querySelectorAll('aside nav a').forEach(a => {
+                a.classList.remove('text-secondary', 'font-bold', 'border-r-4', 'border-secondary', 'bg-secondary/5');
+                a.classList.add('text-on-surface-variant');
+                if (a.id === `nav-${current}`) {
+                    a.classList.add('text-secondary', 'font-bold', 'border-r-4', 'border-secondary', 'bg-secondary/5');
+                    a.classList.remove('text-on-surface-variant');
+                }
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('py-2', 'shadow-md');
+                nav.classList.remove('py-4', 'shadow-sm');
+            } else {
+                nav.classList.remove('py-2', 'shadow-md');
+                nav.classList.add('py-4', 'shadow-sm');
+            }
+        });
+    </script>
+</body></html>

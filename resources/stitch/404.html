@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>404 - الصفحة غير موجودة | الأفق</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-container": "#696463",
+                    "inverse-surface": "#313030",
+                    "primary": "#4d4d4d",
+                    "surface-container": "#f1edec",
+                    "on-secondary-container": "#fffbff",
+                    "surface": "#fcf8f8",
+                    "surface-container-low": "#f7f3f2",
+                    "on-surface-variant": "#444748",
+                    "on-tertiary-container": "#e9e2e0",
+                    "on-primary-fixed-variant": "#464747",
+                    "secondary-container": "#e3231c",
+                    "on-primary-fixed": "#1b1c1c",
+                    "error-container": "#ffdad6",
+                    "secondary": "#bc0007",
+                    "surface-container-highest": "#e5e2e1",
+                    "primary-fixed": "#e4e2e2",
+                    "background": "#fcf8f8",
+                    "surface-dim": "#ddd9d8",
+                    "secondary-fixed": "#ffdad5",
+                    "on-secondary": "#ffffff",
+                    "tertiary-fixed": "#e9e1df",
+                    "on-secondary-fixed-variant": "#930004",
+                    "tertiary-fixed-dim": "#ccc5c3",
+                    "surface-container-high": "#ebe7e7",
+                    "error": "#ba1a1a",
+                    "on-tertiary": "#ffffff",
+                    "inverse-primary": "#c7c6c6",
+                    "surface-tint": "#5e5e5e",
+                    "inverse-on-surface": "#f4f0ef",
+                    "on-primary-container": "#e4e3e3",
+                    "on-surface": "#1c1b1b",
+                    "on-primary": "#ffffff",
+                    "on-secondary-fixed": "#410001",
+                    "tertiary": "#514c4b",
+                    "surface-bright": "#fcf8f8",
+                    "on-tertiary-fixed": "#1e1b1a",
+                    "on-error-container": "#93000a",
+                    "surface-container-lowest": "#ffffff",
+                    "outline-variant": "#c4c7c7",
+                    "on-tertiary-fixed-variant": "#4a4645",
+                    "primary-fixed-dim": "#c7c6c6",
+                    "on-error": "#ffffff",
+                    "secondary-fixed-dim": "#ffb4a9",
+                    "surface-variant": "#e5e2e1",
+                    "primary-container": "#656565",
+                    "outline": "#747878",
+                    "on-background": "#1c1b1b"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "unit": "8px",
+                    "margin-mobile": "20px",
+                    "gutter": "24px",
+                    "container-max": "1440px",
+                    "margin-desktop": "64px",
+                    "stack-section": "80px"
+            },
+            "fontFamily": {
+                    "body-md": ["IBM Plex Sans Arabic"],
+                    "display-lg": ["IBM Plex Sans Arabic"],
+                    "title-md": ["IBM Plex Sans Arabic"],
+                    "headline-lg": ["IBM Plex Sans Arabic"],
+                    "label-sm": ["IBM Plex Sans Arabic"],
+                    "headline-lg-mobile": ["IBM Plex Sans Arabic"],
+                    "body-lg": ["IBM Plex Sans Arabic"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "display-lg": ["48px", {"lineHeight": "60px", "letterSpacing": "0", "fontWeight": "700"}],
+                    "title-md": ["20px", {"lineHeight": "28px", "fontWeight": "500"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "label-sm": ["13px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .brand-gradient {
+            background: linear-gradient(90deg, #E0201A, #F06A17, #F6B000, #F9DD05, #9ACC32, #58D860, #13E19C, #3C9E91);
+        }
+        
+        .brand-gradient-text {
+            background: linear-gradient(135deg, #E0201A 0%, #3C9E91 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .floating {
+            animation: floating 6s ease-in-out infinite;
+        }
+
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .drift {
+            animation: drift 20s linear infinite;
+        }
+
+        @keyframes drift {
+            from { transform: translate(0, 0) rotate(0deg); }
+            to { transform: translate(100px, 100px) rotate(360deg); }
+        }
+
+        .reveal-up {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: revealUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        }
+
+        @keyframes revealUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .stagger-1 { animation-delay: 0.1s; }
+        .stagger-2 { animation-delay: 0.2s; }
+        .stagger-3 { animation-delay: 0.3s; }
+        .stagger-4 { animation-delay: 0.4s; }
+        .stagger-5 { animation-delay: 0.5s; }
+
+        @media (prefers-reduced-motion: reduce) {
+            .floating, .drift, .reveal-up {
+                animation: none !important;
+                opacity: 1 !important;
+                transform: none !important;
+            }
+        }
+
+        .diagonal-cut {
+            clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(101, 101, 101, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body-md text-on-surface selection:bg-secondary/20 overflow-x-hidden">
+<!-- Full Screen Shader Background -->
+<!-- STITCH_SHADER_START:ANIMATION_31 class="fixed inset-0 w-full h-full z-0 opacity-40" -->
+<div class="fixed inset-0 w-full h-full z-0 opacity-40" style="display:block;">
+<canvas id="shader-canvas-ANIMATION_31" style="display:block;width:100%;height:100%"></canvas>
+<script>
+(function() {
+  const canvas = document.getElementById('shader-canvas-ANIMATION_31');
+
+  // Sync the WebGL drawing-buffer size with the CSS-driven layout size.
+  // This fires on initial layout and whenever the element is resized.
+  function syncSize() {
+    const w = canvas.clientWidth  || 1280;
+    const h = canvas.clientHeight || 720;
+    if (canvas.width !== w || canvas.height !== h) {
+      canvas.width  = w;
+      canvas.height = h;
+    }
+  }
+  if (typeof ResizeObserver !== 'undefined') {
+    new ResizeObserver(syncSize).observe(canvas);
+  }
+  syncSize();
+
+  const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+  if (!gl) return;
+  const vs = `attribute vec2 a_position;
+varying vec2 v_texCoord;
+void main() {
+  v_texCoord = a_position * 0.5 + 0.5;
+  gl_Position = vec4(a_position, 0.0, 1.0);
+}`;
+  const fs = `precision highp float;
+varying vec2 v_texCoord;
+uniform float u_time;
+uniform vec2 u_resolution;
+
+void main() {
+    vec2 uv = v_texCoord;
+    float t = u_time * 0.15;
+    
+    // Base surface color (Clean White/Gray)
+    vec3 color = vec3(0.98, 0.98, 0.98); 
+    
+    // Brand Gradient Colors
+    vec3 red = vec3(0.88, 0.13, 0.10);    // #E0201A
+    vec3 orange = vec3(0.94, 0.42, 0.09); // #F06A17
+    vec3 gold = vec3(0.96, 0.69, 0.0);    // #F6B000
+    vec3 teal = vec3(0.24, 0.62, 0.57);   // #3C9E91
+    
+    // Floating "lost" blobs for 404 feel
+    float d1 = distance(uv, vec2(0.5 + 0.3 * sin(t), 0.5 + 0.2 * cos(t * 1.2)));
+    float b1 = smoothstep(0.7, 0.0, d1);
+    color = mix(color, orange, b1 * 0.02);
+    
+    float d2 = distance(uv, vec2(0.1 + 0.2 * cos(t * 0.8), 0.9 + 0.1 * sin(t * 1.1)));
+    float b2 = smoothstep(0.6, 0.0, d2);
+    color = mix(color, teal, b2 * 0.03);
+    
+    float d3 = distance(uv, vec2(0.9 + 0.1 * sin(t * 0.7), 0.1 + 0.1 * cos(t * 0.9)));
+    float b3 = smoothstep(0.5, 0.0, d3);
+    color = mix(color, red, b3 * 0.015);
+
+    // Subtle diagonal "scanning" lines
+    float lines = sin((uv.x + uv.y) * 25.0 - t * 2.0);
+    lines = smoothstep(0.99, 1.0, lines);
+    color = mix(color, vec3(0.94, 0.94, 0.94), lines * 0.15);
+
+    gl_FragColor = vec4(color, 1.0);
+}`;
+  function cs(type, src) {
+    const s = gl.createShader(type);
+    gl.shaderSource(s, src);
+    gl.compileShader(s);
+    return s;
+  }
+  const prog = gl.createProgram();
+  gl.attachShader(prog, cs(gl.VERTEX_SHADER, vs));
+  gl.attachShader(prog, cs(gl.FRAGMENT_SHADER, fs));
+  gl.linkProgram(prog);
+  gl.useProgram(prog);
+  const buf = gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1, 1,-1, -1,1, 1,1]), gl.STATIC_DRAW);
+  const pos = gl.getAttribLocation(prog, 'a_position');
+  gl.enableVertexAttribArray(pos);
+  gl.vertexAttribPointer(pos, 2, gl.FLOAT, false, 0, 0);
+  const uTime = gl.getUniformLocation(prog, 'u_time');
+  const uRes = gl.getUniformLocation(prog, 'u_resolution');
+  const uMouse = gl.getUniformLocation(prog, 'u_mouse');
+
+  // u_mouse is in pixel coordinates matching u_resolution (ShaderToy convention).
+  // Shaders that need normalized coords should use: u_mouse / u_resolution.
+  let mouse = { x: canvas.width / 2, y: canvas.height / 2 };
+  window.addEventListener('mousemove', (event) => {
+    const rect = canvas.getBoundingClientRect();
+    if (rect.width && rect.height) {
+      const nx = (event.clientX - rect.left) / rect.width;
+      const ny = 1.0 - (event.clientY - rect.top) / rect.height;
+      mouse.x = nx * canvas.width;
+      mouse.y = ny * canvas.height;
+    }
+  });
+
+  function render(t) {
+    if (typeof ResizeObserver === 'undefined') syncSize();
+    gl.viewport(0, 0, canvas.width, canvas.height);
+    if (uTime) gl.uniform1f(uTime, t * 0.001);
+    if (uRes) gl.uniform2f(uRes, canvas.width, canvas.height);
+    if (uMouse) gl.uniform2f(uMouse, mouse.x, mouse.y);
+    gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+    requestAnimationFrame(render);
+  }
+  render(0);
+})();
+</script>
+</div>
+<!-- STITCH_SHADER_END:ANIMATION_31 -->
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full z-50 bg-white/70 dark:bg-black/70 backdrop-blur-md shadow-sm border-b border-outline/10">
+<nav class="flex flex-row-reverse justify-between items-center w-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto h-20">
+<div class="font-display-lg text-headline-lg-mobile md:text-headline-lg text-on-surface dark:text-inverse-on-surface font-bold tracking-tight">
+                الأفق
+            </div>
+<div class="hidden md:flex flex-row-reverse items-center gap-8">
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-secondary transition-colors duration-300" href="#">الرئيسية</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-secondary transition-colors duration-300" href="#">من نحن</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-secondary transition-colors duration-300" href="#">خدماتنا</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-secondary transition-colors duration-300" href="#">أعمالنا</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-secondary transition-colors duration-300" href="#">شركاؤنا</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-secondary transition-colors duration-300" href="#">عملاؤنا</a>
+</div>
+<button class="bg-secondary text-on-secondary px-6 py-2.5 rounded-lg font-title-md text-title-md scale-95 active:scale-90 transition-transform shadow-md hover:shadow-lg">
+                تواصل معنا
+            </button>
+</nav>
+</header>
+<main class="relative z-10 pt-24 min-h-screen flex flex-col items-center">
+<!-- Hero Section -->
+<section class="relative w-full max-w-4xl px-margin-mobile md:px-margin-desktop text-center pt-stack-section pb-stack-section">
+<!-- Animated Geometric Background Elements -->
+<div class="absolute inset-0 pointer-events-none -z-10 overflow-hidden">
+<div class="drift absolute top-0 left-1/4 w-12 h-12 border-2 border-secondary/20 rotate-45"></div>
+<div class="drift absolute bottom-0 right-1/4 w-16 h-16 border-2 border-primary/10 rounded-full" style="animation-delay: -5s;"></div>
+<div class="drift absolute top-1/2 left-0 w-8 h-8 bg-brand-gradient opacity-10 diagonal-cut" style="animation-delay: -2s;"></div>
+</div>
+<!-- Big 404 Text -->
+<div class="relative inline-block mb-12 reveal-up stagger-1">
+<h1 class="font-display-lg text-[120px] md:text-[220px] leading-none font-extrabold text-primary-container tracking-tighter floating" style="text-shadow: 0 10px 40px rgba(224, 32, 26, 0.15);">
+                    404
+                </h1>
+<div class="absolute -bottom-4 left-1/2 -translate-x-1/2 w-32 h-1.5 brand-gradient rounded-full blur-sm opacity-60"></div>
+</div>
+<div class="reveal-up stagger-2">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-4">الصفحة غير موجودة</h2>
+<p class="font-title-md text-title-md text-on-surface-variant mb-2">عذرًا، الصفحة التي تبحث عنها غير موجودة أو تم نقلها إلى رابط آخر.</p>
+<p class="font-body-lg text-body-lg text-outline max-w-2xl mx-auto">يبدو أن الرابط الذي تحاول الوصول إليه غير صحيح أو لم يعد متاحًا.</p>
+</div>
+<!-- Action Buttons -->
+<div class="mt-12 flex flex-col md:flex-row-reverse justify-center items-center gap-4 reveal-up stagger-3">
+<a class="w-full md:w-auto px-10 py-4 brand-gradient text-white font-bold rounded-xl shadow-lg hover:shadow-xl transition-all hover:scale-105 active:scale-95 text-center" href="#">
+                    العودة للرئيسية
+                </a>
+<a class="w-full md:w-auto px-8 py-4 border-2 border-outline/30 text-on-surface-variant font-semibold rounded-xl hover:bg-surface-container-low transition-all text-center" href="#">
+                    تصفح خدماتنا
+                </a>
+<a class="w-full md:w-auto px-8 py-4 bg-white/50 backdrop-blur text-on-surface-variant font-semibold rounded-xl border border-outline/10 hover:border-outline/30 transition-all text-center" href="#">
+                    تواصل معنا
+                </a>
+</div>
+</section>
+<!-- Helpful Links Grid -->
+<section class="w-full max-w-container-max px-margin-mobile md:px-margin-desktop py-stack-section">
+<h3 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-center mb-12 reveal-up stagger-4">روابط قد تهمك</h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+<!-- Card: الرئيسية -->
+<a class="reveal-up stagger-1 group bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-all relative overflow-hidden border border-outline/10 flex flex-col items-center text-center" href="#">
+<div class="absolute top-0 right-0 w-1 h-full brand-gradient opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<span class="material-symbols-outlined text-secondary text-4xl mb-4 group-hover:scale-110 transition-transform" data-icon="home">home</span>
+<span class="font-title-md text-title-md">الرئيسية</span>
+</a>
+<!-- Card: خدماتنا -->
+<a class="reveal-up stagger-2 group bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-all relative overflow-hidden border border-outline/10 flex flex-col items-center text-center" href="#">
+<div class="absolute top-0 right-0 w-1 h-full brand-gradient opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<span class="material-symbols-outlined text-secondary text-4xl mb-4 group-hover:scale-110 transition-transform" data-icon="settings_suggest">settings_suggest</span>
+<span class="font-title-md text-title-md">خدماتنا</span>
+</a>
+<!-- Card: أعمالنا -->
+<a class="reveal-up stagger-3 group bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-all relative overflow-hidden border border-outline/10 flex flex-col items-center text-center" href="#">
+<div class="absolute top-0 right-0 w-1 h-full brand-gradient opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<span class="material-symbols-outlined text-secondary text-4xl mb-4 group-hover:scale-110 transition-transform" data-icon="work">work</span>
+<span class="font-title-md text-title-md">أعمالنا</span>
+</a>
+<!-- Card: طلب عرض سعر -->
+<a class="reveal-up stagger-4 group bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-all relative overflow-hidden border border-outline/10 flex flex-col items-center text-center" href="#">
+<div class="absolute top-0 right-0 w-1 h-full brand-gradient opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<span class="material-symbols-outlined text-secondary text-4xl mb-4 group-hover:scale-110 transition-transform" data-icon="request_quote">request_quote</span>
+<span class="font-title-md text-title-md">طلب عرض سعر</span>
+</a>
+<!-- Card: تواصل معنا -->
+<a class="reveal-up stagger-5 group bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-all relative overflow-hidden border border-outline/10 flex flex-col items-center text-center" href="#">
+<div class="absolute top-0 right-0 w-1 h-full brand-gradient opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<span class="material-symbols-outlined text-secondary text-4xl mb-4 group-hover:scale-110 transition-transform" data-icon="mail">mail</span>
+<span class="font-title-md text-title-md">تواصل معنا</span>
+</a>
+</div>
+</section>
+</main>
+<!-- Footer Section -->
+<footer class="relative z-10 w-full bg-surface-container dark:bg-inverse-surface border-t border-outline/10">
+<div class="flex flex-col md:flex-row-reverse justify-between items-center w-full py-16 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="flex flex-col items-center md:items-end mb-8 md:mb-0">
+<div class="font-display-lg text-headline-lg text-on-surface dark:text-inverse-on-surface font-bold mb-4">الأفق</div>
+<div class="flex gap-6">
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary transition-colors font-body-md text-body-md" href="#">الشروط والأحكام</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary transition-colors font-body-md text-body-md" href="#">سياسة الخصوصية</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary transition-colors font-body-md text-body-md" href="#">اتصل بنا</a>
+</div>
+</div>
+<div class="flex flex-col items-center md:items-start text-center md:text-right">
+<p class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant opacity-80 mb-6">© 2024 الأفق للبرمجيات. جميع الحقوق محفوظة</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-outline/20 flex items-center justify-center hover:bg-secondary hover:text-white transition-all" href="#"><span class="material-symbols-outlined text-sm" data-icon="public">public</span></a>
+<a class="w-10 h-10 rounded-full border border-outline/20 flex items-center justify-center hover:bg-secondary hover:text-white transition-all" href="#"><span class="material-symbols-outlined text-sm" data-icon="chat">chat</span></a>
+<a class="w-10 h-10 rounded-full border border-outline/20 flex items-center justify-center hover:bg-secondary hover:text-white transition-all" href="#"><span class="material-symbols-outlined text-sm" data-icon="share">share</span></a>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interactions for button scale
+        document.querySelectorAll('button, a').forEach(el => {
+            el.addEventListener('mousedown', () => el.style.transform = 'scale(0.95)');
+            el.addEventListener('mouseup', () => el.style.transform = '');
+            el.addEventListener('mouseleave', () => el.style.transform = '');
+        });
+
+        // Simple mouse trail effect for atmospheric feel
+        document.addEventListener('mousemove', (e) => {
+            const circle = document.createElement('div');
+            circle.style.position = 'fixed';
+            circle.style.width = '4px';
+            circle.style.height = '4px';
+            circle.style.borderRadius = '50%';
+            circle.style.background = '#E0201A';
+            circle.style.pointerEvents = 'none';
+            circle.style.left = e.clientX + 'px';
+            circle.style.top = e.clientY + 'px';
+            circle.style.zIndex = '9999';
+            circle.style.opacity = '0.2';
+            document.body.appendChild(circle);
+
+            setTimeout(() => {
+                circle.style.transition = 'all 0.5s ease-out';
+                circle.style.transform = 'scale(4)';
+                circle.style.opacity = '0';
+                setTimeout(() => circle.remove(), 500);
+            }, 10);
+        });
+    </script>
+</body></html>

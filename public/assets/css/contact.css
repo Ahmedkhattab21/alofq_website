@@ -1,0 +1,283 @@
+.contact-page {
+    background: #fff;
+    color: #1c1b1b;
+}
+
+.contact-page .forms-hero {
+    position: relative;
+    overflow: hidden;
+    padding: 180px 0 120px;
+    background: #f7f3f2;
+    clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
+}
+
+.contact-page .forms-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(77, 77, 77, .035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(77, 77, 77, .035) 1px, transparent 1px);
+    background-size: 48px 48px;
+    animation: contactGridDrift 22s linear infinite;
+}
+
+.contact-page .forms-grid::after {
+    content: "";
+    position: absolute;
+    top: 15%;
+    right: 10%;
+    width: 130px;
+    height: 130px;
+    border-radius: 24px;
+    background: linear-gradient(135deg, #e0201a, #656565);
+    opacity: .08;
+    animation: contactFloat 7s ease-in-out infinite;
+}
+
+.contact-page .forms-kicker {
+    display: inline-flex;
+    border-radius: 999px;
+    background: #f1edec;
+    padding: 7px 18px;
+    color: #e0201a;
+    font-weight: 700;
+}
+
+.contact-page .forms-hero h1 {
+    margin: 14px 0 20px;
+    font-size: clamp(52px, 7vw, 76px);
+    font-weight: 700;
+}
+
+.contact-page .forms-hero p {
+    max-width: 700px;
+    margin: auto;
+    color: #444748;
+    font-size: 19px;
+    line-height: 2;
+}
+
+.contact-page .forms-section {
+    padding: 96px 0;
+}
+
+.contact-page .contact-info-card {
+    border: 1px solid rgba(116, 120, 120, .12);
+    border-radius: 18px;
+    background: #fff;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 8px 28px rgba(28, 27, 27, .06);
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.contact-page .contact-info-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 18px 40px rgba(28, 27, 27, .11);
+}
+
+.contact-page .contact-info-card > span {
+    display: grid;
+    width: 58px;
+    height: 58px;
+    margin: 0 auto 16px;
+    place-items: center;
+    border-radius: 16px;
+    background: #f1edec;
+    color: #e0201a;
+    font-size: 30px;
+}
+
+.contact-page .contact-info-card h2 {
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.contact-page .contact-info-card p,
+.contact-page .contact-info-card a {
+    display: block;
+    margin-top: 8px;
+    color: #444748;
+}
+
+.contact-page .contact-info-card a:hover {
+    color: #e0201a;
+}
+
+.contact-page .forms-panel-section {
+    background: #f7f3f2;
+}
+
+.contact-page .forms-panel {
+    max-width: 980px;
+    margin: auto;
+    border: 0;
+    border-top: 6px solid #e0201a;
+    border-radius: 22px;
+    background: #fff;
+    padding: 44px;
+    box-shadow: 0 20px 55px rgba(28, 27, 27, .12);
+}
+
+.contact-page .forms-panel::before {
+    display: none;
+}
+
+.contact-page .forms-panel > h2 {
+    margin-bottom: 34px;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.contact-page .forms-grid-fields {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 26px;
+}
+
+.contact-page .forms-grid-fields label {
+    display: grid;
+    gap: 8px;
+    color: #1c1b1b;
+    font-weight: 700;
+}
+
+.contact-page .forms-grid-fields input,
+.contact-page .forms-grid-fields select,
+.contact-page .forms-grid-fields textarea {
+    width: 100%;
+    border: 1px solid #e5e2e1;
+    border-radius: 12px;
+    background: #f7f3f2;
+    padding: 14px 16px;
+    color: #1c1b1b;
+    font-weight: 400;
+    outline: none;
+    transition: border-color .25s ease, box-shadow .25s ease, background .25s ease;
+}
+
+.contact-page .forms-grid-fields input:focus,
+.contact-page .forms-grid-fields select:focus,
+.contact-page .forms-grid-fields textarea:focus {
+    border-color: #e0201a;
+    background: #fff;
+    box-shadow: 0 0 0 4px rgba(224, 32, 26, .08);
+}
+
+.contact-page .forms-grid-fields small {
+    color: #747878;
+    text-align: left;
+    font-weight: 400;
+}
+
+.contact-page .forms-grid-fields button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    border-radius: 14px;
+    padding: 16px;
+    font-size: 18px;
+    font-weight: 700;
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.contact-page .forms-grid-fields button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 35px rgba(224, 32, 26, .18);
+}
+
+.contact-page .forms-heading {
+    max-width: 700px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.contact-page .forms-heading h2 {
+    font-size: clamp(30px, 4vw, 44px);
+    font-weight: 700;
+}
+
+.contact-page .forms-heading p {
+    margin-top: 10px;
+    color: #444748;
+}
+
+.contact-page .map-placeholder {
+    display: grid;
+    min-height: 360px;
+    place-items: center;
+    align-content: center;
+    gap: 10px;
+    border: 1px solid #e5e2e1;
+    border-radius: 22px;
+    background-color: #f7f3f2;
+    background-image:
+        linear-gradient(30deg, rgba(77, 77, 77, .04) 12%, transparent 12.5%, transparent 87%, rgba(77, 77, 77, .04) 87.5%),
+        linear-gradient(150deg, rgba(77, 77, 77, .04) 12%, transparent 12.5%, transparent 87%, rgba(77, 77, 77, .04) 87.5%);
+    background-size: 80px 140px;
+    text-align: center;
+}
+
+.contact-page .map-placeholder > span {
+    color: #e0201a;
+    font-size: 48px;
+    animation: contactPin 2s ease-in-out infinite;
+}
+
+.contact-page .map-placeholder strong {
+    font-size: 22px;
+}
+
+.contact-page .map-placeholder p {
+    color: #444748;
+}
+
+.contact-page .map-placeholder a {
+    margin-top: 10px;
+    color: #e0201a;
+    font-weight: 700;
+}
+
+@keyframes contactGridDrift {
+    to { background-position: 48px 48px; }
+}
+
+@keyframes contactFloat {
+    50% { transform: translateY(-20px) rotate(8deg); }
+}
+
+@keyframes contactPin {
+    50% { transform: translateY(-8px); }
+}
+
+@media (max-width: 767px) {
+    .contact-page .forms-hero {
+        padding: 140px 0 100px;
+    }
+
+    .contact-page .forms-section {
+        padding: 72px 0;
+    }
+
+    .contact-page .forms-panel {
+        padding: 28px 20px;
+    }
+
+    .contact-page .forms-grid-fields {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-page .forms-grid-fields .md\:col-span-2 {
+        grid-column: auto;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .contact-page .forms-grid,
+    .contact-page .forms-grid::after,
+    .contact-page .map-placeholder > span {
+        animation: none;
+    }
+}

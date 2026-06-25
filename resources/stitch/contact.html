@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>تواصل معنا | الأفق للبرمجيات</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed-variant": "#4a4645",
+                    "primary": "#4d4d4d",
+                    "on-primary-container": "#e4e3e3",
+                    "surface": "#fcf8f8",
+                    "secondary-fixed": "#ffdad5",
+                    "tertiary-fixed-dim": "#ccc5c3",
+                    "surface-container-high": "#ebe7e7",
+                    "on-primary-fixed-variant": "#464747",
+                    "on-background": "#1c1b1b",
+                    "on-primary": "#ffffff",
+                    "inverse-primary": "#c7c6c6",
+                    "error-container": "#ffdad6",
+                    "secondary": "#bc0007",
+                    "tertiary-container": "#696463",
+                    "on-tertiary-fixed": "#1e1b1a",
+                    "outline": "#747878",
+                    "on-secondary-container": "#fffbff",
+                    "surface-container-highest": "#e5e2e1",
+                    "primary-fixed-dim": "#c7c6c6",
+                    "on-secondary-fixed-variant": "#930004",
+                    "surface-bright": "#fcf8f8",
+                    "background": "#fcf8f8",
+                    "surface-dim": "#ddd9d8",
+                    "error": "#ba1a1a",
+                    "on-surface-variant": "#444748",
+                    "on-secondary-fixed": "#410001",
+                    "surface-variant": "#e5e2e1",
+                    "tertiary-fixed": "#e9e1df",
+                    "primary-fixed": "#e4e2e2",
+                    "surface-tint": "#5e5e5e",
+                    "primary-container": "#656565",
+                    "inverse-surface": "#313030",
+                    "secondary-fixed-dim": "#ffb4a9",
+                    "surface-container-low": "#f7f3f2",
+                    "outline-variant": "#c4c7c7",
+                    "surface-container": "#f1edec",
+                    "secondary-container": "#e3231c",
+                    "on-secondary": "#ffffff",
+                    "on-primary-fixed": "#1b1c1c",
+                    "inverse-on-surface": "#f4f0ef",
+                    "tertiary": "#514c4b",
+                    "on-error": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "on-tertiary-container": "#e9e2e0",
+                    "on-surface": "#1c1b1b"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "unit": "8px",
+                    "stack-section": "80px",
+                    "gutter": "24px",
+                    "margin-desktop": "64px",
+                    "margin-mobile": "20px",
+                    "container-max": "1440px"
+            },
+            "fontFamily": {
+                    "title-md": ["IBM Plex Sans Arabic"],
+                    "label-sm": ["IBM Plex Sans Arabic"],
+                    "headline-lg-mobile": ["IBM Plex Sans Arabic"],
+                    "display-lg": ["IBM Plex Sans Arabic"],
+                    "body-lg": ["IBM Plex Sans Arabic"],
+                    "headline-lg": ["IBM Plex Sans Arabic"],
+                    "body-md": ["IBM Plex Sans Arabic"]
+            },
+            "fontSize": {
+                    "title-md": ["20px", {"lineHeight": "28px", "fontWeight": "500"}],
+                    "label-sm": ["13px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "60px", "letterSpacing": "0", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        body { font-family: 'IBM Plex Sans Arabic', sans-serif; background-color: #F7F7F7; }
+        
+        .brand-gradient {
+            background: linear-gradient(135deg, #E0201A 0%, #F06A17 14%, #F6B000 28%, #F9DD05 42%, #9ACC32 56%, #58D860 70%, #13E19C 84%, #3C9E91 100%);
+        }
+
+        .brand-gradient-text {
+            background: linear-gradient(135deg, #E0201A 0%, #F06A17 14%, #F6B000 28%, #F9DD05 42%, #9ACC32 56%, #58D860 70%, #13E19C 84%, #3C9E91 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(101, 101, 101, 0.1);
+        }
+
+        .diagonal-cut {
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .stagger-item { opacity: 0; }
+
+        .gradient-border-focus:focus-within {
+            border-image: linear-gradient(135deg, #E0201A, #3C9E91) 1;
+        }
+
+        .hover-glow:hover {
+            box-shadow: 0 0 20px rgba(224, 32, 26, 0.15);
+            border-bottom: 2px solid;
+            border-image: linear-gradient(to left, #E0201A, #13E19C) 1;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+            100% { transform: translateY(0px) rotate(0deg); }
+        }
+
+        .floating-shape { animation: float 6s ease-in-out infinite; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="docked full-width top-0 sticky z-[100] bg-surface/70 backdrop-blur-xl shadow-sm">
+<div class="flex flex-row-reverse justify-between items-center w-full px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="flex items-center gap-2">
+<span class="font-display-lg text-display-lg font-bold text-primary">Al-Ofuq</span>
+</div>
+<div class="hidden md:flex flex-row-reverse items-center gap-8">
+<a class="text-on-surface-variant font-medium hover:text-secondary transition-colors duration-300 font-body-md text-body-md" href="#">الرئيسية</a>
+<a class="text-on-surface-variant font-medium hover:text-secondary transition-colors duration-300 font-body-md text-body-md" href="#">من نحن</a>
+<a class="text-on-surface-variant font-medium hover:text-secondary transition-colors duration-300 font-body-md text-body-md" href="#">خدماتنا</a>
+<a class="text-on-surface-variant font-medium hover:text-secondary transition-colors duration-300 font-body-md text-body-md" href="#">أعمالنا</a>
+<a class="text-on-surface-variant font-medium hover:text-secondary transition-colors duration-300 font-body-md text-body-md" href="#">شركاؤنا</a>
+<a class="text-on-surface-variant font-medium hover:text-secondary transition-colors duration-300 font-body-md text-body-md" href="#">عملاؤنا</a>
+<a class="text-secondary font-bold border-b-2 border-secondary pb-1 font-body-md text-body-md" href="#">اتصل بنا</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-lg font-label-sm text-label-sm active:scale-95 transition-transform duration-200">
+                ابدأ مشروعك
+            </button>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative w-full h-[716px] flex items-center justify-center overflow-hidden diagonal-cut">
+<!-- STITCH_SHADER_START:ANIMATION_21 class="absolute inset-0 w-full h-full" -->
+<div class="absolute inset-0 w-full h-full" style="display:block;">
+<canvas id="shader-canvas-ANIMATION_21" style="display:block;width:100%;height:100%"></canvas>
+<script>
+(function() {
+  const canvas = document.getElementById('shader-canvas-ANIMATION_21');
+
+  // Sync the WebGL drawing-buffer size with the CSS-driven layout size.
+  // This fires on initial layout and whenever the element is resized.
+  function syncSize() {
+    const w = canvas.clientWidth  || 1280;
+    const h = canvas.clientHeight || 720;
+    if (canvas.width !== w || canvas.height !== h) {
+      canvas.width  = w;
+      canvas.height = h;
+    }
+  }
+  if (typeof ResizeObserver !== 'undefined') {
+    new ResizeObserver(syncSize).observe(canvas);
+  }
+  syncSize();
+
+  const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+  if (!gl) return;
+  const vs = `attribute vec2 a_position;
+varying vec2 v_texCoord;
+void main() {
+  v_texCoord = a_position * 0.5 + 0.5;
+  gl_Position = vec4(a_position, 0.0, 1.0);
+}`;
+  const fs = `precision highp float;
+varying vec2 v_texCoord;
+uniform float u_time;
+uniform vec2 u_resolution;
+
+void main() {
+    vec2 uv = v_texCoord;
+    float t = u_time * 0.15;
+    
+    // Base surface color
+    vec3 color = vec3(0.97, 0.97, 0.97); 
+    
+    // Brand Colors (converted to vec3)
+    vec3 red = vec3(0.88, 0.13, 0.10);    // #E0201A
+    vec3 orange = vec3(0.94, 0.42, 0.09); // #F06A17
+    vec3 gold = vec3(0.96, 0.69, 0.0);    // #F6B000
+    vec3 teal = vec3(0.24, 0.62, 0.57);   // #3C9E91
+    
+    // Soft moving blobs for the contact hero
+    float d1 = distance(uv, vec2(0.5 + 0.3 * sin(t), 0.5 + 0.3 * cos(t)));
+    float b1 = smoothstep(0.8, 0.0, d1);
+    color = mix(color, red, b1 * 0.04);
+    
+    float d2 = distance(uv, vec2(0.1 + 0.2 * cos(t * 0.8), 0.2 + 0.2 * sin(t * 1.2)));
+    float b2 = smoothstep(0.7, 0.0, d2);
+    color = mix(color, gold, b2 * 0.05);
+    
+    float d3 = distance(uv, vec2(0.9 + 0.3 * cos(t * 0.5), 0.8 + 0.3 * sin(t * 0.7)));
+    float b3 = smoothstep(0.6, 0.0, d3);
+    color = mix(color, teal, b3 * 0.06);
+
+    // Subtle diagonal lines movement - characteristic of the Al-Ofuq brand
+    float lines = sin((uv.x - uv.y * 1.3) * 22.0 + t * 2.0);
+    lines = smoothstep(0.97, 1.0, lines);
+    color = mix(color, vec3(0.9, 0.9, 0.9), lines * 0.1);
+
+    gl_FragColor = vec4(color, 1.0);
+}`;
+  function cs(type, src) {
+    const s = gl.createShader(type);
+    gl.shaderSource(s, src);
+    gl.compileShader(s);
+    return s;
+  }
+  const prog = gl.createProgram();
+  gl.attachShader(prog, cs(gl.VERTEX_SHADER, vs));
+  gl.attachShader(prog, cs(gl.FRAGMENT_SHADER, fs));
+  gl.linkProgram(prog);
+  gl.useProgram(prog);
+  const buf = gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1, 1,-1, -1,1, 1,1]), gl.STATIC_DRAW);
+  const pos = gl.getAttribLocation(prog, 'a_position');
+  gl.enableVertexAttribArray(pos);
+  gl.vertexAttribPointer(pos, 2, gl.FLOAT, false, 0, 0);
+  const uTime = gl.getUniformLocation(prog, 'u_time');
+  const uRes = gl.getUniformLocation(prog, 'u_resolution');
+  const uMouse = gl.getUniformLocation(prog, 'u_mouse');
+
+  // u_mouse is in pixel coordinates matching u_resolution (ShaderToy convention).
+  // Shaders that need normalized coords should use: u_mouse / u_resolution.
+  let mouse = { x: canvas.width / 2, y: canvas.height / 2 };
+  window.addEventListener('mousemove', (event) => {
+    const rect = canvas.getBoundingClientRect();
+    if (rect.width && rect.height) {
+      const nx = (event.clientX - rect.left) / rect.width;
+      const ny = 1.0 - (event.clientY - rect.top) / rect.height;
+      mouse.x = nx * canvas.width;
+      mouse.y = ny * canvas.height;
+    }
+  });
+
+  function render(t) {
+    if (typeof ResizeObserver === 'undefined') syncSize();
+    gl.viewport(0, 0, canvas.width, canvas.height);
+    if (uTime) gl.uniform1f(uTime, t * 0.001);
+    if (uRes) gl.uniform2f(uRes, canvas.width, canvas.height);
+    if (uMouse) gl.uniform2f(uMouse, mouse.x, mouse.y);
+    gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+    requestAnimationFrame(render);
+  }
+  render(0);
+})();
+</script>
+</div>
+<!-- STITCH_SHADER_END:ANIMATION_21 -->
+<!-- Floating Shapes -->
+<div class="absolute top-20 right-[10%] w-32 h-32 bg-secondary/10 rounded-xl floating-shape blur-xl"></div>
+<div class="absolute bottom-20 left-[15%] w-48 h-48 bg-primary/5 rounded-full floating-shape blur-2xl" style="animation-delay: 2s"></div>
+<div class="relative z-10 text-center px-margin-mobile md:px-margin-desktop max-w-4xl reveal active">
+<h1 class="font-display-lg text-display-lg md:text-[64px] font-bold text-on-surface mb-6 leading-tight">تواصل معنا</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-2xl mx-auto">
+                يسعدنا الاستماع إلى فكرتك ومساعدتك في تحويلها إلى حل رقمي احترافي يناسب احتياجات شركتك.
+            </p>
+<div class="flex flex-col sm:flex-row-reverse items-center justify-center gap-4">
+<button class="brand-gradient text-white px-8 py-4 rounded-xl font-title-md text-title-md shadow-lg hover:shadow-xl transition-all hover:scale-105 active:scale-95 w-full sm:w-auto">
+                    ابدأ مشروعك الآن
+                </button>
+<button class="border-2 border-primary/20 text-primary px-8 py-4 rounded-xl font-title-md text-title-md hover:bg-surface-container transition-all w-full sm:w-auto flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">chat</span>
+                    راسلنا على واتساب
+                </button>
+</div>
+</div>
+</header>
+<!-- Contact Info Cards -->
+<section class="py-stack-section px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter" id="stagger-container">
+<!-- Phone -->
+<div class="stagger-item glass-card p-8 rounded-xl flex flex-col items-center text-center hover-glow transition-all duration-300">
+<div class="w-16 h-16 rounded-full bg-surface-container flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-secondary text-3xl">call</span>
+</div>
+<h3 class="font-title-md text-title-md mb-2">الهاتف</h3>
+<p class="font-body-md text-body-md text-on-surface-variant" dir="ltr">+966 500 000 000</p>
+</div>
+<!-- WhatsApp -->
+<div class="stagger-item glass-card p-8 rounded-xl flex flex-col items-center text-center hover-glow transition-all duration-300">
+<div class="w-16 h-16 rounded-full bg-surface-container flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-secondary text-3xl">chat_bubble</span>
+</div>
+<h3 class="font-title-md text-title-md mb-2">واتساب</h3>
+<p class="font-body-md text-body-md text-on-surface-variant" dir="ltr">+966 500 000 001</p>
+</div>
+<!-- Email -->
+<div class="stagger-item glass-card p-8 rounded-xl flex flex-col items-center text-center hover-glow transition-all duration-300">
+<div class="w-16 h-16 rounded-full bg-surface-container flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-secondary text-3xl">mail</span>
+</div>
+<h3 class="font-title-md text-title-md mb-2">البريد الإلكتروني</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">info@alofuq.com</p>
+</div>
+<!-- Address -->
+<div class="stagger-item glass-card p-8 rounded-xl flex flex-col items-center text-center hover-glow transition-all duration-300">
+<div class="w-16 h-16 rounded-full bg-surface-container flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-secondary text-3xl">location_on</span>
+</div>
+<h3 class="font-title-md text-title-md mb-2">العنوان</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">الرياض، حي الصحافة، برج الأفق</p>
+</div>
+</div>
+</section>
+<!-- Contact Form Section -->
+<section class="py-stack-section bg-surface-container-low reveal">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="max-w-4xl mx-auto bg-surface p-8 md:p-12 rounded-2xl shadow-2xl border border-outline-variant/10 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-2 h-full brand-gradient"></div>
+<h2 class="font-headline-lg text-headline-lg mb-10 text-center">أرسل لنا رسالة</h2>
+<form class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="relative">
+<input class="peer w-full bg-transparent border-0 border-b-2 border-outline-variant focus:ring-0 focus:border-secondary transition-all p-3 pt-6 font-body-md text-body-md" id="name" placeholder=" " type="text"/>
+<label class="absolute right-3 top-4 text-on-surface-variant transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-body-md peer-focus:top-0 peer-focus:text-label-sm peer-focus:text-secondary font-label-sm" for="name">الاسم بالكامل</label>
+</div>
+<div class="relative">
+<input class="peer w-full bg-transparent border-0 border-b-2 border-outline-variant focus:ring-0 focus:border-secondary transition-all p-3 pt-6 font-body-md text-body-md" id="phone" placeholder=" " type="tel"/>
+<label class="absolute right-3 top-4 text-on-surface-variant transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-body-md peer-focus:top-0 peer-focus:text-label-sm peer-focus:text-secondary font-label-sm" for="phone">رقم الهاتف</label>
+</div>
+<div class="relative">
+<input class="peer w-full bg-transparent border-0 border-b-2 border-outline-variant focus:ring-0 focus:border-secondary transition-all p-3 pt-6 font-body-md text-body-md" id="email" placeholder=" " type="email"/>
+<label class="absolute right-3 top-4 text-on-surface-variant transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-body-md peer-focus:top-0 peer-focus:text-label-sm peer-focus:text-secondary font-label-sm" for="email">البريد الإلكتروني</label>
+</div>
+<div class="relative">
+<select class="peer w-full bg-transparent border-0 border-b-2 border-outline-variant focus:ring-0 focus:border-secondary transition-all p-3 pt-6 font-body-md text-body-md appearance-none" id="service">
+<option disabled="" selected="" value=""></option>
+<option value="web">تطوير مواقع</option>
+<option value="app">تطبيقات جوال</option>
+<option value="uiux">تصميم تجربة مستخدم</option>
+<option value="erp">أنظمة ERP</option>
+</select>
+<label class="absolute right-3 top-4 text-on-surface-variant transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-body-md peer-focus:top-0 peer-focus:text-label-sm peer-focus:text-secondary font-label-sm" for="service">نوع الخدمة</label>
+</div>
+<div class="relative md:col-span-2">
+<input class="peer w-full bg-transparent border-0 border-b-2 border-outline-variant focus:ring-0 focus:border-secondary transition-all p-3 pt-6 font-body-md text-body-md" id="budget" placeholder=" " type="text"/>
+<label class="absolute right-3 top-4 text-on-surface-variant transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-body-md peer-focus:top-0 peer-focus:text-label-sm peer-focus:text-secondary font-label-sm" for="budget">الميزانية المتوقعة</label>
+</div>
+<div class="relative md:col-span-2">
+<textarea class="peer w-full bg-transparent border-0 border-b-2 border-outline-variant focus:ring-0 focus:border-secondary transition-all p-3 pt-6 font-body-md text-body-md" id="message" placeholder=" " rows="4"></textarea>
+<label class="absolute right-3 top-4 text-on-surface-variant transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-body-md peer-focus:top-0 peer-focus:text-label-sm peer-focus:text-secondary font-label-sm" for="message">تفاصيل المشروع</label>
+</div>
+<div class="md:col-span-2 flex justify-center mt-6">
+<button class="brand-gradient text-white px-12 py-4 rounded-xl font-headline-lg-mobile text-headline-lg-mobile shadow-xl hover:scale-105 active:scale-95 transition-all duration-300 group flex items-center gap-3" type="submit">
+                            إرسال الرسالة
+                            <span class="material-symbols-outlined group-hover:-translate-x-2 transition-transform">send</span>
+</button>
+</div>
+</form>
+</div>
+</div>
+</section>
+<!-- Map Section -->
+<section class="py-stack-section px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto reveal">
+<h2 class="font-headline-lg text-headline-lg mb-10 text-center">موقعنا</h2>
+<div class="relative w-full h-[500px] rounded-3xl overflow-hidden shadow-2xl border-4 border-surface p-2">
+<div class="absolute inset-0 bg-outline-variant/10">
+<div class="w-full h-full grayscale opacity-70" data-alt="A clean, minimalist 3D isometric map of Riyadh's business district. The map features sleek white buildings and smooth grey roads under bright, diffused daylight. A vibrant multi-color gradient pin mark's the company's location with a subtle glow effect. The aesthetic is high-tech, corporate, and modern." data-location="Riyadh, Saudi Arabia" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCzfnujD8P9DULQYv6vv9YCHH18NrFuxrF1xZX2Dhxu9DF_bWVMNw-ccRBc2tMcTo23c5VIlmd6916JdPVGJsdE-PAi_DKI4TpfIvr-bOW3Fz-QujDMATEeWhvV5TeJDQu5iD9u-7KIx4PKa36n0AjZw9uKzu11R0tu_QU2qQATD0GwO0ONT5L0HjV9L68THRV0naW0r97Jj-XzlqLu4Big-bKfsX-PkuSso3nHOtyPvHE9HL8crI_yg88ssIvlP8n92UaAWQEFKLk')"></div>
+</div>
+<!-- Animated Pin Overlay -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
+<div class="w-10 h-10 brand-gradient rounded-full flex items-center justify-center animate-bounce shadow-xl border-4 border-white">
+<span class="material-symbols-outlined text-white text-sm" style="font-variation-settings: 'FILL' 1;">location_on</span>
+</div>
+<div class="w-20 h-4 bg-black/10 rounded-[100%] blur-sm scale-75 mt-[-5px]"></div>
+</div>
+</div>
+</section>
+<!-- Social Media -->
+<section class="py-stack-section bg-surface-container-low">
+<div class="px-margin-mobile md:px-margin-desktop text-center">
+<h2 class="font-headline-lg text-headline-lg mb-12">تابعنا على منصات التواصل</h2>
+<div class="flex flex-wrap justify-center gap-6" id="social-stagger">
+<a class="stagger-social w-16 h-16 rounded-full glass-card flex items-center justify-center hover-glow transition-all hover:-translate-y-2" href="#">
+<img class="w-8 h-8 opacity-70" data-alt="A clean, high-contrast black vector icon of the Facebook logo, centered on a minimalist white circular background. Professional and modern appearance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD20Cdi2MreoBfTsvTYH9K_lljvbS6QRSxCaa97PBITwEcOVF-XMDDvN603l3DPU6o6K2P-xoh8THAvjFfJSVRjIS0V-j1e_Jtl7hev0O9M2fBjFrf27O_IydNOdQ4vSraYJAv5uf4sKLQSgL0iGr4Ztuocbsazd_pucHJ3QEv0jsofN6sXoPGtb-64pUwYJEUL1gZAE2mnoeots65RIF0w5MZfAAnqdgI_EXekcF3kkyCcy_rBvY0ykIx-WHUTHBWarW0KyytkU80"/>
+</a>
+<a class="stagger-social w-16 h-16 rounded-full glass-card flex items-center justify-center hover-glow transition-all hover:-translate-y-2" href="#">
+<img class="w-8 h-8 opacity-70" data-alt="A minimalist black vector icon of the Instagram camera logo, centered on a pristine white circular background. Professional and modern corporate style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZtZWDcVgBS_CxtSLBNcrdTsRgahlLkMC8b458C0fu0mc3WudW8n_UJQzmGakr5hINNnEPUgGAoFherpRoFLa87JHpefyvzYOi03Ud22k57ZdHBGigRvZynawTgELRBd_FmfKpWUyEFSZUbYbqSlAqkT9jPobHwsiNxVs9B5R_QLX2BDkDGvIgBN3aB41m37srrSM-Vt7NDeVi5f3hzeGQRSXXNlVA-FuvwHU-OA-dfgAHmHhow-9a0g53JNZE_niHxRL20g64sgY"/>
+</a>
+<a class="stagger-social w-16 h-16 rounded-full glass-card flex items-center justify-center hover-glow transition-all hover:-translate-y-2" href="#">
+<img class="w-8 h-8 opacity-70" data-alt="The modern X logo as a sharp black vector icon, centered on a minimalist white circular background. High-tech and contemporary corporate aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvBgRlvhVkx5VByLQMuY70hOqtHqYNlhCzp4eW1J5j99U8FHR17S4MqQOH0Oh2I7qr5L1avzMiTMVmodXG5kIhMmWxr_e1baUaKcoWFQ_E6YmRwWtTWENxlJyeybDGF6LHL-tnjrBzMUKD5BfKK2KZ7sazqerDOEJ9ltbEP-yt3a7LGmkNIFSPcmXKs_BypdhO8q6KWdGGfXeDmsH71GT-2aMBDR3wj9gHtX5D8l5ybZ5Lp8XdFvczZhbW-EVcef7hliE3BrY84dA"/>
+</a>
+<a class="stagger-social w-16 h-16 rounded-full glass-card flex items-center justify-center hover-glow transition-all hover:-translate-y-2" href="#">
+<img class="w-8 h-8 opacity-70" data-alt="A professional black vector icon of the LinkedIn logo, centered on a minimalist white circular background. Reflects a high-end business environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtWg3yUlobwdNur4ieYdGlJFXtaYAg1VqaIA_ZUXGFS4PHLPRZ68LFA0-HoGdrIzL8Iaant2CmHoOmeO4SrR0_wVsP4IICVjk_5TZeWO07oCIxp6BP--yPTDQot1KBeepAUrrvgHFFzAibQ3RkmoVPBzuXfzmrMJ1lg7srXPPyUS6_E5C3DJpTc3-5LCLATZGDXFr6XWYn2O4Cefn_pCCPSbNVkTKVI0u6lMkMX3_Tz26T82EC-VO-eXeSoIDFBwHRszRjhJjhzlM"/>
+</a>
+<a class="stagger-social w-16 h-16 rounded-full glass-card flex items-center justify-center hover-glow transition-all hover:-translate-y-2" href="#">
+<img class="w-8 h-8 opacity-70" data-alt="A clean black vector icon of the TikTok logo, centered on a minimalist white circular background. Modern and engaging corporate social icon." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDajWNEHDRwufZc1wpUzHlhqxWHsusGsT3UXH0xt8SR-JfQx-XvfNfiCBs801_osU9-dQzzpn1pXyuSTQDnptEkgEYeCvOEzABHk-Qv8VtaJUpPLk5Dk8zpCgeEAJ0maCjuP9Ur3E73Zy1IT4olu8Q-9owz82_NWeeF2xLFEGhbw4bQXQdFyapF9TbpUUdRWXryK2ezmZgiQacjzz0PPb0BPPERLBlgCGEw_fq4HUU1VpMM9xMM1_GwoE2xR_QJX8g_C_F4H0u5g40"/>
+</a>
+<a class="stagger-social w-16 h-16 rounded-full glass-card flex items-center justify-center hover-glow transition-all hover:-translate-y-2" href="#">
+<img class="w-8 h-8 opacity-70" data-alt="A minimalist black vector icon of the Snapchat ghost logo, centered on a pristine white circular background. Sleek and professional design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRJ_soWMkLbj8Hi6X3LRtOevDKx-VHlBZUkGbUH4-m42YzaGFgvsyLscQhyQfPX_Mj6GwItvO31KncNWnX4GLAZw7cguzLaoiX3xwitnoxzA7Hys3Vi-fDqr7v-I-1zI5zIjA3Wfy13FE0tzAymNkNCSuPq6eYD_pId4qWynWtQJQc2ew_DI_jxwxYrloj15e4Isl2r-tF57hqwn_I5DxMD-ERoNfO6VeCNa5rlNDzGWBPnmFTyVFmsiehm4yEJSIdGU8IslYT0dE"/>
+</a>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-stack-section px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto reveal">
+<div class="brand-gradient rounded-[32px] p-10 md:p-20 text-center text-white relative overflow-hidden">
+<div class="absolute top-0 right-0 w-full h-full bg-black/10 opacity-50 mix-blend-overlay"></div>
+<div class="relative z-10">
+<h2 class="font-display-lg text-display-lg md:text-[56px] font-bold mb-6">هل لديك فكرة مشروع؟</h2>
+<p class="font-body-lg text-body-lg mb-10 max-w-2xl mx-auto opacity-90">
+                    شاركنا فكرتك، وسنساعدك في تحويلها إلى منتج رقمي احترافي يدعم نمو أعمالك.
+                </p>
+<div class="flex flex-col sm:flex-row-reverse items-center justify-center gap-6">
+<button class="bg-white text-primary px-10 py-4 rounded-xl font-title-md text-title-md hover:bg-surface-bright transition-all shadow-xl">
+                        اطلب عرض سعر
+                    </button>
+<button class="border-2 border-white/40 text-white px-10 py-4 rounded-xl font-title-md text-title-md hover:bg-white/10 transition-all">
+                        تواصل معنا
+                    </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest full-width bottom-0 shadow-inner">
+<div class="w-full py-stack-section px-margin-desktop flex flex-col items-center justify-center gap-6 text-center">
+<div class="flex flex-col items-center gap-2 mb-4">
+<span class="font-title-md text-title-md font-bold text-primary">الأفق للبرمجيات</span>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">نحن نبني حلولاً رقمية تتجاوز التوقعات، تجمع بين الإبداع العربي والتقنيات العالمية.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8 mb-4">
+<a class="text-on-surface-variant font-label-sm text-label-sm hover:text-primary transition-colors duration-200" href="#">سياسة الخصوصية</a>
+<a class="text-on-surface-variant font-label-sm text-label-sm hover:text-primary transition-colors duration-200" href="#">الشروط والأحكام</a>
+<a class="text-on-surface-variant font-label-sm text-label-sm hover:text-primary transition-colors duration-200" href="#">خريطة الموقع</a>
+</div>
+<p class="font-label-sm text-label-sm text-outline-variant">
+                © 2024 الأفق للبرمجيات. جميع الحقوق محفوظة.
+            </p>
+</div>
+</footer>
+<script>
+        // Reveal Animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Staggered Animations
+        const staggerObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const items = entry.target.querySelectorAll('.stagger-item, .stagger-social');
+                    items.forEach((item, index) => {
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'translateY(0)';
+                            item.style.transition = 'all 0.5s ease-out';
+                        }, index * 150);
+                    });
+                }
+            });
+        }, observerOptions);
+
+        const staggerContainers = ['#stagger-container', '#social-stagger'];
+        staggerContainers.forEach(id => {
+            const el = document.querySelector(id);
+            if (el) staggerObserver.observe(el);
+        });
+
+        // Form Focus Visual Effects
+        const inputs = document.querySelectorAll('input, select, textarea');
+        inputs.forEach(input => {
+            input.addEventListener('focus', () => {
+                input.parentElement.classList.add('scale-[1.02]');
+                input.parentElement.style.transition = 'transform 0.3s ease';
+            });
+            input.addEventListener('blur', () => {
+                input.parentElement.classList.remove('scale-[1.02]');
+            });
+        });
+    </script>
+</body></html>

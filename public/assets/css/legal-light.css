@@ -1,0 +1,15 @@
+.legal-hero--light {
+    background: #f7f3f2;
+    color: #1c1b1b;
+}
+
+.legal-hero--light .legal-grid {
+    background-image:
+        linear-gradient(rgba(77, 77, 77, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(77, 77, 77, 0.035) 1px, transparent 1px);
+}
+
+.legal-hero--light .legal-kicker {
+    background: #f1edec;
+    color: #bc0007;
+}
