@@ -1,22 +1,53 @@
-<section id="home" class="relative min-h-screen flex items-center pt-20 overflow-hidden bg-white">
-    <div id="threejs-canvas-container" aria-hidden="true"></div>
+<section id="home" class="alofq-tech-hero">
+    <div class="tech-wave" aria-hidden="true"></div>
 
-    <div class="container mx-auto px-margin-desktop relative z-20 text-right reveal">
-        <div class="max-w-3xl">
-            <h1 class="font-display-lg text-display-lg text-primary mb-6 leading-tight stagger-item">
+    <div class="home-hero-layout">
+        <div class="home-hero-content reveal">
+            <h2 class="stagger-item">
                 حلول برمجية <span class="brand-gradient-text">تقود أعمالك</span> نحو المستقبل
-            </h1>
-            <p class="font-body-lg text-body-lg text-on-surface-variant mb-12 max-w-2xl stagger-item">
-                نحن في <span class="font-bold text-primary">شركة الأفق المتعدد لتقنية المعلومات</span>
-                نبتكر تجارب رقمية متكاملة تساعد الشركات على النمو والتحول الرقمي من خلال تقنيات الذكاء الاصطناعي وتطوير النظم السحابية المتقدمة.
+            </h2>
+            <p class="stagger-item">
+                نحن في <strong>شركة الأفق المتعدد لتقنية المعلومات</strong> نبتكر تجارب رقمية
+                متكاملة تساعد الشركات على النمو والتحول الرقمي.
             </p>
-            <div class="flex flex-col sm:flex-row justify-start gap-4 stagger-item">
-                <a href="{{ route('quote') }}" class="brand-gradient text-center text-white px-10 py-4 rounded-xl font-title-md text-title-md shadow-lg hover:shadow-xl transition-all btn-pulse">
-                    ابدأ رحلتك الآن
-                </a>
-                <a href="#services" class="border-2 border-primary text-center text-primary px-10 py-4 rounded-xl font-title-md text-title-md hover:bg-surface-container transition-all">
-                    اكتشف حلولنا
-                </a>
+            <div class="home-hero-actions stagger-item">
+                <a href="{{ route('quote') }}" class="brand-gradient text-white btn-pulse">ابدأ رحلتك الآن</a>
+                <a href="#services">اكتشف حلولنا</a>
+            </div>
+        </div>
+
+        <div class="home-hero-visual" aria-label="أنيميشن تقني لشركة الأفق">
+            <div class="orbit" aria-hidden="true"></div>
+            <div class="orbit" aria-hidden="true"></div>
+            <div class="orbit" aria-hidden="true"></div>
+
+            <div class="center-tech-card" aria-label="شركة الأفق المتعدد لتقنية المعلومات">
+                <div>
+                    <img class="center-tech-card__logo"
+                         src="{{ asset('assets/images/alofq-logo.png') }}"
+                         alt="شعار شركة الأفق المتعدد لتقنية المعلومات">
+                    <h1>ALOFQ IT</h1>
+                    <p>حلول رقمية ذكية بتقنيات حديثة</p>
+                </div>
+            </div>
+
+            <div class="cards" aria-label="خدمات تقنية مختصرة">
+                <div class="service-card c1">
+                    <b>تطبيقات الجوال</b>
+                    <span>Flutter / iOS / Android</span>
+                </div>
+                <div class="service-card c2">
+                    <b>الأنظمة الخلفية</b>
+                    <span>Laravel / APIs / Databases</span>
+                </div>
+                <div class="service-card c3">
+                    <b>واجهات المستخدم</b>
+                    <span>React / Vue / Interactive UI</span>
+                </div>
+                <div class="service-card c4">
+                    <b>البيانات والذكاء الاصطناعي</b>
+                    <span>Dashboards / Analytics / Automation</span>
+                </div>
             </div>
         </div>
     </div>

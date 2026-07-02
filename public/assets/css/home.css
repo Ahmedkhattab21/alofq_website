@@ -851,6 +851,364 @@ body {
     }
 }
 
+.alofq-tech-hero {
+    --hero-bg: #ffffff;
+    --hero-bg2: #f7f7f7;
+    --hero-gray: #656565;
+    --hero-dark: #222222;
+    --hero-muted: #666666;
+    --hero-red: #e0201a;
+    --hero-orange: #f06a17;
+    --hero-light-yellow: #f9dd05;
+    --hero-green: #58d860;
+    --hero-teal: #3c9e91;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    padding: 110px 20px 96px;
+    background:
+        radial-gradient(circle at 55% 45%, rgba(224, 32, 26, .09), transparent 32%),
+        radial-gradient(circle at 42% 45%, rgba(60, 158, 145, .09), transparent 34%),
+        linear-gradient(180deg, var(--hero-bg), var(--hero-bg2));
+    color: var(--hero-dark);
+}
+
+.home-hero-layout {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    width: min(100%, 1320px);
+    min-height: calc(100vh - 170px);
+    align-items: center;
+    justify-content: space-between;
+    gap: clamp(36px, 6vw, 86px);
+    margin: 0 auto;
+}
+
+.home-hero-visual {
+    position: relative;
+    flex: 1 1 55%;
+    min-width: 0;
+    min-height: 780px;
+    display: grid;
+    place-items: center;
+}
+
+.alofq-tech-hero::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    background-image:
+        linear-gradient(rgba(101, 101, 101, .08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(101, 101, 101, .08) 1px, transparent 1px);
+    background-size: 64px 64px;
+    mask-image: radial-gradient(circle at center, #000 0 55%, transparent 80%);
+    animation: gridMove 12s linear infinite;
+}
+
+@keyframes gridMove {
+    to { transform: translate3d(64px, 64px, 0); }
+}
+
+.tech-wave {
+    position: absolute;
+    inset: auto -10% 10%;
+    height: 45%;
+    opacity: .45;
+    background: repeating-radial-gradient(ellipse at center, transparent 0 18px, rgba(224, 32, 26, .12) 19px 20px);
+    transform: skewY(-8deg);
+    animation: waveFloat 5s ease-in-out infinite alternate;
+}
+
+@keyframes waveFloat {
+    to { transform: translateY(-30px) skewY(-8deg); }
+}
+
+.center-tech-card {
+    width: min(430px, 86vw);
+    min-height: 270px;
+    border: 1px solid rgba(101, 101, 101, .16);
+    border-radius: 34px;
+    background: rgba(255, 255, 255, .72);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    box-shadow: 0 30px 80px rgba(34, 34, 34, .12), 0 0 90px rgba(224, 32, 26, .10);
+    display: grid;
+    place-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 3;
+    animation: cardPulse 3s ease-in-out infinite;
+}
+
+@keyframes cardPulse {
+    0%, 100% {
+        transform: translateY(0);
+        box-shadow: 0 30px 80px rgba(34, 34, 34, .12), 0 0 80px rgba(224, 32, 26, .10);
+    }
+    50% {
+        transform: translateY(-12px);
+        box-shadow: 0 42px 100px rgba(34, 34, 34, .16), 0 0 120px rgba(60, 158, 145, .16);
+    }
+}
+
+.center-tech-card__logo {
+    width: 104px;
+    height: 104px;
+    margin: 0 auto 12px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 22px rgba(224, 32, 26, .18));
+}
+
+.center-tech-card h1 {
+    margin: 0;
+    color: var(--hero-dark);
+    font-size: clamp(40px, 5vw, 54px);
+    font-weight: 700;
+    letter-spacing: .06em;
+}
+
+.center-tech-card p {
+    margin: 8px 0 0;
+    color: var(--hero-muted);
+    font-size: 21px;
+}
+
+.alofq-tech-hero .orbit {
+    position: absolute;
+    width: 620px;
+    height: 390px;
+    border: 1px solid rgba(224, 32, 26, .22);
+    border-radius: 50%;
+    z-index: 2;
+    animation: rotate 12s linear infinite;
+    top: 50%;
+    left: 50%;
+    margin-top: -195px;
+    margin-left: -310px;
+}
+
+.alofq-tech-hero .orbit:nth-child(3) {
+    width: 760px;
+    height: 480px;
+    animation-duration: 18s;
+    border-color: rgba(240, 106, 23, .22);
+    margin-top: -240px;
+    margin-left: -380px;
+}
+
+.alofq-tech-hero .orbit:nth-child(4) {
+    width: 900px;
+    height: 570px;
+    animation-duration: 24s;
+    border-color: rgba(60, 158, 145, .2);
+    margin-top: -285px;
+    margin-left: -450px;
+}
+
+.alofq-tech-hero .orbit::after {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--hero-red);
+    left: 50%;
+    top: -6px;
+    box-shadow: 0 0 24px var(--hero-red);
+}
+
+@keyframes rotate {
+    to { transform: rotate(360deg); }
+}
+
+.alofq-tech-hero .service-card {
+    position: absolute;
+    z-index: 4;
+    width: 305px;
+    padding: 20px 22px;
+    border: 1px solid rgba(101, 101, 101, .16);
+    border-radius: 22px;
+    background: rgba(255, 255, 255, .76);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    box-shadow: 0 20px 60px rgba(34, 34, 34, .12);
+    animation: float 4s ease-in-out infinite;
+    pointer-events: auto;
+}
+
+.alofq-tech-hero .service-card b {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--hero-dark);
+    font-size: 20px;
+}
+
+.alofq-tech-hero .service-card span {
+    color: var(--hero-muted);
+    font-size: 15px;
+}
+
+.alofq-tech-hero .service-card::before {
+    content: "";
+    width: 44px;
+    height: 44px;
+    border-radius: 14px;
+    display: inline-block;
+    margin-inline-end: 12px;
+    background: linear-gradient(135deg, var(--hero-red), var(--hero-orange));
+    box-shadow: 0 0 30px rgba(224, 32, 26, .18);
+    vertical-align: middle;
+}
+
+.alofq-tech-hero .cards {
+    position: absolute;
+    inset: 0;
+    z-index: 5;
+    pointer-events: none;
+}
+
+.alofq-tech-hero .c1 { left: 0; top: 4%; animation-delay: .1s; }
+.alofq-tech-hero .c2 { right: 0; top: 5%; animation-delay: .6s; }
+.alofq-tech-hero .c3 { left: 4%; bottom: 4%; animation-delay: 1.1s; }
+.alofq-tech-hero .c4 { right: 4%; bottom: 5%; animation-delay: 1.6s; }
+
+.alofq-tech-hero .c2::before { background: linear-gradient(135deg, var(--hero-green), var(--hero-teal)); }
+.alofq-tech-hero .c3::before { background: linear-gradient(135deg, var(--hero-gray), var(--hero-red)); }
+.alofq-tech-hero .c4::before { background: linear-gradient(135deg, var(--hero-orange), var(--hero-light-yellow)); }
+
+@keyframes float {
+    50% { transform: translateY(-18px); }
+}
+
+.home-hero-content {
+    position: relative;
+    z-index: 6;
+    flex: 0 1 520px;
+    max-width: 620px;
+    text-align: right;
+    pointer-events: auto;
+}
+
+.home-hero-content h2 {
+    margin: 0 0 12px;
+    color: var(--hero-dark);
+    font-size: clamp(32px, 4.5vw, 56px);
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.home-hero-content p {
+    max-width: 560px;
+    margin: 0 0 22px;
+    color: var(--hero-muted);
+    font-size: 18px;
+    line-height: 1.9;
+}
+
+.home-hero-content strong {
+    color: var(--hero-dark);
+}
+
+.home-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.home-hero-actions a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 165px;
+    border-radius: 14px;
+    padding: 15px 28px;
+    color: var(--hero-dark);
+    font-size: 17px;
+    font-weight: 700;
+    transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
+}
+
+.home-hero-actions a:first-child {
+    color: #fff;
+    box-shadow: 0 14px 34px rgba(224, 32, 26, .18);
+}
+
+.home-hero-actions a:last-child {
+    border: 2px solid var(--hero-dark);
+    background: rgba(255, 255, 255, .65);
+}
+
+.home-hero-actions a:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 36px rgba(34, 34, 34, .12);
+}
+
+@media (max-width: 900px) {
+    .alofq-tech-hero {
+        min-height: auto;
+        padding-top: 120px;
+        padding-bottom: 70px;
+    }
+
+    .home-hero-layout {
+        min-height: auto;
+        flex-direction: column;
+        gap: 34px;
+    }
+
+    .home-hero-content {
+        order: 1;
+        max-width: 680px;
+        text-align: center;
+    }
+
+    .home-hero-content p {
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .home-hero-visual {
+        order: 2;
+        width: 100%;
+        min-height: 820px;
+    }
+
+    .alofq-tech-hero .service-card {
+        position: relative;
+        left: auto;
+        right: auto;
+        top: auto;
+        bottom: auto;
+        width: min(88vw, 340px);
+        margin: 12px auto;
+    }
+
+    .cards {
+        inset: auto;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        display: grid;
+        gap: 0;
+        z-index: 5;
+    }
+
+    .alofq-tech-hero .orbit {
+        opacity: .55;
+        scale: .65;
+    }
+
+    .center-tech-card h1 {
+        font-size: 42px;
+    }
+
+    .home-hero-actions {
+        justify-content: center;
+    }
+}
+
 @media (prefers-reduced-motion: reduce) {
     html {
         scroll-behavior: auto;
